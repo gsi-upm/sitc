@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+
+_:Hotel1 a schema:Hotel ;
+         schema:description "A fictitious hotel" .
+
+
+_:Review1 a schema:Review ;
+          schema:reviewBody "This is a great review" ;
+          schema:reviewRating [
+           a schema:Rating ;
+           schema:author <http://jfernando.es/me> ;
+           schema:ratingValue "0.7"
+           
+          ] ;
+          schema:itemReviewed _:Hotel1 .
+
+
+_:Review2 a schema:Review ;
+          schema:reviewBody "This is a not so great review" ;
+          schema:reviewRating [
+           a schema:Rating ;
+           schema:author [ a schema:Person ;
+           schema:givenName "anonymous" ] ;
+           schema:ratingValue "0.3"
+          ] ;
+          schema:itemReviewed _:Hotel1 .
