@@ -32,14 +32,15 @@ def sanitize_triple(t):
 
 with request.urlopen(url) as response:
     # Get all json-ld objects embedded in the html file
-    html = response.read().decode('utf-8')
+    html = response.read().decode('utf-8', errors='ignore')
     parser = etree.XMLParser(recover=True)
     root = etree.fromstring(html, parser=parser)
-    for jsonld in root.findall(".//script[@type='application/ld+json']"):
-        g.parse(data=jsonld.text, publicID=url, format='json-ld')
+    if root:
+        for jsonld in root.findall(".//script[@type='application/ld+json']"):
+            g.parse(data=jsonld.text, publicID=url, format='json-ld')
 
 
 fixedgraph = Graph()
 fixedgraph += [sanitize_triple(s) for s in g]
 
-print(g.serialize(format='turtle').decode('utf-8'))
+print(g.serialize(format='turtle').decode('utf-8', errors='ignore'))
