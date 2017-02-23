@@ -1,3 +1,4 @@
 rdflib
 rdflib-jsonld
 lxml
+html5lib
