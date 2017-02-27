@@ -1,5 +1,8 @@
 
 import sys
+from future.standard_library import install_aliases
+install_aliases()
+
 from urllib import request, parse
 from rdflib import Graph, term
 from lxml import etree

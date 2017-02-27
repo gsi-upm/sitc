@@ -1,3 +1,4 @@
+future
 rdflib
 rdflib-jsonld
 lxml

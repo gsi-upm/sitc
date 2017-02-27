@@ -4,3 +4,4 @@ Exercises for Intelligent Systems Course
 * ML-1: introduction to machine learning with scikit-learn
 * ML-2: introduction to machine learning with pandas and scikit-learn
 * NLP: introduction to NLP
+* LOD: Linked Open Data, exercises and example code
