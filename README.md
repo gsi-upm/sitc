@@ -1,7 +1,7 @@
 # sitc
 Exercises for Intelligent Systems Course at Universidad Politécnica de Madrid, Telecommunication Engineering School. This material is used in the subjects
 - SITC (Sistemas Inteligentes y Tecnologías del Conocimiento) - Master Universitario de Ingeniería de Telecomunicación (MUIT)
-- TIAD (Tecnologas Inteligentes de Análisis de Datos) - Master Universitario en Ingeniera de Redes y Servicios Telemáticos)
+- TIAD (Tecnologías Inteligentes de Análisis de Datos) - Master Universitario en Ingeniera de Redes y Servicios Telemáticos)
 
 For following this course:
 - Follow the instructions to install the environment: https://github.com/gsi-upm/sitc/blob/master/python/1_1_Notebooks.ipynb (Just install 'conda')
