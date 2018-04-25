@@ -12,5 +12,6 @@ Topics
 * Python: quick introduction to Python
 * ML-1: introduction to machine learning with scikit-learn
 * ML-2: introduction to machine learning with pandas and scikit-learn
+* ML-3: introduction to machine learning. Neural Computing
 * NLP: introduction to NLP
 * LOD: Linked Open Data, exercises and example code
