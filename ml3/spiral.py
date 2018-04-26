@@ -58,7 +58,6 @@ def plot_dataset(X,y):
     plt.scatter(X[:,0], X[:,1], c=y, cmap=cm, lw=.5, s=10)
     
 def plot_decision_surface(X, y, classifier, h=0.02):
-    h = .02
     cm = plt.cm.RdBu
     
     x_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5
