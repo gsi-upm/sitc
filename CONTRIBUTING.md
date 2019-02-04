@@ -1,10 +1,11 @@
 # Contributing
 
 When contributing to this repository, please consider the scope of your contribution.
-For major corrections (other than typos and minor code changes), please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+For major corrections (other than typos and minor code changes), please first discuss the change you wish to make via a GitHub issue,
+email, or any other method with the owners of this repository before working on your change. 
+If you fail to do so, your contribution may be rejected.
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+Also note that we have a code of conduct, please follow it in all your interactions with the project.
 
 ## Pull Request Process
 
@@ -13,9 +14,9 @@ Please note we have a code of conduct, please follow it in all your interactions
 2. If you are adding code, ensure the changed notebooks can be run in a fresh environment. Include instructions to download
 any additional dependencies.
 3. Ensure any spurious changes are removed, such as compilation files (`pyc`) or metadata changes in a notebook.
-4. A member of the GSI-UPM group will review your request. The reviewer may choose to accept the request, ask for further changes,
-or reject the request.
-
+4. Submit your pull request on GitHub.
+5. A member of the GSI-UPM group will review your request.
+6. The reviewer may ask for further changes before merging the contribution. Please, follow the reviewer's instructions before resubmitting.
 
 ## Code of Conduct
 
