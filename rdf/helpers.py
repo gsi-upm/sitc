@@ -53,7 +53,7 @@ If you don\'t know what this error means, try an online validator: http://ttl.su
     key = line or 'default'
     try:
         DEFINITIONS[key] = g.parse(data=cell,
-                                  format="ttl")
+                                  format="n3")
     except SyntaxError as ex:
         return Markdown(msg.format(line=ex.lines, reason=ex._why))
     except Exception as ex:
