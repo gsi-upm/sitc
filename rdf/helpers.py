@@ -1,6 +1,4 @@
 import sys
-import operator
-import types
 from future.standard_library import install_aliases
 install_aliases()
 
@@ -18,13 +16,11 @@ from IPython.core.magic import (register_line_magic, register_cell_magic,
 from IPython.display import HTML, display, Image, Markdown
 
 
-schema = Namespace('http://schema.org/')
-
 DEFINITIONS = {}
 
 def solution(exercise='default'):
     if exercise not in DEFINITIONS:
-        raise Exception('Solution for {} not found'.format(exercise))
+        raise Exception('Solution for {} not found. Have you defined it?'.format(exercise))
     return DEFINITIONS[exercise]
 
 
@@ -51,16 +47,17 @@ If you don\'t know what this error means, try an online validator: http://ttl.su
 '''
     global DEFINITIONS
     key = line or 'default'
+    DEFINITIONS[key] = None
     try:
         DEFINITIONS[key] = g.parse(data=cell,
                                   format="n3")
     except SyntaxError as ex:
-        return Markdown(msg.format(line=ex.lines, reason=ex._why))
+        print(msg.format(line=ex.lines, reason=ex._why), file=sys.stderr)
+        raise Exception('Bad Turtle syntax') from None
     except Exception as ex:
-        return Markdown(msg.format(line='?', reason=ex))
-    return Markdown('File loaded!')
-        
-    return HTML('Loaded!') #HTML('<code>{}</code>'.format(cell))
+        print(msg.format(line='?', reason=ex), file=sys.stderr)
+        raise Exception('Bad Turtle syntax') from None
+    return Markdown('The Turtle syntax is correct.')
 
 
 def extract_data(url):
@@ -101,7 +98,6 @@ def extract_data(url):
     fixedgraph = Graph()
     fixedgraph += [sanitize_triple(s) for s in g]
 
-#     print(g.serialize(format='turtle').decode('utf-8', errors='ignore'))
     return fixedgraph
 
 def turtle(g):
@@ -119,30 +115,13 @@ def print_data(url):
 
     
 
-def test(description, got, expected=None, func=None):
-    if isinstance(got, types.GeneratorType):
-        got = set(got)
-    try:
-        if expected is None:
-            func = func or operator.truth
-            expected = True
-            assert func(got)
-        else:
-            func = func or operator.eq
-            assert func(got, expected)
-    except AssertionError:
-        print('Test failed: {}'.format(description), file=sys.stderr)
-        print('\tExpected: {}'.format(expected), file=sys.stderr)
-        print('\tGot:      {}'.format(got), file=sys.stderr)
-        raise Exception('Test failed: {}'.format(description))
-
-        
-def atLeast(lst, number):
-    return len(set(lst))>=number
-
-def containsAll(lst, other):
-    for i in other:
-        if i not in lst:
-            print('{} not found'.format(i), file=sys.stderr)
-            return False
-    return True
+def check(testname):
+    import tests
+    
+    test = getattr(tests, 'test_{}'.format(testname), None)
+    if test is None:
+        raise Exception('There are no tests for {}'.format(testname))
+    definition = solution(testname)
+    if definition is None:
+        raise Exception('The definition for {} is empty or invalid.'.format(testname))
+    return test(definition)
