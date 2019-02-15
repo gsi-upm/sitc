@@ -1,5 +1,5 @@
 import sys
-from future.standard_library import install_aliases
+from future.standard_library import install_aliases, print_function
 install_aliases()
 
 from urllib import request, parse

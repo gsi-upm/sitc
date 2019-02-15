@@ -1,3 +1,4 @@
+from future.standard_library import print_function
 import operator
 import types
 import sys
