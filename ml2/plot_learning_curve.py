@@ -19,11 +19,10 @@ samples.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import cross_validation
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.datasets import load_digits
-from sklearn.learning_curve import learning_curve
+from sklearn.model_selection import learning_curve
 
 
 def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None,
@@ -53,7 +52,7 @@ def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None,
     cv : integer, cross-validation generator, optional
         If an integer is passed, it is the number of folds (defaults to 3).
         Specific cross-validation objects can be passed, see
-        sklearn.cross_validation module for the list of possible objects
+        sklearn.model_selection module for the list of possible objects
 
     n_jobs : integer, optional
         Number of jobs to run in parallel (default 1).

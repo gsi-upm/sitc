@@ -14,6 +14,12 @@ Also note that we have a code of conduct, please follow it in all your interacti
 2. If you are adding code, ensure the changed notebooks can be run in a fresh environment. Include instructions to download
 any additional dependencies.
 3. Ensure any spurious changes are removed, such as compilation files (`pyc`) or metadata changes in a notebook.
+You can automatically do so using nbstripout:
+```
+pip install nbstripout
+nbstripout --install
+```
+This will install a git hook that strips all metadata from the notebooks before you commit changes to git.
 4. Submit your pull request on GitHub.
 5. A member of the GSI-UPM group will review your request.
 6. The reviewer may ask for further changes before merging the contribution. Please, follow the reviewer's instructions before resubmitting.
