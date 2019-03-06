@@ -20,9 +20,35 @@ pip install nbstripout
 nbstripout --install
 ```
 This will install a git hook that strips all metadata from the notebooks before you commit changes to git.
+
+You can also remove the output from all cells using this command:
+
+```
+make clean
+```
+
+To limit the command to a specific folder (e.g. ml1):
+```
+make FOLDER=ml1 clean
+```
 4. Submit your pull request on GitHub.
 5. A member of the GSI-UPM group will review your request.
 6. The reviewer may ask for further changes before merging the contribution. Please, follow the reviewer's instructions before resubmitting.
+
+
+## Testing the changes
+
+You can execute all notebooks at once to make sure they work with this command:
+
+```
+make exec
+```
+
+To only check notebooks in a specific folder, run:
+
+```
+make FOLDER=ml2 exec  # Run all notebooks in the ml2 folder
+```
 
 ## Code of Conduct
 
