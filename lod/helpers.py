@@ -20,7 +20,9 @@ display_javascript(js, raw=True)
 
 
 def send_query(query, endpoint):
-    FORMATS = ",".join(["application/sparql-results+json", "text/javascript", "application/json"])
+    FORMATS = ",".join(["application/sparql-results+json",
+                        "text/javascript",
+                        "application/json"])
 
     data = {'query': query}
     # b = quote_plus(query)
@@ -33,7 +35,11 @@ def send_query(query, endpoint):
     res = urlopen(r)
     data = res.read().decode('utf-8')
     if res.getcode() == 200:
-        return json.loads(data)
+        try:
+            return json.loads(data)
+        except Exception:
+            print('Got: ', data, file=sys.stderr)
+            raise
     raise Exception('Error getting results: {}'.format(data))
 
 
@@ -60,7 +66,7 @@ def solution():
 def query(query, endpoint=None, print_table=False):
     global LAST_QUERY
 
-    endpoint = endpoint or "http://fuseki.cluster.gsi.dit.upm.es/sitc/"
+    endpoint = endpoint or "http://fuseki.gsi.upm.es/sitc/"
     results = send_query(query, endpoint)
     tuples = to_table(results)
 
