@@ -1,0 +1,1377 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+
+  
+
+  <link rel="shortcut icon" href="images/favicons/es_favicon.ico" type="image/x-icon">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+  <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+
+  <title>Uso de SPARQL para acceder a datos abiertos enlazados
+ | Programming Historian</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Crete+Round|Open+Sans|Quattrocento|Roboto|Roboto+Condensed" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" media="all">
+  <link rel="stylesheet" href="css/github.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="js/ext_links.js"></script>
+  <script type="text/javascript" src="js/header_links.js"></script>
+
+  
+  
+
+  <script src="js/bootstrap-4-navbar.js"></script>
+
+
+</head>
+
+
+  <body>
+    <main>
+      <div class="hide-screen">
+        
+        
+
+<div class="alert alert-success sitewide-alert text-center">
+  <h2><a href="https://www.patreon.com/theprogramminghistorian" class="alert-link">¡Haz una donación a <i>The Programming Historian</i>!</a></h2>
+
+</div>
+
+        
+        
+
+
+
+
+
+
+
+
+<nav class="hide-screen navbar navbar-toggleable-sm navbar-dark bg-dark"
+  style="background-color: #535D7F" role="navigation">
+  <!--<div class="container">-->
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="https://programminghistorian.org/es">The Programming
+    Historian</a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end" role="menubar">
+      <li class="nav-item dropdown mobile-drop" role="menu">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" role="button">
+          Acerca
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="https://programminghistorian.org/es/acerca-de"
+            role="menuitem">Acerca</a>
+          <a class="dropdown-item" href="https://programminghistorian.org/es/equipo-de-proyecto"
+            role="menuitem">Equipo</a>
+          <a class="dropdown-item" href="https://programminghistorian.org/es/investigacion"
+            role="menuitem">Investigación</a>
+          <a class="dropdown-item" href="https://programminghistorian.org/es/politica-de-privacidad"
+            role="menuitem">Política de privacidad</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown mobile-drop" role="menu">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" role="button">
+          Contribuciones
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item"
+            href="https://programminghistorian.org/es/contribuciones"
+            role="menuitem">Contribuciones</a>
+          <a class="dropdown-item"
+            href="https://programminghistorian.org/es/retroalimentacion"
+            role="menuitem">Sugerencias</a>
+          <a class="dropdown-item" href="https://programminghistorian.org/es/guia-para-revisores"
+            role="menuitem">Guía para revisores</a>
+          <a class="dropdown-item" href="https://programminghistorian.org/es/guia-para-autores"
+            role="menuitem">Guía para autores</a>
+          <a class="dropdown-item"
+            href="https://programminghistorian.org/es/guia-para-traductores"
+            role="menuitem">Guía para traductores</a>
+          <a class="dropdown-item" href="https://programminghistorian.org/es/guia-editor"
+            role="menuitem">Guía para editores</a>
+          <a class="dropdown-item" href="https://programminghistorian.org/es/solicitud-lecciones"
+            role="menuitem">Solicitud de lecciones</a>
+          <a class="dropdown-item"
+            href="https://github.com/programminghistorian/jekyll/wiki/Making-Technical-Contributions"
+            role="menuitem">Contribuciones técnicas</a>
+        </div>
+      </li>
+
+      <li class="nav-item" role="menuitem">
+        <a class="nav-link" href="https://programminghistorian.org/es/lecciones"
+          role="menuitem">Lecciones</a>
+      </li>
+
+      <li class="nav-item dropdown mobile-drop" role="menu">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" role="button">
+          Apóyanos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+        <a class="dropdown-item" href="https://programminghistorian.org/es/pia"
+          role="menuitem">Programa de Instituciones Asociadas</a>
+        <a class="dropdown-item" href="https://programminghistorian.org/es/donaciones"
+          role="menuitem">Apóyanos - Donaciones</a>
+        <a class="dropdown-item" href="https://programminghistorian.org/es/colaboradores"
+          role="menuitem">Colaboradores</a>
+      </li>
+      
+      <li class="nav-item" role="menuitem">
+        <a class="nav-link" href="https://programminghistorian.org/blog"
+          role="menuitem">Blog</a>
+      </li>
+     
+
+      
+
+      
+
+      <li class="nav-item">
+        <div class="btn-group" role="group" aria-label="Language selector">
+          
+
+          
+
+          
+
+          
+          <a class="btn btn-secondary nav-link" role="button"
+            href="https://programminghistorian.org/en/lessons/retired/graph-databases-and-SPARQL">en</a>
+          
+          
+          
+
+          
+          <a class="btn btn-secondary nav-link active disabled" role="button"
+            aria-pressed="true">es</a>
+          
+          
+
+          
+
+          
+
+          
+          <a class="btn btn-secondary nav-link" role="button"
+            href="https://programminghistorian.org/fr">fr</a>
+          
+          
+          
+
+          
+
+          
+
+          
+          <a class="btn btn-secondary nav-link" role="button"
+            href="https://programminghistorian.org/pt">pt</a>
+          
+          
+          
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--</div>-->
+</nav>
+
+<nav class="hide-print print-header navbar-brand">The Programming Historian </nav>
+
+      </div>
+      <div class="hide-print print-header">
+        <h1>The Programming Historian en español</h1>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+
+  <div class="container-fluid">
+
+    <div class="container expanded">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="header-image rounded">
+            <img src="images/graph-databases-and-SPARQL.png" alt="Grabado con dos peces unidos por una rama en sus bocas.">
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="header-title">
+            <h1><a href="https://programminghistorian.org/es/lecciones/retirada/sparql-datos-abiertos-enlazados">Uso de SPARQL para acceder a datos abiertos enlazados
+</a></h1>
+          </div>
+
+          <div class="header-author">
+            <h2>
+
+
+
+Matthew Lincoln <a href="https://orcid.org/0000-0002-4387-3384"><img src="images/ORCIDiD_iconvector.svg" alt="ORCID id icon" width="16px" style="max-width:16px;display:inline;"></a> </h2>
+          </div>
+
+          <div class="header-abstract">
+            <p>Esta lección explica por qué numerosas instituciones culturales están adoptando bases de datos orientadas a grafos y cómo los investigadores pueden acceder a estos datos a través de consultas realizadas en el lenguaje llamado SPARQL.</p>
+
+          </div>
+
+          <div class="container expanded">
+            <div class="row d-flex justify-content-left">
+              
+              <div class="peer-review mr-5">
+                <p>
+                  <a href="https://github.com/programminghistorian/ph-submissions/issues/67">
+                    <i class="fas fa-user-check"></i> Revisado por pares
+                    </a>
+                </p>
+              </div>
+              
+              <div class="open-license mr-5">
+                <p><a href="https://creativecommons.org/licenses/by/4.0/deed.en"><i class="fas fa-lock-open"></i> CC-BY
+                    4.0</a></p>
+              </div>
+              <div class="donate mr-5">
+                <p><a
+                    href="https://programminghistorian.org/es/apoyanos#donaciones"><i
+                      class="fas fa-credit-card"></i> Apoyar PH</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container-fluid header-helpers">
+    <div class="container expanded">
+      
+      
+        <div>
+          
+          <div class="d-flex flex-wrap flex-md-row flex-column justify-content-between">
+            <div>
+              <h3>editado por</h3>
+              <ul>
+                
+                
+                <li>Fred Gibbs</li>
+                
+              </ul>
+            </div>
+
+            <div>
+              <h3>revisado por</h3>
+              <ul>
+                
+                
+                <li>Patrick Murray-John
+                </li>
+                
+                
+                <li>Jason Heppler
+                </li>
+                
+                
+                <li>Will Hanley
+                </li>
+                
+                
+                <li>Fred Gibbs
+                </li>
+                
+              </ul>
+            </div>
+
+            
+            <div>
+              <h3>traducido por</h3>
+              <ul>
+                
+                
+                <li>Nuria Rodríguez Ortega</li>
+                
+              </ul>
+            </div>
+            
+
+            
+            <div>
+              <h3>traducción editada por</h3>
+              <ul>
+                
+                
+                <li>Antonio Rojas Castro
+                  <a href="https://orcid.org/0000-0002-8916-4997"><img src="images/ORCIDiD_iconvector.svg" alt="ORCID id icon" width="16px" style="max-width:16px;display:inline;"></a></li>
+                
+              </ul>
+            </div>
+            
+
+            
+            <div>
+              <h3>traducción revisada por</h3>
+              <ul>
+                
+                
+                <li>Antonio Rojas Castro
+                  <a href="https://orcid.org/0000-0002-8916-4997"><img src="images/ORCIDiD_iconvector.svg" alt="ORCID id icon" width="16px" style="max-width:16px;display:inline;"></a></li>
+                
+                
+                <li>Juan Antonio Pastor Sánchez</li>
+                
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div> <!-- end row -->
+    </div>
+
+    <div class="container-fluid header-bottom">
+      <div class="container expanded">
+        <div class="d-flex flex-wrap flex-md-row flex-column justify-content-between">
+          <div class="metarow">
+            <h4>publicado</h4> 2015-11-24
+          </div>
+          
+          <div class="metarow">
+            <h4>traducido</h4> <span
+              id="translated-date">2017-05-20</span>
+          </div>
+          
+          
+          <div class="metarow">
+            <h4>retirada</h4> <span
+              id="retired-date"></span>
+          </div>
+          
+          <div class="metarow">
+            <h4>dificultad</h4> 
+
+Medio
+
+          </div>
+          
+          <div class="metarow">
+           <p> <img src="images/doi_icon.jpg" alt="DOI id icon" width="16px" style="max-width:16px;display:inline;"> https://doi.org/10.46430/phes0027</p>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+</header>
+
+<div class="container">
+
+  
+  
+<div class="alert alert-success hide-screen"><h2 id="haz-una-donación">¡Haz una donación!</h2>
+<p>Producir buenos tutoriales de acceso abierto cuesta dinero. Únete al creciente número de personas que <a href="https://www.patreon.com/theprogramminghistorian">apoya a <em>The Programming Historian</em></a> para que podamos continuar compartiendo conocimientos de forma gratuita.</p>
+</div>
+
+  
+
+  
+
+  <div class="alert alert-warning">
+    <!-- Banner pointing to the original and other translations of this lesson when they exist -->
+    Disponible en:
+
+    <a href="https://programminghistorian.org/en/lessons/retired/graph-databases-and-SPARQL"> EN
+    </a> (original) |
+
+    
+
+    <a href="https://programminghistorian.org/es/lecciones/retirada/sparql-datos-abiertos-enlazados"> ES </a>
+    
+
+    
+  </div>
+  
+
+  <!-- Check if lesson is part of a sequence -->
+  
+
+
+  
+  <div class="alert alert-warning">
+    <h2>Esta lección ha sido retirada</h2>
+    <p><em>¿Qué significa esto?</em></p>
+    <p><p>Los editores de The Programming Historian hacen todo lo posible para mantener las lecciones a medida que surgen inevitablemente problemas menores. Sin embargo, desde la publicación, los cambios en las tecnologías subyacentes o los principios utilizados en esta lección han sido sustanciales, hasta el punto de que los editores han decidido no actualizarla más. Es posible que la lección siga siendo una herramienta de aprendizaje útil y una instantánea de las técnicas de la historia digital cuando se publicó, pero no podemos garantizar que todos los elementos sigan funcionando como estaba previsto.</p>
+</p>
+    
+    <p><em>¿Por qué ha sido retirada?</em></p>
+    <p><p>El Museo Británico no ha mantenido el acceso a su base de datos de colecciones de una manera consistente. Aunque la sintaxis y los comandos de SPARQL siguen siendo correctos, las URLs a las que intentan conectarse son ahora demasiado inconsistentes para su uso en una lección funcional.</p>
+</p>
+    
+  </div>
+  
+
+  
+
+
+
+
+  <div class="content">
+    <h2 id="objetivos-de-la-lección">Objetivos de la lección</h2>
+
+<p>Esta lección explica por qué numerosas instituciones culturales están adoptando bases de datos orientadas a grafos (<em>graph databases</em>) y cómo los investigadores pueden acceder a estos datos a través de consultas realizadas en el lenguaje llamado SPARQL.</p>
+
+<h2 class="no_toc" id="contenidos">Contenidos</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#objetivos-de-la-lección" id="markdown-toc-objetivos-de-la-lección">Objetivos de la lección</a></li>
+  <li><a href="#bases-de-datos-orientadas-a-grafo-rdf-y-datos-abiertos-enlazados-linked-open-data-lod" id="markdown-toc-bases-de-datos-orientadas-a-grafo-rdf-y-datos-abiertos-enlazados-linked-open-data-lod">Bases de datos orientadas a grafo, RDF y datos abiertos enlazados (Linked Open Data, LOD)</a>    <ul>
+      <li><a href="#rdf-en-pocas-palabras" id="markdown-toc-rdf-en-pocas-palabras">RDF en pocas palabras</a></li>
+      <li><a href="#buscando-rdf-con-sparql" id="markdown-toc-buscando-rdf-con-sparql">Buscando RDF con SPARQL</a></li>
+      <li><a href="#uri-y-literales" id="markdown-toc-uri-y-literales">URI y literales</a></li>
+      <li><a href="#términos-para-revisar" id="markdown-toc-términos-para-revisar">Términos para revisar</a></li>
+    </ul>
+  </li>
+  <li><a href="#consultas-basadas-en-casos-reales" id="markdown-toc-consultas-basadas-en-casos-reales">Consultas basadas en casos reales</a>    <ul>
+      <li><a href="#todas-las-declaraciones-para-un-objeto" id="markdown-toc-todas-las-declaraciones-para-un-objeto">Todas las declaraciones para un objeto</a></li>
+      <li><a href="#consultas-complejas" id="markdown-toc-consultas-complejas">Consultas complejas</a></li>
+      <li><a href="#filter" id="markdown-toc-filter">FILTER</a></li>
+      <li><a href="#agregación" id="markdown-toc-agregación">Agregación</a></li>
+      <li><a href="#enlazando-múltiples-puntos-de-entrada-sparql" id="markdown-toc-enlazando-múltiples-puntos-de-entrada-sparql">Enlazando múltiples puntos de entrada SPARQL</a></li>
+    </ul>
+  </li>
+  <li><a href="#trabajando-con-resultados-sparql" id="markdown-toc-trabajando-con-resultados-sparql">Trabajando con resultados SPARQL</a>    <ul>
+      <li><a href="#exportar-resultados-en-formato-csv" id="markdown-toc-exportar-resultados-en-formato-csv">Exportar resultados en formato CSV</a></li>
+      <li><a href="#exportar-resultados-a-palladio" id="markdown-toc-exportar-resultados-a-palladio">Exportar resultados a Palladio</a></li>
+    </ul>
+  </li>
+  <li><a href="#lecturas-adicionales" id="markdown-toc-lecturas-adicionales">Lecturas adicionales</a></li>
+</ul>
+
+<h2 id="bases-de-datos-orientadas-a-grafo-rdf-y-datos-abiertos-enlazados-linked-open-data-lod">Bases de datos orientadas a grafo, RDF y datos abiertos enlazados (Linked Open Data, LOD)</h2>
+
+<p>Actualmente, numerosas instituciones culturales están  ofreciendo información sobre sus colecciones a través de las denominadas API (<a href="https://programminghistorian.org/lessons/intro-to-the-zotero-api.html"><em>Application Programming Interfaces</em></a>). Estas API son instrumentos muy eficaces para acceder de manera automatizada a registros individuales, sin embargo, no constituyen el procedimiento ideal cuando tratamos con datos culturales debido a que las API están estructuradas para trabajar con un conjunto predeterminado de consultas (<em>queries</em>). Por ejemplo, un museo puede tener información sobre donantes, artistas, obras de arte, exposiciones, procedencia de sus obras (<em>provenance</em>), etc., pero su API puede ofrecer solo una recuperación orientada a objetos, haciendo difícil o imposible buscar datos relacionados con donantes, artistas, etc. Así pues, esta estructura es interesante si el objetivo es buscar información sobre objetos particulares; sin embargo, puede complicar la operación de agregar información sobre los artistas o donantes que también se encuentran registrados en la base de datos.</p>
+
+<p>Las bases de datos RDF son muy apropiadas para expresar relaciones complejas entre múltiples entidades, como personas, lugares, eventos y conceptos ligados a objetos individuales. Estas bases de datos se denominan habitualmente bases de datos orientadas a grafos (<em>graph databases</em>) porque estructuran la información como un grafo o red, donde un conjunto de recursos o nodos están conectados entre sí mediante aristas (o enlaces) que describen las relaciones establecidas entre dichos recursos y/o nodos.</p>
+
+<p>Dado que las bases de datos RDF admiten el uso de URL, estas pueden estar accesibles <em>online</em> y también pueden enlazarse a otras bases de datos, de ahí el término “datos abiertos enlazados” (<em>Linked Open Data</em>, LOD). Importantes colecciones artísticas, entre las que se incluyen las del <a href="http://collection.britishmuseum.org/">British Museum</a>, <a href="http://labs.europeana.eu/api/linked-open-data-introduction">Europeana</a>, el <a href="http://americanart.si.edu/">Smithsonian American Art Museum</a> y el <a href="http://britishart.yale.edu/collections/using-collections/technology/linked-open-data">Yale Center for British Art</a>, han publicado sus colecciones de datos como LOD. El <a href="http://vocab.getty.edu/">Getty Vocabulary Program</a> también ha publicado sus vocabularios controlados (TGN, ULAN y AAT) como LOD.</p>
+
+<p>SPARQL es el lenguaje utilizado para interrogar este tipo de bases de datos. Este lenguaje es particularmente potente porque obvia las perspectivas que los usuarios transfieren a los datos. Una consulta sobre objetos y una consulta sobre donantes son prácticamente equivalentes en estas bases de datos. Lamentablemente, numerosos tutoriales sobre SPARQL utilizan modelos de datos tan extremadamente simplificados que no son operativos cuando se trata de utilizar las complejas bases de datos desarrolladas por las instituciones culturales. Este tutorial ofrece un curso intensivo sobre SPARQL utilizando un conjunto de datos (<em>dataset</em>) que un humanista podría realmente encontrar en Internet. En concreto, en este tutorial aprenderemos cómo interrogar la colección LOD del British Museum.</p>
+
+<h3 id="rdf-en-pocas-palabras">RDF en pocas palabras</h3>
+
+<p>RDF representa la información en una declaración triple -también llamada tripleta- que sigue la estructura sujeto-predicado-objeto. Por ejemplo:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;La ronda de noche&gt; &lt;fue creada por&gt; &lt;Rembrandt van Rijn&gt; .
+
+</code></pre></div></div>
+
+<p>(Observa que, como toda buena oración, estas declaraciones terminan con un punto y final).</p>
+
+<p>En este ejemplo, el sujeto <code class="language-plaintext highlighter-rouge">&lt;La ronda de noche&gt;</code> y el objeto <code class="language-plaintext highlighter-rouge">&lt;Rembrandt van Rijn&gt;</code> pueden ser considerados como dos nodos de un grafo, donde el predicado <code class="language-plaintext highlighter-rouge">&lt;fue creada por&gt;</code> define la arista -o relación- entre ellos. (Técnicamente, <fue creada="" por=""> puede ser tratado en otras consultas como un objeto o un sujeto, pero esta cuestión escapa el alcance de este tutorial).</fue></p>
+
+<p>Una seudobase de datos RDF podría contener declaraciones interrelacionadas entre sí, como las siguientes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+&lt;La ronda de noche&gt; &lt;fue creada por&gt; &lt;Rembrandt van Rijn&gt;.
+&lt;La ronda de noche&gt; &lt;fue creada en&gt; &lt;1642&gt;.
+&lt;La ronda de noche&gt; &lt;utiliza la técnica de&gt; &lt;óleo sobre lienzo&gt;.
+&lt;Rembrandt van Rijn&gt; &lt;nació en&gt; &lt;1606&gt;.
+&lt;Rembrandt van Rijn&gt; &lt;es de nacionalidad&gt; &lt;holandesa&gt;.
+&lt;Johannes Vermeer&gt; &lt;es de nacionalidad&gt; &lt;holandesa&gt;.
+&lt;La tasadora de perlas&gt; &lt;fue creada por&gt; &lt;Johannes Vermeer&gt;.
+&lt;La tasadora de peras&gt; &lt;utiliza la técnica de&gt; &lt;óleo sobre lienzo&gt;.
+...
+</code></pre></div></div>
+
+<p>Si visualizásemos estas declaraciones como nodos y aristas de un grafo o red, la representación sería como sigue:</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-01.png" alt="Visualización en red del seudoRDF mostrado más arriba. Las flechas indican la 'dirección' del predicado. Por ejemplo, que '*La tasadora de perlas* fue creada por Vermeer' y no al revés. Diagrama reconstruido por Nuria Rodríguez Ortega." />
+<figcaption>
+    <p>Visualización en red del seudoRDF mostrado más arriba. Las flechas indican la ‘dirección’ del predicado. Por ejemplo, que ‘<em>La tasadora de perlas</em> fue creada por Vermeer’ y no al revés. Diagrama reconstruido por Nuria Rodríguez Ortega.</p>
+
+</figcaption>
+</figure>
+
+<p>Las tradicionales bases de datos relacionales pueden distribuir atributos sobre obras de arte y artistas en tablas separadas. En las bases de datos RDF u orientadas a grafos, todos estos datos pertenencen a un mismo mismo grafo interconectado, lo que permite a los usuarios una mayor flexibilidad a la hora de decidir cómo quieren interrogar estos recursos.</p>
+
+<h3 id="buscando-rdf-con-sparql">Buscando RDF con SPARQL</h3>
+
+<p>SPARQL nos permite traducir datos en grafo, intensamente enlazados, en datos normalizados en formato tabular, esto es,  distribuidos en filas y columnas, que se pueden abrir en programas como Excel o importar a programas de visualización, tales como <a href="https://plot.ly/">plot.ly</a> o <a href="http://hdlab.stanford.edu/palladio/">Palladio</a>.</p>
+
+<p>Resulta útil pensar las consultas SPARQL como un <a href="https://en.wikipedia.org/wiki/Mad_Libs">Mad Lib</a> -un conjunto de oraciones con espacios en blanco-. La base de datos tomará esta consulta y encontrará cada conjunto de oraciones que encaje correctamente en estos espacios en blanco, devolviéndonos los valores coincidentes como una tabla. Veamos esta consulta SPARQL:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ?pintura
+WHERE {
+	?pintura &lt;utiliza la técnica de&gt; &lt;óleo sobre lienzo&gt; .
+}
+</code></pre></div></div>
+
+<p>En este consulta, <code class="language-plaintext highlighter-rouge">?pintura</code> representa el nodo (o nodos) que la bases de datos nos devolverá. Una vez recibida la consulta, la base de datos buscará todos los valores para <code class="language-plaintext highlighter-rouge">?pintura</code> que adecuadamente complete la declaración RDF <code class="language-plaintext highlighter-rouge">&lt;utiliza la técnica de&gt; &lt;óleo sobre lienzo&gt;</code>.</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-02.png" alt="Visualización de lo que nuestra consulta está buscando. Diagrama reconstruido por Nuria Rodríguez Ortega." />
+<figcaption>
+    <p>Visualización de lo que nuestra consulta está buscando. Diagrama reconstruido por Nuria Rodríguez Ortega.</p>
+
+</figcaption>
+</figure>
+
+<p>Cuando la consulta interroga la base de datos completa, esta busca los sujetos, predicados y objetos que coinciden con esta declaración, exluyendo, al mismo tiempo, el resto de datos.</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-03.png" alt="Visualización de la consulta SPARQL con los elementos mencionados en naranja y los elementos seleccionados (aquellos que nos serán devueltos en los resultados) en rojo. Diagrama reconstruido por Nuria Rodríguez Ortega." />
+<figcaption>
+    <p>Visualización de la consulta SPARQL con los elementos mencionados en naranja y los elementos seleccionados (aquellos que nos serán devueltos en los resultados) en rojo. Diagrama reconstruido por Nuria Rodríguez Ortega.</p>
+
+</figcaption>
+</figure>
+
+<p>Nuestros resultados podrían tener este aspecto:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>pinturas</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>La ronda de noche</td>
+    </tr>
+    <tr>
+      <td>La tasadora de perlas</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ahora bien, lo que hace a RDF y a SPARQL herramientas tan potentes es su habilidad para crear consultas complejas que referencian múltiples variables al mismo tiempo. Por ejemplo, podríamos buscar en nuestra seudobase de datos RDF pinturas creadas por cualquier artista que fuese holandés:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ?artista ?pintura
+WHERE {
+	?artista &lt;es de nacionalidad&gt; &lt;holandesa&gt; .
+	?pintura &lt;fue creada por&gt; ?artista .
+	}
+</code></pre></div></div>
+
+<p>En este ejemplo, hemos introducido una segunda variable: <code class="language-plaintext highlighter-rouge">?artista</code>. La base de datos RDF devolverá todas las combinaciones conincidentes de <code class="language-plaintext highlighter-rouge">?artista</code> y <code class="language-plaintext highlighter-rouge">?pintura</code> que encajen en ambas declaraciones.</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-04.png" alt="Visualización de la consulta SPARQL con los elementos mencionados en naranja y los elementos seleccionados (aquellos que serán recuperados en los resultados en rojo). Diagrama reconstruido por Nuria Rodríguez Ortega." />
+<figcaption>
+    <p>Visualización de la consulta SPARQL con los elementos mencionados en naranja y los elementos seleccionados (aquellos que serán recuperados en los resultados en rojo). Diagrama reconstruido por Nuria Rodríguez Ortega.</p>
+
+</figcaption>
+</figure>
+
+<table>
+  <thead>
+    <tr>
+      <th>artistas</th>
+      <th>pinturas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rembrandt van Rijn</td>
+      <td>La ronda de noche</td>
+    </tr>
+    <tr>
+      <td>Johannes Vermeer</td>
+      <td>La tasadora de perlas</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="uri-y-literales">URI y literales</h3>
+
+<p>Hasta ahora, hemos visto una representación facticia de RDF que utiliza un texto fácil de leer. Sin embargo, RDF se almacena principalmente en formato URI (<em>Uniform Resource Identifiers</em>), que separa las entidades conceptuales de sus etiquetas lingüísticas. (Ten en cuenta que una URL, o <em>Uniform Resource Locator</em>, es una URI accesible desde la web). En RDF real, nuestra declaración original:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;La ronda de noche&gt; &lt;fue creada por&gt; &lt;Rembrandt van  Rijn&gt;.
+</code></pre></div></div>
+
+<p>sería más parecido a lo siguiente:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;http://data.rijksmuseum.nl/item/8909812347&gt; &lt;http://purl.org/dc/terms/creator&gt; &lt;http://dbpedia.org/resource/Rembrandt&gt; .
+</code></pre></div></div>
+
+<p><em>N.B. el Rijksmuseum todavía no ha desarrollado su propio sitio LOD, por lo que en esta consulta la URI responde únicamente a objetivos de demostración.</em></p>
+
+<p>A fin de obtener una versión legible desde el punto de vista humano de la información representada por cada una de estas URI, lo que hacemos realmente es recuperar más declaraciones RDF. Incluso el predicado en esta declaración tiene su propia etiqueta literal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;http://data.rijksmuseum.nl/item/8909812347&gt; &lt;http://purl.org/dc/terms/title&gt; "La ronda de noche".
+&lt;http://purl.dc.terms/creator&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#label&gt; "fue creado por".
+&lt;http://dbpedia.org/resource/Rembrandt&gt; &lt;http://xmlns.com/foaf/0.1/name&gt; "Rembrandt van Rijn".
+</code></pre></div></div>
+
+<p>Como se puede observar, a diferencia de las URI que en esta consulta están enmarcadas por los signos <code class="language-plaintext highlighter-rouge">&lt;&gt;</code>, los <em>objetos</em> son cadenas de texto entrecomilladas. Esto es lo que se conoce como <em>literales</em> (<em>literals</em>). Los literales representan valores, mientras que las URI representan referencias. Por ejemplo, <code class="language-plaintext highlighter-rouge">&lt;http://dbpedia.org/resources/Rembrandt&gt;</code> representa una entidad que puede referenciar (y puede ser referenciada por) muchas otras declaraciones (fechas de nacimiento, discípulos, miembros de la familia, etc.), mientras que la cadena de texto <code class="language-plaintext highlighter-rouge">"Rembrandt van Rijn"</code> solo se representa a sí misma. Otros valores literales en RDF incluyen fechas y números.</p>
+
+<p>Fijémenos ahora en los predicados de estas declaraciones, con nombres de dominio como <code class="language-plaintext highlighter-rouge">purl.org</code>, <code class="language-plaintext highlighter-rouge">w3.org</code> y <code class="language-plaintext highlighter-rouge">xmlns.com</code>. Estos son algunos de los numerosos proveedores de ontologías que ayudan a estandarizar el modo en que describimos relaciones entre bits de información como, “título”, “etiqueta”, “creador” o “nombre”. Cuanto más trabajemos con RDF/LOD, más proveedores de este tipo encontraremos.</p>
+
+<p>Las URI pueden llegar a ser difíciles de manejar cuando se componen consultas SPARQL. Para simplificar este proceso se utilizan los <em>prefijos</em> (<em>prefixes</em>). Los prefijos son atajos que nos liberan de tener que escribir toda la larga cadena de  caracteres que constituye una URI. Por ejemplo, recordemos el predicado para recuperar el título de <em>La ronda de noche</em>, <code class="language-plaintext highlighter-rouge">http://purl.org/dc/terms/title&gt;</code>. Con los siguientes prefijos, solo necesitamos escribir <code class="language-plaintext highlighter-rouge">dct:title</code> cuando queramos utilizar un predicado <code class="language-plaintext highlighter-rouge">purl.org</code>. <code class="language-plaintext highlighter-rouge">dct:</code> representa la cadena completa <code class="language-plaintext highlighter-rouge">http://purl.org.dc/terms,</code> y <code class="language-plaintext highlighter-rouge">'title'</code> simplemente se agrega al final de este enlace.</p>
+
+<p>Por ejemplo, con el prefijo <code class="language-plaintext highlighter-rouge">PREFIX rkm: que representa la cadena completa &lt;http//data.rijksmuseum.nl&gt;</code>, agregado al inicio de nuestra consulta SPARQL, <code class="language-plaintext highlighter-rouge">http://data.rijksmuseum.nl/item/8909812347 &lt;</code> se convierte en <code class="language-plaintext highlighter-rouge">rkm:item/8909812347</code>.</p>
+
+<p>Debemos ser conscientes de que los prefijos se pueden asignar arbitrariamente a cualquier abreviatura que queramos; así, diferentes puntos de entrada (<em>endpoints</em>) pueden utilizar prefijos ligeramente diferentes para el mismo espacio de nombre (<em>namespace</em>) (por ejemplo: <code class="language-plaintext highlighter-rouge">dct vs.</code> <code class="language-plaintext highlighter-rouge">dcterms</code> para <code class="language-plaintext highlighter-rouge">&lt;http://purl.org/dc/terms&gt;</code>).</p>
+
+<h3 id="términos-para-revisar">Términos para revisar</h3>
+
+<ul>
+  <li><strong>SPARQL</strong> - <em>Protocol and RDF Query Language</em> - El lenguaje utilizado para interrogar bases de datos RDF u orientadas a grafos.</li>
+  <li><strong>RDF</strong> - <em>Resource Description Framework</em> - Un método para estructurar datos en forma de grafo o como una red de declaraciones conectadas más que como una serie de tablas.</li>
+  <li><strong>LOD</strong> - <em>Linked Open Data</em> (datos abiertos enlazados) - LOD son datos RDF publicados <em>online</em> en formato URI de modo que los desarrolladores pueden referenciarlos de manera fiable y sin ambigüedad.</li>
+  <li><strong>declaración</strong> - a veces denominada “tripleta”, una declaración RDF es una unidad de conocimiento que comprende sujeto, predicado y objeto.</li>
+  <li><strong>URI</strong> - <em>Uniform Resource Identifier</em> - una cadena de caracteres que identifica un recurso. Las declaraciones RDF utilizan URI para enlazar varios recursos. Una URL, o <em>Uniform Resource Locator</em>, es un tipo de URI que apunta a un determinado recurso en la web.</li>
+  <li><strong>literal</strong> - En las declaraciones RDF, algunos objetos no referencian recursos con una URI sino que vehiculan un valor, que puede ser un texto (<code class="language-plaintext highlighter-rouge">"Rembrandt van Rijn"</code>), un número (<code class="language-plaintext highlighter-rouge">5</code>) o una fecha (<code class="language-plaintext highlighter-rouge">1606-06-15</code>). Estos objetos se conocen como literales.</li>
+  <li><strong>prefijo</strong> - A fin de simplificar las consultas SPARQL, un usuario puede especificar prefijos que funcionan como abreviaturas de las URI completas. Estas abreviaturas, o <strong>QNAmes</strong>, se utilizan también en los espacios de nombre (<em>namespaces</em>) de los documentos XML.</li>
+</ul>
+
+<h2 id="consultas-basadas-en-casos-reales">Consultas basadas en casos reales</h2>
+
+<h3 id="todas-las-declaraciones-para-un-objeto">Todas las declaraciones para un objeto</h3>
+
+<p>Vamos a empezar nuestra primera consulta utilizando el <a href="http://collection.britishmuseum.org/sparql">punto de entrada SPARQL del British Museum</a>. Un punto de entrada SPARQL es una dirección web que acepta consultas SPARQL y devuelve resultados. El punto de entrada del British Museum funciona como muchos otros: cuando accedemos a él a través de un navegador web, encontramos una caja de texto para componer las consultas.</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-05.png" alt="Web del punto de entrada SPARQL del British Museum. Para todas las consultas de este tutorial, hay que asegurarse de haber dejado las casillas 'Include inferred' y 'Expand results over equivalent URIs' sin marcar." />
+<figcaption>
+    <p>Web del punto de entrada SPARQL del British Museum. Para todas las consultas de este tutorial, hay que asegurarse de haber dejado las casillas ‘Include inferred’ y ‘Expand results over equivalent URIs’ sin marcar.</p>
+
+</figcaption>
+</figure>
+
+<p>Cuando empezamos a explorar una nueva base de datos RDF, resulta últil examinar, a modo de ejemplo, las relaciones que emanan de un <a href="http://collection.britishmuseum.org/resource?uri=http://collection.britishmuseum.org/id/object/PPA82633">objeto en concreto</a>.</p>
+
+<p>(Para cada una de las siguientes consultas, clica en el enlace “Run query” situado más abajo para ver los resultados. La puedes ejecutar tal y como está o modificarla antes. En este último caso, recuerda que es necesario dejar sin marcar la casilla “Include inferred” antes de ejecutar la consulta).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ?p ?o
+WHERE {
+	&lt;http://collection.britishmuseum.org/id/object/PPA82633&gt; ?p ?o .
+}
+</code></pre></div></div>
+
+<p><a href="http://collection.britishmuseum.org/sparql?query=SELECT+*%0D%0AWHERE+%7B%0D%0A++%3Chttp%3A%2F%2Fcollection.britishmuseum.org%2Fid%2Fobject%2FPPA82633%3E+%3Fp+%3Fo+.%0D%0A++%7D&amp;_implicit=false&amp;_equivalent=false&amp;_form=%2Fsparql">Run query</a></p>
+
+<p>Con la orden <code class="language-plaintext highlighter-rouge">SELECT ?p ?o</code>, le estamos diciendo a la base de datos que nos devuelva los valores de <code class="language-plaintext highlighter-rouge">?p</code> y <code class="language-plaintext highlighter-rouge">?o</code> descritos en el comando <code class="language-plaintext highlighter-rouge">WHERE {}</code>. Esta consulta devuelve cada declaración para la cual nuestra obra de arte seleccionada, <code class="language-plaintext highlighter-rouge">&lt;http://collection.britishmuseum.org/id/object/PPA82633&gt;</code>, es el sujeto. <code class="language-plaintext highlighter-rouge">?p</code> ocupa la posición central en la declaración RDF en el comando <code class="language-plaintext highlighter-rouge">WHERE {}</code>, por lo que esta devuelve cualquier predicado que coincide con la declaración, mientras que <code class="language-plaintext highlighter-rouge">?o</code>, en la posición final, devuelve todos los objetos. Aunque yo las he nombrado como <code class="language-plaintext highlighter-rouge">?p</code> y <code class="language-plaintext highlighter-rouge">?o</code>, en realidad, tal y como se puede ver en el ejemplo inferior, es posible nombrar estas variables del modo que nosotros queramos. De hecho, será útil darles nombres significativos para las  consultas complejas que siguen a continuación.</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-06.png" alt="Listado inicial de todos los predicados y objetos asociados con una obra de arte en el British Museum." />
+<figcaption>
+    <p>Listado inicial de todos los predicados y objetos asociados con una obra de arte en el British Museum.</p>
+
+</figcaption>
+</figure>
+
+<p>El punto de entrada del Britism Museum formatea la tabla de resultados con enlaces para cada una de las variables, que son, en realidad, nodos RDF, por lo que clicando en cada uno de estos enlaces podemos ver todos los predicados y objetos para cada uno de los nodos seleccionados. Advierte que el British Musuem incluye automáticamente un amplio rango de prefijos SPARQL en sus consultas, por lo que encontraremos numerosos enlaces mostrados en su versión abreviada; si pasamos el ratón sobre ellos, podremos ver las URI sin abreviar.</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-07.png" alt="Visualización del conjunto de nodos recuperados a través de la primera consulta realizada a la base de datos del British Museum. Los elementos de este grafo coloreados en rojo se encuentran también en la tabla de resultados mostrada más arriba. Se han incluido niveles adicionales en la jerarquía para mostrar cómo esta obra en particular se encuentra conectada en el grafo general que constituye la base de datos del BM." />
+<figcaption>
+    <p>Visualización del conjunto de nodos recuperados a través de la primera consulta realizada a la base de datos del British Museum. Los elementos de este grafo coloreados en rojo se encuentran también en la tabla de resultados mostrada más arriba. Se han incluido niveles adicionales en la jerarquía para mostrar cómo esta obra en particular se encuentra conectada en el grafo general que constituye la base de datos del BM.</p>
+
+</figcaption>
+</figure>
+
+<p>Veamos ahora cómo se almacena la información de tipo objeto: busca el predicado <code class="language-plaintext highlighter-rouge">&lt;bmo:PX_object_type&gt;</code> (marcado en la tabla anterior) y clica en el enlace <code class="language-plaintext highlighter-rouge">thes:x8577</code> para acceder al nodo que describe el tipo de objeto “print” (grabado).</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-08.png" alt="Página del recurso `thes:x8577` ('print') en el conjunto de datos enlazados del British Museum." />
+<figcaption>
+    <p>Página del recurso <code class="language-plaintext highlighter-rouge">thes:x8577</code> (‘print’) en el conjunto de datos enlazados del British Museum.</p>
+
+</figcaption>
+</figure>
+
+<p>Como se puede observar, este nodo tiene una etiqueta (<em>label</em>) en texto plano, así como enlaces a nodos del tipo “objetos artísticos” con los que se relaciona en el conjunto de la base de datos.</p>
+
+<h3 id="consultas-complejas">Consultas complejas</h3>
+
+<p>Para encontrar otros objetos del mismo tipo descritos con la etiqueta “print”, podemos invocar esta consulta:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PREFIX bmo: &lt;http://www.researchspace.org/ontology/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+
+SELECT ?object
+WHERE {
+
+  # Busca todos los valores de ?object que tengan un "object type" dado
+  ?object bmo:PX_object_type ?object_type .
+
+  # El "object type" debería tener la etiqueta "print"
+  ?object_type skos:prefLabel "print" .
+}
+LIMIT 10
+</code></pre></div></div>
+
+<p><a href="https://collection.britishmuseum.org/sparql#query=PREFIX+bmo%3A+%3Chttp%3A%2F%2Fwww.researchspace.org%2Fontology%2F%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%0ASELECT+%3Fobject%0AWHERE+%7B%0A%0A++%23+Search+for+all+values+of+%3Fobject+that+have+a+given+%22object+type%22%0A++%3Fobject+bmo%3APX_object_type+%3Fobject_type+.%0A%0A++%23+That+object+type+should+have+the+label+%22print%22%0A++%3Fobject_type+skos%3AprefLabel+%22print%22+.%0A%7D%0ALIMIT+10">Run query</a> / <a href="https://hypothes.is/a/AVLH7aAMvTW_3w8Ly19w">User-generated query</a></p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-09.png" alt="Tabla resultantes de nuestra consulta para todos los objetos del tipo 'print'." />
+<figcaption>
+    <p>Tabla resultantes de nuestra consulta para todos los objetos del tipo ‘print’.</p>
+
+</figcaption>
+</figure>
+
+<p>Recuerda que, dado que <code class="language-plaintext highlighter-rouge">"print"</code> funciona aquí como un literal, lo escribimos entrecomillado en nuestra consulta. Cuando se incluyen literales en las consultas SPARQL, la base de datos solo devuelve coincidencias exactas para estos valores.</p>
+
+<p>Advierte también que, dado que <code class="language-plaintext highlighter-rouge">?object_type</code> no se encuentra presente en el comando <code class="language-plaintext highlighter-rouge">SELECT</code>, este no se mostrará en la tabla de resultados. Sin embargo, resulta esencial estructurar nuestra consulta, porque es esto lo que permite conectar los puntos desde <code class="language-plaintext highlighter-rouge">?object</code> con la etiqueta <code class="language-plaintext highlighter-rouge">"print"</code>.</p>
+
+<h3 id="filter">FILTER</h3>
+
+<p>En los ejemplos anteriores, nuestra consulta SPARQL ha buscado una coincidencia exacta para el tipo de objeto con la etiqueta “print”. Sin embargo, con frecuencia querremos encontrar valores literales que caen dentro de un determinado rango, como son las fechas. Para ello utilizaremos el comando <code class="language-plaintext highlighter-rouge">FILTER</code>.</p>
+
+<p>Para localizar las URI de todos los grabados presentes en la base de datos del British Museum creados entre 1580 y 1600, necesitaremos, en primer lugar, averiguar dónde se almacenan en la base de datos las fechas en relación con los objetos, y entonces añadir referencias a estas fechas en nuestra consulta. De manera similar al procedimiento que hemos seguido de un único enlace para determinar un tipo de objeto, debemos ahora movernos a través de diversos nodos para encontrar las fechas de producción asociadas a un objeto dado:</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-10.png" alt="Visualización de la parte del modelo de datos del British Museum donde las fechas de producción están conectadas a los objetos." />
+<figcaption>
+    <p>Visualización de la parte del modelo de datos del British Museum donde las fechas de producción están conectadas a los objetos.</p>
+
+</figcaption>
+</figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PREFIX bmo: &lt;http://www.researchspace.org/ontology/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX ecrm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+
+# Recupera enlaces de objetos y fechas de creación
+SELECT ?object ?date
+WHERE {
+
+  # Utilizaremos nuestro comando previo para buscar solo
+  # objetos del tipo "print"
+  ?object bmo:PX_object_type ?object_type .
+  ?object_type skos:prefLabel "print" .
+
+  # Necesitamos enlazar diversos nodos para encontrar la
+  # fecha de creación asociada con un objeto
+  ?object ecrm:P108i_was_produced_by ?production .
+  ?production ecrm:P9_consists_of ?date_node .
+  ?date_node ecrm:P4_has_time-span ?timespan .
+  ?timespan ecrm:P82a_begin_of_the_begin ?date .
+
+  # Como se ve, es necesario conectar unos cuantos pocos de puntos
+  # para llegar al nodo de la fecha. Ahora que lo tehemos, podemos
+  # filtrar nuestros resultados. Dado que estamos filtrando por fecha,
+  # debemos agregar la etiqueta ^^xsd:date después de nuestra cadena de fecha.
+  # Esta etiqueta le dice a la base de datos que interprete la cadena
+  # "1580-01-01" como la fecha 1 de enero de 1580.
+
+  FILTER(?date &gt;= "1580-01-01"^^xsd:date &amp;&amp;
+         ?date &lt;= "1600-01-01"^^xsd:date)
+}
+</code></pre></div></div>
+
+<p><a href="https://collection.britishmuseum.org/sparql#query=PREFIX+bmo%3A+%3Chttp%3A%2F%2Fwww.researchspace.org%2Fontology%2F%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+ecrm%3A+%3Chttp%3A%2F%2Fwww.cidoc-crm.org%2Fcidoc-crm%2F%3E%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0A%23+Return+object+links+and+creation+date%0ASELECT+%3Fobject+%3Fdate%0AWHERE+%7B%0A%0A++%23+We'll+use+our+previous+command+to+search+only+for%0A++%23+objects+of+type+%22print%22%0A++%3Fobject+bmo%3APX_object_type+%3Fobject_type+.%0A++%3Fobject_type+skos%3AprefLabel+%22print%22+.%0A%0A++%23+We+need+to+link+though+several+nodes+to+find+the%0A++%23+creation+date+associated+with+an+object%0A++%3Fobject+ecrm%3AP108i_was_produced_by+%3Fproduction+.%0A++%3Fproduction+ecrm%3AP9_consists_of+%3Fdate_node+.%0A++%3Fdate_node+ecrm%3AP4_has_time-span+%3Ftimespan+.%0A++%3Ftimespan+ecrm%3AP82a_begin_of_the_begin+%3Fdate+.%0A%0A++%23+As+you+can+see%2C+we+need+to+connect+quite+a+few+dots%0A++%23+to+get+to+the+date+node!+Now+that+we+have+it%2C+we+can%0A++%23+filter+our+results.+Because+we+are+filtering+by+date%2C%0A++%23+we+must+attach+the+tag+%5E%5Exsd%3Adate+after+our+date+strings.%0A++%23+This+tag+tells+the+database+to+interpret+the+string%0A++%23+%221580-01-01%22+as+the+date+1+January+1580.%0A%0A++FILTER(%3Fdate+%3E%3D+%221580-01-01%22%5E%5Exsd%3Adate+%26%26%0A+++++++++%3Fdate+%3C%3D+%221600-01-01%22%5E%5Exsd%3Adate)%0A%7D">Run query</a></p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-11.png" alt="Todos los grabados del British Museum realizados entre 1580-1600." />
+<figcaption>
+    <p>Todos los grabados del British Museum realizados entre 1580-1600.</p>
+
+</figcaption>
+</figure>
+
+<h3 id="agregación">Agregación</h3>
+
+<p>Hasta ahora, solo hemos utilizado el comando <code class="language-plaintext highlighter-rouge">SELECT</code> para recuperar una tabla de objetos. Sin embargo, SPARQL nos permite realizar análisis muchos más avanzados, como agrupaciones, cálculos y clasificaciones.</p>
+
+<p>Pongamos por caso que estuviésemos interesados en examinar los objetos realizados entre 1580 y 1600, pero que asimismo quisiésemos conocer cuántos objetos de cada tipo tiene el British Museum en su colección. En vez de limitar nuestros resultados a los objetos del tipo “print”, en este caso utilizaríamos el operador <code class="language-plaintext highlighter-rouge">COUNT</code> para sumar los resultados de nuestra búsqueda en función del tipo al que pertenezcan.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PREFIX bmo: &lt;http://www.researchspace.org/ontology/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX ecrm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+
+SELECT ?type (COUNT(?type) as ?n)
+WHERE {
+  # Es necesario que indiquemos la variable ?object_type,
+  # sin embargo, ahora no es necesario que esta coincida con el valor "print"
+
+  ?object bmo:PX_object_type ?object_type .
+  ?object_type skos:prefLabel ?type .
+
+  # De nuevo, filtraremos por fecha
+  ?object ecrm:P108i_was_produced_by ?production .
+  ?production ecrm:P9_consists_of ?date_node .
+  ?date_node ecrm:P4_has_time-span ?timespan .
+  ?timespan ecrm:P82a_begin_of_the_begin ?date .
+  FILTER(?date &gt;= "1580-01-01"^^xsd:date &amp;&amp;
+         ?date &lt;= "1600-01-01"^^xsd:date)
+}
+# El comando GROUP BY designa la variable que se sumará,
+# y el comando ORDER BY DESC() clasifica los resultados
+# en orden descedente.
+
+GROUP BY ?type
+ORDER BY DESC(?n)
+</code></pre></div></div>
+
+<p><a href="https://collection.britishmuseum.org/sparql#query=PREFIX+bmo%3A+%3Chttp%3A%2F%2Fwww.researchspace.org%2Fontology%2F%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+ecrm%3A+%3Chttp%3A%2F%2Fwww.cidoc-crm.org%2Fcidoc-crm%2F%3E%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT+%3Ftype+(COUNT(%3Ftype)+as+%3Fn)%0AWHERE+%7B%0A++%23+We+still+need+to+indicate+the+%3Fobject_type+variable%2C%0A++%23+however+we+will+not+require+it+to+match+%22print%22+this+time%0A%0A++%3Fobject+bmo%3APX_object_type+%3Fobject_type+.%0A++%3Fobject_type+skos%3AprefLabel+%3Ftype+.%0A%0A++%23+Once+again%2C+we+will+also+filter+by+date%0A++%3Fobject+ecrm%3AP108i_was_produced_by+%3Fproduction+.%0A++%3Fproduction+ecrm%3AP9_consists_of+%3Fdate_node+.%0A++%3Fdate_node+ecrm%3AP4_has_time-span+%3Ftimespan+.%0A++%3Ftimespan+ecrm%3AP82a_begin_of_the_begin+%3Fdate+.%0A++FILTER(%3Fdate+%3E%3D+%221580-01-01%22%5E%5Exsd%3Adate+%26%26%0A+++++++++%3Fdate+%3C%3D+%221600-01-01%22%5E%5Exsd%3Adate)%0A%7D%0A%23+The+GROUP+BY+command+designates+the+variable+to+tally+by%2C%0A%23+and+the+ORDER+BY+DESC()+command+sorts+the+results+by%0A%23+descending+number.%0AGROUP+BY+%3Ftype%0AORDER+BY+DESC(%3Fn)">Run query</a></p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-12.png" alt="Recuento de los objetos producidos entre 1580 y 1600 según el tipo al que pertenecen." />
+<figcaption>
+    <p>Recuento de los objetos producidos entre 1580 y 1600 según el tipo al que pertenecen.</p>
+
+</figcaption>
+</figure>
+
+<h3 id="enlazando-múltiples-puntos-de-entrada-sparql">Enlazando múltiples puntos de entrada SPARQL</h3>
+
+<div class="alert alert-warning">2018-06-13: Desafortunadamente, Europeana ha eliminado la opción de enlazar puntos de entrada externos por medio de consultas `SERVICE`, y, en consecuencia, esta sección ha dejado de funcionar. Mantenemos el texto que sigue porque creemos que puede tener valor como referencia y porque esperamos que el servicio de Europeana vuelva a estar operativo en el futuro.</div>
+
+<p>Hasta ahora, hemos construido consultas que buscan patrones en un único conjunto de datos. Sin embargo, el escenario ideal al que aspiran los partidarios de LOD viene dado por la posibilidad de enlazar múltiples bases de datos, lo que permitirá realizar consultas mucho más complejas al estar estas basadas en el conocimiento distribuido que es posible extraer de diversos espacios web. No obstante, esto resulta más fácil de decir que de hacer, y muchos puntos de entrada (incluido el del British Museum) todavía no referencian recursos de autoridad externos.</p>
+
+<p>Un punto de entrada que sí lo hace es el de <a href="http://sparql.europeana.eu/">Europeana</a>. Europeana ha creado enlaces entre los objetos de sus bases de datos y los registros de personas en <a href="http://wiki.dbpedia.org/">DBPedia</a> y <a href="https://viaf.org/">VIAF</a>, los registros de lugares en <a href="http://sws.geonames.org/">GeoNames</a>, y los conceptos resgistrados el <em>Tesauro de Arte y Arquitectura</em> (AAT) del Getty Research Institute. SPARQL nos permite insertar declaraciones <code class="language-plaintext highlighter-rouge">SERVICE</code> que ordenan a la base de datos “llamar a un amigo” y ejecutar una porción de la consulta en una base de datos externa, utilizando estos resultados para completar la consulta en la base de datos local. Si bien esta lección no se dentendrá en los modelos de datos de Europeana y DBPedia en profundidad, la siguiente consulta nos permite ver cómo funciona la declaración <code class="language-plaintext highlighter-rouge">SELECT</code>. Cada uno de los lectores puede ejecutarla por sí mismo copiando y pegando el texto de la consulta en el punto de entrada de <a href="http://sparql.europeana.eu">Europeana</a>. (A fin de que la consulta funcione, en el punto de entrada de Europeana se debe configurar el menú “Sponging” para “Retrieve remote RDF data for all missing source graphs”).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PREFIX ore:    &lt;http://www.openarchives.org/ore/terms/&gt;
+PREFIX edm:    &lt;http://www.europeana.eu/schemas/edm/&gt;
+PREFIX rdf:    &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX dbo:    &lt;http://dbpedia.org/ontology/&gt;
+PREFIX dbr:    &lt;http://dbpedia.org/resource/&gt;
+PREFIX rdaGr2: &lt;http://rdvocab.info/ElementsGr2/&gt;
+
+# Encuentra todos los ?object relacionados por alguna ?property con un ?agent nacido en una
+# ?dutch_city
+SELECT ?object ?property ?agent ?dutch_city
+WHERE {
+    ?proxy ?property ?agent .
+    ?proxy ore:proxyFor ?object .
+
+    ?agent rdf:type edm:Agent .
+    ?agent rdaGr2:placeOfBirth ?dutch_city .
+
+    # En DBPedia, ?dutch_city está definida por pertenecer al país "Netherlands"
+    # La declaración SERVICE pregunta a
+    # http://dbpdeia.org/sparql qué ciudades pertenecen al país
+    # "Netherlands". La respuesta obtenida de esta subconsulta se utilizará para
+    # completar nuestra consulta originaria sobre los objetos
+    # presentes en la base de datos de Europeana
+
+    SERVICE &lt;http://dbpedia.org/sparql&gt; {
+        ?dutch_city dbo:country dbr:Netherlands .
+   }
+}
+# Potencialmente, esta consulta puede devolvernos un elevado número de objetos, por lo que vamos
+# a solicitar solo los cien primeros a fin de agilizar la búsqueda
+LIMIT 100
+</code></pre></div></div>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-13.png" alt="Visualización de la secuencia de la consulta de la solicitud SPARQL definida más arriba." />
+<figcaption>
+    <p>Visualización de la secuencia de la consulta de la solicitud SPARQL definida más arriba.</p>
+
+</figcaption>
+</figure>
+
+<p>Una consulta interconectada como esta significa que podemos interrogar a Europeana sobre los objetos que cuentan con información geográfica (¿cuáles son las ciudades de Holanda?) sin necesidad de que Europeana tenga que almacenar y mantener esta información por sí misma. Es de esperar que, en el futuro, cada vez mayor cantidad de información LOD de carácter cultural esté enlazada con bases de datos autorizadas, como el ULAN (<em>Union List of Artist Names</em>) del <a href="https://www.getty.edu/research/">Getty Research Institute</a>. Esto permitirá, por ejemplo, que el British Museum “externalice” la información biográfica acudiendo a los recursos más completos del GRI.</p>
+
+<h2 id="trabajando-con-resultados-sparql">Trabajando con resultados SPARQL</h2>
+
+<p>Una vez que hemos construido y ejecutado una consulta, ¿qué hacemos ahora con estos resultados? Muchos puntos de entrada, como el del British Museum, ofrecen un navegador web que devuelve resultados legibles para los humanos. Sin embargo, el objetivo de los puntos de entrada SPARQL (y para eso están diseñados) es devolver datos estructurados para ser utilizados por otros programas.</p>
+
+<h3 id="exportar-resultados-en-formato-csv">Exportar resultados en formato CSV</h3>
+
+<p>En la esquina superior derecha de la página de resultados del punto de entrada del BM, se encuentran enlaces para descargas en formato JSON y XML. Otros puntos de entrada también pueden ofrecer la opción de descargar los resultados en CSV/TSV; sin embargo, esta opción no siempre se encuentra disponible. Las salidas JSON y XML desde un punto de entrada SPARQL contienen no solo los valores devueltos por la declaración <code class="language-plaintext highlighter-rouge">SELECT</code>, sino también metadatos adicionales sobre tipos de variables e idiomas.</p>
+
+<p>El procesamiento de la versión XML de los resultados se puede realizar con herramientas tales como Beautiful Soup (véase la lección correspondiente en <em><a href="https://programminghistorian.org/lessons/intro-to-beautiful-soup.html">The Programming Historian</a></em> u <a href="http://openrefine.org/">OpenRefine</a>). Para convertir rápidamente los resultados JSON desde un punto de entrada SPARQL en un formato tabular, yo recomiendo la utilidad de la línea de comando gratuita <a href="https://stedolan.github.io/jq/download/">jg</a>. (Para un tutorial sobre cómo utilizar programas de línea de comando, véase <a href="https://programminghistorian.org/lessons/intro-to-bash.html">“Introduction to the Bash Command Line”</a>). La siguiente consulta convertirá el formato especial JSON RDF en un fichero CSV, que podremos cargar en nuestro programa preferido para su posterior análisis y visualización:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jq -r '.head.vars as $fields | ($fields | @csv), (.results.bindings[] | [.[$fields[]].value] | @csv)' sparql.json &gt; sparql.csv
+</code></pre></div></div>
+
+<h3 id="exportar-resultados-a-palladio">Exportar resultados a Palladio</h3>
+
+<p>La popular plataforma de análisis de datos <a href="http://hdlab.stanford.edu/palladio/">Palladio</a> puede cargar directamente datos desde un punto de entrada SPARQL. En la parte inferior de la pantalla “Create a new project”, el enlace “Load data from a SPARQL endpoint (beta)” nos proporciona un campo para escribir la dirección del punto de entrada y una caja para la consulta propiamente dicha. Dependiendo del punto de entrada, podemos necesitar especifidar el tipo de fichero de salida en la dirección del punto de entrada; por ejemplo, para cargar datos desde el punto de entrada del British Museum, debemos utilizar la dirección <code class="language-plaintext highlighter-rouge">http://collection.britishmuseum.org/sparql.json</code>. Trata de pegar la consulta de agregación que utilizamos más arriba para el recuento de obras de arte según su tipología y clica en “Run query”. Palladio debería mostrar una tabla de previsualización como esta:</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-14.png" alt="Interfaz de Palladio para las consultas SPARQL." />
+<figcaption>
+    <p>Interfaz de Palladio para las consultas SPARQL.</p>
+
+</figcaption>
+</figure>
+
+<p>Después de previsualizar los datos devueltos por el punto de entrada, clica en en botón “Load data” en la parte inferior de la pantalla para empezar a trabajar con ellos. (Véase esta lección de <em><a href="https://programminghistorian.org/es/lecciones/creando-diagramas-de-redes-desde-fuentes-historicas">Programming Historian</a></em> para un tutorial más detallado sobre Palladio). <a href="https://collection.britishmuseum.org/sparql?query=%23+Return+object+links+and+creation+date%0D%0APREFIX+bmo%3A+%3Chttp%3A%2F%2Fcollection.britishmuseum.org%2Fid%2Fontology%2F%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0APREFIX+ecrm%3A+%3Chttp%3A%2F%2Ferlangen-crm.org%2Fcurrent%2F%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0ASELECT+DISTINCT+%3Fobject+%3Fdate+%3Fimage%0D%0AWHERE+%7B%0D%0A%0D%0A++%23+We%27ll+use+our+previous+command+to+search+only+for+objects+of+type+%22print%22%0D%0A++%3Fobject+bmo%3APX_object_type+%3Fobject_type+.%0D%0A++%3Fobject_type+skos%3AprefLabel+%22print%22+.%0D%0A%0D%0A++%23+We+need+to+link+though+several+nodes+to+find+the+creation+date+associated%0D%0A++%23+with+an+object%0D%0A++%3Fobject+ecrm%3AP108i_was_produced_by+%3Fproduction+.%0D%0A++%3Fproduction+ecrm%3AP9_consists_of+%3Fdate_node+.%0D%0A++%3Fdate_node+ecrm%3AP4_has_time-span+%3Ftimespan+.%0D%0A++%3Ftimespan+ecrm%3AP82a_begin_of_the_begin+%3Fdate+.%0D%0A%0D%0A++%23+Yes%2C+we+need+to+connect+quite+a+few+dots+to+get+to+the+date+node%21+Now+that%0D%0A++%23+we+have+it%2C+we+can+filter+our+results.+Because+we+are+filtering+a+date%2C+we%0D%0A++%23+must+attach+the+xsd%3Adate+tag+to+our+date+strings+so+that+SPARQL+knows+how+to%0D%0A++%23+parse+them.%0D%0A%0D%0A++FILTER%28%3Fdate+%3E%3D+%221580-01-01%22%5E%5Exsd%3Adate+%26%26+%3Fdate+%3C%3D+%221600-01-01%22%5E%5Exsd%3Adate%29%0D%0A++%0D%0A++%3Fobject+bmo%3APX_has_main_representation+%3Fimage+.%0D%0A%7D%0D%0ALIMIT+100#query=%23+Return+object+links+and+creation+date%0APREFIX+bmo%3A+%3Chttp%3A%2F%2Fwww.researchspace.org%2Fontology%2F%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX+ecrm%3A+%3Chttp%3A%2F%2Fwww.cidoc-crm.org%2Fcidoc-crm%2F%3E%0ASELECT+DISTINCT+%3Fobject+%3Fdate+%3Fimage%0AWHERE+%7B%0A++%0A++%23+We'll+use+our+previous+command+to+search+only+for+objects+of+type+%22print%22%0A++%3Fobject+bmo%3APX_object_type+%3Fobject_type+.%0A++%3Fobject_type+skos%3AprefLabel+%22print%22+.%0A%0A++%23+We+need+to+link+though+several+nodes+to+find+the+creation+date+associated%0A++%23+with+an+object%0A++%3Fobject+ecrm%3AP108i_was_produced_by+%3Fproduction+.%0A++%3Fproduction+ecrm%3AP9_consists_of+%3Fdate_node+.%0A++%3Fdate_node+ecrm%3AP4_has_time-span+%3Ftimespan+.%0A++%3Ftimespan+ecrm%3AP82a_begin_of_the_begin+%3Fdate+.%0A%0A++%0A++%23+Yes%2C+we+need+to+connect+quite+a+few+dots+to+get+to+the+date+node!+Now+that%0A++%23+we+have+it%2C+we+can+filter+our+results.+Because+we+are+filtering+a+date%2C+we%0A++%23+must+attach+the+xsd%3Adate+tag+to+our+date+strings+so+that+SPARQL+knows+how+to%0A++%23+parse+them.%0A%0A++FILTER(%3Fdate+%3E%3D+%221580-01-01%22%5E%5Exsd%3Adate+%26%26+%3Fdate+%3C%3D+%221600-01-01%22%5E%5Exsd%3Adate)%0A++%0A++%3Fobject+bmo%3APX_has_main_representation+%3Fimage+.%0A%7D%0ALIMIT+100">Por ejemplo, podríamos realizar una consulta que devuelva enlaces a las imágenes de los grabados realizados entre 1580 y 1600</a>, y representar estos datos como una galería de imágenes clasificadas por fecha:</p>
+
+<figure>
+    <img src="images/graph-databases-and-SPARQL/sparql-lod-15.png" alt="Galería de imágenes con línea de tiempo de sus fechas de creación generada utilizando Palladio." />
+<figcaption>
+    <p>Galería de imágenes con línea de tiempo de sus fechas de creación generada utilizando Palladio.</p>
+
+</figcaption>
+</figure>
+
+<p>Adviértase que Palladio está diseñado para funcionar con un conjunto relativamente pequeño de datos (del orden de cientos de miles de filas, no decenas de miles), por lo que pudiera ser necesario utilizar el comando LIMIT, que ya empleamos anteriormente en la consulta en el punto de entrada de Europeana, para reducir el número de resultados obtenidos y así evitar que el programa se quede bloqueado.</p>
+
+<h2 id="lecturas-adicionales">Lecturas adicionales</h2>
+
+<p>En este tutorial hemos examinado la estructura de LOD y hemos realizado un ejemplo real de cómo escribir consultas SPARQL para la base de datos del British Museum. También hemos aprendido cómo utilizar comandos de agregación en SPARQL para agrupar, contar y clasificar resultados más allá de la simple operación de listarlos.</p>
+
+<p>Con todo, existen otras muchas maneras de modificar estas consultas, tales como introducir operadores <code class="language-plaintext highlighter-rouge">OR</code> y <code class="language-plaintext highlighter-rouge">UNION</code> (para describir consultas condicionales) y declaraciones <code class="language-plaintext highlighter-rouge">CONSTRUCT</code> (para inferir nuevos enlaces basados en reglas definidas), búsqueda de texto completo o llevar a cabo otras operaciones matemáticas más complejas que la del recuento. Para un informe más detallado de los comandos disponibles en SPARQL, véanse estos enlaces:</p>
+
+<ul>
+  <li><a href="https://en.wikibooks.org/wiki/XQuery/SPARQL_Tutorial">Wikibooks SPARQL tutorial</a></li>
+  <li><a href="https://www.w3.org/TR/sparql11-overview/">Full W3C Overview of SPARQL</a></li>
+</ul>
+
+<p>Tanto la web de Europeana como la del Getty Vocabularies ofrecen ejemplos extensos y bastante complejos de consultas que pueden constituir buenos recursos para comprender cómo buscar en sus datos:</p>
+
+<ul>
+  <li><a href="http://labs.europeana.eu/api/linked-open-data-SPARQL-endpoint">Europeana SPARQL how-to</a></li>
+  <li><a href="http://vocab.getty.edu/queries#Finding_Subjects">Getty Vocabularies Example Queries</a></li>
+</ul>
+
+  </div>
+
+ 
+
+
+
+  
+
+
+
+<div class="author-info">
+    <h5 class="author-name">Acerca del autor</h5>
+</div>
+<div class="author-description">
+  
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+         <p>Matthew Lincoln es desarrollador de humanidades digitales en la Universidad Carnegie Mellon e historiador del arte de la Europa moderna.
+ <a href="https://orcid.org/0000-0002-4387-3384"><img src="images/ORCIDiD_iconvector.svg" alt="ORCID id icon" width="16px" style="max-width:16px;display:inline;"></a><p>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+
+</div>
+
+
+  <div class="citation-info">
+    
+    
+    
+
+    <h5 class="suggested-citation-header">Cita sugerida</h5>
+    <div class="suggested-citation-text">
+      <p class="suggested-citation-text">
+
+
+
+Matthew Lincoln,
+        "Uso de SPARQL para acceder a datos abiertos enlazados",
+        traducido por
+        Nuria Rodríguez Ortega,
+        <em>The Programming Historian en español</em> 1 (2017),
+        https://doi.org/10.46430/phes0027.</p>
+    </div>
+  </div>
+
+  
+  
+<div class="alert alert-success hide-screen"><h2 id="haz-una-donación">¡Haz una donación!</h2>
+<p>Producir buenos tutoriales de acceso abierto cuesta dinero. Únete al creciente número de personas que <a href="https://www.patreon.com/theprogramminghistorian">apoya a <em>The Programming Historian</em></a> para que podamos continuar compartiendo conocimientos de forma gratuita.</p>
+</div>
+
+  
+
+</div>
+</div>
+
+<script>
+  (function () {
+    var githubAPI = "https://api.github.com/repos/programminghistorian/jekyll/commits";
+    $.getJSON(githubAPI, {
+      path: "es/lecciones/retirada/sparql-datos-abiertos-enlazados.md"
+    })
+      .done(function (data) {
+        var date = new Date(data[0].commit.author.date);
+        var formatted_date = new Intl.DateTimeFormat('sv').format(date)
+        $("#modified-date").text(formatted_date);
+      });
+  })();
+</script>
+
+      
+
+<footer role="contentinfo" style="background-color: #535D7F">
+
+
+<div class="d-flex flex-wrap justify-content-center footer-head">
+  <p><em>The Programming Historian en español</em> (ISSN: 2517-5769) se publica con una licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC-BY</a>.</p>
+<p>Este proyecto es administrado por ProgHist Limited, con número de compañía <a href="https://beta.companieshouse.gov.uk/company/12192946">12192946</a>.</p>
+
+</div>
+
+<div class="d-flex flex-wrap justify-content-around">
+  <div class="mx-4">
+     
+      <p>
+        <a href="https://programminghistorian.org/">ISSN 2397-2068 (inglés)</a>
+      </p>
+        
+    <strong>
+      <p>
+        <a href="https://programminghistorian.org/es">ISSN 2517-5769 (español)</a>
+      </p>
+      </strong>  
+      <p>
+        <a href="https://programminghistorian.org/fr">ISSN 2631-9462 (francés)</a>
+      </p>
+        
+      <p>
+        <a href="https://programminghistorian.org/pt">ISSN 2753-9296 (portugués)</a>
+      </p>
+       
+  </div>
+  <div class="mx-4">
+    <i class="fab fa-github" aria-hidden="true"></i>
+    <a href="https://github.com/programminghistorian/jekyll">Alojado en GitHub</a>
+  </div>
+
+  <div class="mx-4">
+  <i class="fa fa-calendar" aria-hidden="true"></i>
+    <a href="https://github.com/programminghistorian/jekyll/commits/gh-pages">Última actualización el 17 February 2021</a>
+  </div>
+ 
+ <div class="mx-4">
+  <i class="fas fa-rss" aria-hidden="true"></i>
+  <a href="https://programminghistorian.org/feed.xml">Suscripción a RSS</a>
+  </div>
+ 
+  <div class="mx-4">
+  <i class="fa fa-history" aria-hidden="true"></i>
+  <a href="https://github.com/programminghistorian/jekyll/commits/gh-pages/es/lecciones/retirada/sparql-datos-abiertos-enlazados.md">Versiones anteriores</a>
+  </div>
+
+  <div class="mx-4">
+  <i class="fa fa-bolt" aria-hidden="true"></i>
+  <a href="https://programminghistorian.org/es/retroalimentacion">Envíanos tus comentarios</a>
+  </div>
+
+  <div class="mx-4">
+  <i class="fa fa-chain-broken" aria-hidden="true"></i>
+  <a href="https://programminghistorian.org/es/politica-retirada-lecciones">Política de retirada de lecciones</a>
+  </div>
+ 
+  <div class="mx-4">
+  <i class="fa fa-globe" aria-hidden="true"></i>
+  <a href="https://programminghistorian.org/translation-concordance">Concordancia de traducción</a>
+  </div>
+ 
+  </div>
+
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2752866-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+    </main>
+  </body>
+
+</html>
