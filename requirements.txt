@@ -1,0 +1,9 @@
+future
+rdflib
+rdflib-jsonld
+lxml
+html5lib
+scikit-learn
+seaborn
+pydotplus
+graphviz
