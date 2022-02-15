@@ -12,6 +12,7 @@ from urllib.request import Request, urlopen
 from urllib.parse import quote_plus, urlencode
 from urllib.error import HTTPError
 
+import ssl
 import json
 import sys
 
@@ -32,7 +33,11 @@ def send_query(query, endpoint):
                 headers={'content-type': 'application/x-www-form-urlencoded',
                          'accept': FORMATS},
                 method='POST')
-    res = urlopen(r)
+    context = ssl.create_default_context()
+    context.check_hostname = False
+    context.verify_mode = ssl.CERT_NONE
+
+    res = urlopen(r, context=context)
     data = res.read().decode('utf-8')
     if res.getcode() == 200:
         try:
