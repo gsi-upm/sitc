@@ -37,7 +37,7 @@ def send_query(query, endpoint):
     context.check_hostname = False
     context.verify_mode = ssl.CERT_NONE
 
-    res = urlopen(r, context=context)
+    res = urlopen(r, context=context, timeout=2)
     data = res.read().decode('utf-8')
     if res.getcode() == 200:
         try:
