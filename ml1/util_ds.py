@@ -47,7 +47,7 @@ def get_code(tree, feature_names, target_names,
 
     recurse(left, right, threshold, features, 0, 0)
 
-# Taken from http://scikit-learn.org/stable/auto_examples/tree/plot_iris.html#example-tree-plot-iris-py
+# Taken from https://scikit-learn.org/stable/auto_examples/tree/plot_iris_dtc.html
 import numpy as np
 import matplotlib.pyplot as plt
 
