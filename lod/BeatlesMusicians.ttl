@@ -1,0 +1,4352 @@
+@prefix s:     <http://learningsparql.com/ns/schema/> .
+@prefix t:     <http://learningsparql.com/ns/title/> .
+@prefix i:     <http://learningsparql.com/ns/instrument/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix m:     <http://learningsparql.com/ns/musician/> .
+
+m:RaymondBrown  a   s:Musician ;
+        rdfs:label  "Raymond Brown" .
+
+t:BesameMucho  a        s:Song ;
+        rdfs:label      "Besame Mucho" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:PeteBest ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+t:LendMeYourComb  a     s:Song ;
+        rdfs:label      "Lend Me Your Comb" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+m:KeithMoon  a      s:Musician ;
+        rdfs:label  "Keith Moon" .
+
+t:TheSaints  a          s:Song ;
+        rdfs:label      "The Saints" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:PeteBest ;
+        i:leadguitar    m:TonySheridan , m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:TonySheridan .
+
+<http://learningsparql.com/ns/title/Maxwell%26%238217%3BsSilverHammer>
+        a                  s:Song ;
+        rdfs:label         "Maxwell&#8217;s Silver Hammer" ;
+        i:Hammondorgan     m:GeorgeMartin ;
+        i:Moogsynthesiser  m:PaulMcCartney ;
+        i:anvil            m:RingoStarr ;
+        i:backingvocals    m:PaulMcCartney , m:RingoStarr , m:GeorgeHarrison ;
+        i:bass             m:GeorgeHarrison ;
+        i:drums            m:RingoStarr ;
+        i:guitar           m:PaulMcCartney ;
+        i:leadguitar       m:GeorgeHarrison ;
+        i:piano            m:PaulMcCartney ;
+        i:vocals           m:PaulMcCartney .
+
+i:electricspinetBaldwinharpsichord
+        a           s:Instrument ;
+        rdfs:label  "electric spinet Baldwin harpsichord" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmHappyJustToDanceWithYou>
+        a                s:Song ;
+        rdfs:label       "I&#8217;m Happy Just To Dance With You" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:rhythmguitar   m:GeorgeHarrison , m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+m:DennisMcConnell  a  s:Musician ;
+        rdfs:label  "Dennis McConnell" .
+
+m:JackEllory  a     s:Musician ;
+        rdfs:label  "Jack Ellory" .
+
+t:LetItBe  a              s:Song ;
+        rdfs:label        "Let It Be" ;
+        i:backingvocals   m:JohnLennon , m:LindaMcCartney , m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bassguitar      m:PaulMcCartney ;
+        i:cello           m:Uncredited ;
+        i:drums           m:RingoStarr ;
+        i:electricpiano   m:BillyPreston ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:maracas         m:PaulMcCartney ;
+        i:organ           m:BillyPreston ;
+        i:piano           m:PaulMcCartney ;
+        i:tenorsaxophone  m:Uncredited ;
+        i:twotrombones    m:Uncredited ;
+        i:twotrumpets     m:Uncredited ;
+        i:vocals          m:PaulMcCartney .
+
+<http://learningsparql.com/ns/title/Octopus%26%238217%3BsGarden>
+        a                s:Song ;
+        rdfs:label       "Octopus&#8217;s Garden" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:effects        m:RingoStarr ;
+        i:guitar         m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:percussion     m:RingoStarr ;
+        i:piano          m:PaulMcCartney ;
+        i:synthesiser    m:GeorgeHarrison ;
+        i:vocals         m:RingoStarr .
+
+t:IGotAWoman  a         s:Song ;
+        rdfs:label      "I Got A Woman" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+i:harmonyvocals  a  s:Instrument ;
+        rdfs:label  "harmony vocals" .
+
+i:acousticrhythmguitar
+        a           s:Instrument ;
+        rdfs:label  "acoustic rhythm guitar" .
+
+t:TicketToRide  a                   s:Song ;
+        rdfs:label                  "Ticket To Ride" ;
+        i:bass                      m:PaulMcCartney ;
+        i:double-trackedleadvocals  m:JohnLennon ;
+        i:drums                     m:RingoStarr ;
+        i:handclaps                 m:RingoStarr ;
+        i:harmonyvocals             m:PaulMcCartney ;
+        i:leadguitar                m:PaulMcCartney ;
+        i:rhythmguitar              m:GeorgeHarrison , m:JohnLennon ;
+        i:tambourine                m:RingoStarr .
+
+t:Ob-La-DiOb-La-Da  a      s:Song ;
+        rdfs:label         "Ob-La-Di, Ob-La-Da" ;
+        i:acousticguitar   m:GeorgeHarrison ;
+        i:backingvocals    m:JohnLennon , m:GeorgeHarrison ;
+        i:bass             m:PaulMcCartney ;
+        i:bongo            m:RingoStarr ;
+        i:drums            m:RingoStarr ;
+        i:handclaps        m:JohnLennon , m:PaulMcCartney , m:GeorgeHarrison , m:RingoStarr ;
+        i:percussion       m:RingoStarr ;
+        i:piano            m:JohnLennon ;
+        i:threesaxophones  m:Uncredited ;
+        i:vocals           m:PaulMcCartney .
+
+i:Moogsynthesiser  a  s:Instrument ;
+        rdfs:label  "Moog synthesiser" .
+
+i:fingerclicks  a   s:Instrument ;
+        rdfs:label  "finger clicks" .
+
+m:FreddyClayton  a  s:Musician ;
+        rdfs:label  "Freddy Clayton" .
+
+m:JohnLee  a        s:Musician ;
+        rdfs:label  "John Lee" .
+
+m:DennisVigay  a    s:Musician ;
+        rdfs:label  "Dennis Vigay" .
+
+t:MemphisTennessee  a   s:Song ;
+        rdfs:label      "Memphis, Tennessee" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+t:OldBrownShoe  a        s:Song ;
+        rdfs:label       "Old Brown Shoe" ;
+        i:backingvocals  m:JohnLennon , m:PaulMcCartney ;
+        i:bass           m:GeorgeHarrison ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:GeorgeHarrison , m:PaulMcCartney ;
+        i:organ          m:GeorgeHarrison ;
+        i:piano          m:PaulMcCartney ;
+        i:vocals         m:GeorgeHarrison .
+
+t:GoodNight  a           s:Song ;
+        rdfs:label       "Good Night" ;
+        i:12violins      m:Uncredited ;
+        i:backingvocals  m:MikeRedway , m:PatWhitmore , m:FredLucas , m:ValStockwell , m:IreneKing , m:IngridThomas , m:KenBarrie , m:RossGilmour ;
+        i:celesta        m:GeorgeMartin ;
+        i:clarinet       m:Uncredited ;
+        i:doublebass     m:Uncredited ;
+        i:harp           m:Uncredited ;
+        i:horn           m:Uncredited ;
+        i:threecellos    m:Uncredited ;
+        i:threeflutes    m:Uncredited ;
+        i:threeviolas    m:Uncredited ;
+        i:vibraphone     m:Uncredited ;
+        i:vocals         m:RingoStarr .
+
+i:twoclarinets  a   s:Instrument ;
+        rdfs:label  "two clarinets" .
+
+t:ThingsWeSaidToday  a          s:Song ;
+        rdfs:label              "Things We Said Today" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:piano                 m:JohnLennon ;
+        i:tambourine            m:RingoStarr ;
+        i:vocals                m:PaulMcCartney .
+
+m:Uncredited  a     s:Musician ;
+        rdfs:label  "Uncredited" .
+
+m:JohnLennon  a     s:Musician ;
+        rdfs:label  "John Lennon" .
+
+t:HallelujahILoveHerSo
+        a           s:Song ;
+        rdfs:label  "Hallelujah, I Love Her So" ;
+        i:bass      m:StuartSutcliffe ;
+        i:guitar    m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:vocals    m:PaulMcCartney .
+
+m:LionelRoss  a     s:Musician ;
+        rdfs:label  "Lionel Ross" .
+
+t:IWannaBeYourMan  a     s:Song ;
+        rdfs:label       "I Wanna Be Your Man" ;
+        i:Hammondorgan   m:GeorgeMartin ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:maracas        m:RingoStarr ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:RingoStarr .
+
+m:SidneySax  a      s:Musician ;
+        rdfs:label  "Sidney Sax" .
+
+m:DerekJacobs  a    s:Musician ;
+        rdfs:label  "Derek Jacobs" .
+
+t:YesItIs  a                    s:Song ;
+        rdfs:label              "Yes It Is" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonyvocals         m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:tambourine            m:RingoStarr ;
+        i:vocals                m:JohnLennon .
+
+i:synthesiser  a    s:Instrument ;
+        rdfs:label  "synthesiser" .
+
+m:KennethEssex  a   s:Musician ;
+        rdfs:label  "Kenneth Essex" .
+
+t:Revolution1  a          s:Song ;
+        rdfs:label        "Revolution 1" ;
+        i:Hammondorgan    m:PaulMcCartney ;
+        i:acousticguitar  m:JohnLennon ;
+        i:backingvocals   m:FrancieSchwartz , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison , m:JohnLennon ;
+        i:piano           m:PaulMcCartney ;
+        i:trombone        m:JPower , m:DonLang , m:BillPovey , m:RexMorris ;
+        i:trumpet         m:FreddyClayton , m:DerekWatkins ;
+        i:vocals          m:JohnLennon .
+
+t:DizzyMissLizzy  a                  s:Song ;
+        rdfs:label                   "Dizzy Miss Lizzy" ;
+        i:Hammondorgan               m:JohnLennon ;
+        i:HohnerPianetelectricpiano  m:PaulMcCartney ;
+        i:bass                       m:PaulMcCartney ;
+        i:cowbell                    m:RingoStarr ;
+        i:double-trackedleadguitar   m:GeorgeHarrison ;
+        i:drums                      m:RingoStarr ;
+        i:rhythmguitar               m:JohnLennon ;
+        i:vocals                     m:JohnLennon .
+
+m:GayleenPease  a   s:Musician ;
+        rdfs:label  "Gayleen Pease" .
+
+t:IGotToFindMyBaby  a   s:Song ;
+        rdfs:label      "I Got To Find My Baby" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:harmonica     m:JohnLennon ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+i:snaredrum  a      s:Instrument ;
+        rdfs:label  "snare drum" .
+
+i:acousticguitarpercussion
+        a           s:Instrument ;
+        rdfs:label  "acoustic guitar percussion" .
+
+i:maracas  a        s:Instrument ;
+        rdfs:label  "maracas" .
+
+i:flutesorpiccolos  a  s:Instrument ;
+        rdfs:label  "flutes or piccolos" .
+
+m:Unknown  a        s:Musician ;
+        rdfs:label  "Unknown" .
+
+t:LosParanoias  a         s:Song ;
+        rdfs:label        "Los Paranoias" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:percussion      m:JohnLennon ;
+        i:shaker          m:RingoStarr ;
+        i:vocals          m:PaulMcCartney .
+
+m:unknown  a        s:Musician ;
+        rdfs:label  "unknown" .
+
+t:LikeDreamersDo  a     s:Song ;
+        rdfs:label      "Like Dreamers Do" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:PeteBest ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+i:Mellotron  a      s:Instrument ;
+        rdfs:label  "Mellotron" .
+
+t:Yesterday  a      s:Song ;
+        rdfs:label  "Yesterday" ;
+        i:cello     m:FranciscoGabarro ;
+        i:guitar    m:PaulMcCartney ;
+        i:viola     m:KennethEssex ;
+        i:violin    m:TonyGilbert , m:SidneySax ;
+        i:vocals    m:PaulMcCartney .
+
+m:NeilAspinall  a   s:Musician ;
+        rdfs:label  "Neil Aspinall" .
+
+t:NotASecondTime  a             s:Song ;
+        rdfs:label              "Not A Second Time" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:piano                 m:GeorgeMartin ;
+        i:vocals                m:JohnLennon .
+
+i:sleighbell  a     s:Instrument ;
+        rdfs:label  "sleigh bell" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmDown>
+        a                s:Song ;
+        rdfs:label       "I&#8217;m Down" ;
+        i:backingvocals  m:JohnLennon , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:bongo          m:RingoStarr ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:organ          m:JohnLennon ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+m:DavidGlyde  a     s:Musician ;
+        rdfs:label  "David Glyde" .
+
+i:10violins  a      s:Instrument ;
+        rdfs:label  "10 violins" .
+
+m:IngridThomas  a   s:Musician ;
+        rdfs:label  "Ingrid Thomas" .
+
+m:TerryDoran  a     s:Musician ;
+        rdfs:label  "Terry Doran" .
+
+<http://learningsparql.com/ns/title/You%26%238217%3BveGotToHideYourLoveAway>
+        a                          s:Song ;
+        rdfs:label                 "You&#8217;ve Got To Hide Your Love Away" ;
+        i:12-stringacousticguitar  m:JohnLennon ;
+        i:acousticguitar           m:GeorgeHarrison ;
+        i:altoflute                m:JohnnieScott ;
+        i:bassguitar               m:PaulMcCartney ;
+        i:drums                    m:RingoStarr ;
+        i:maracas                  m:RingoStarr ;
+        i:tambourine               m:RingoStarr ;
+        i:tenorflute               m:JohnnieScott ;
+        i:vocals                   m:JohnLennon .
+
+i:castanets  a      s:Instrument ;
+        rdfs:label  "castanets" .
+
+<http://learningsparql.com/ns/title/Baby%26%238217%3BsInBlack>
+        a                       s:Song ;
+        rdfs:label              "Baby&#8217;s In Black" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:vocals                m:PaulMcCartney , m:JohnLennon .
+
+i:accordion  a      s:Instrument ;
+        rdfs:label  "accordion" .
+
+m:DerekCollins  a   s:Musician ;
+        rdfs:label  "Derek Collins" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BllBeBack>
+        a                       s:Song ;
+        rdfs:label              "I&#8217;ll Be Back" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonyvocals         m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadacousticguitar    m:GeorgeHarrison ;
+        i:leadvocals            m:JohnLennon .
+
+t:PennyLane  a                  s:Song ;
+        rdfs:label              "Penny Lane" ;
+        i:acousticguitar        m:JohnLennon ;
+        i:backingvocals         m:JohnLennon , m:GeorgeHarrison ;
+        i:bassguitar            m:PaulMcCartney ;
+        <http://learningsparql.com/ns/instrument/congas%28%3F%29>
+                m:GeorgeHarrison ;
+        i:doublebass            m:FrankClarke ;
+        i:drums                 m:RingoStarr ;
+        i:electricguitar        m:JohnLennon ;
+        i:flutesorpiccolos      m:PGoody , m:RaySwinfield , m:MannyWinters , m:DennisWalton ;
+        i:guitar                m:GeorgeHarrison ;
+        i:handclaps             m:GeorgeHarrison , m:JohnLennon , m:PaulMcCartney ;
+        i:harmonium             m:PaulMcCartney ;
+        i:oboesorcoranglais     m:DickMorgan , m:MikeWinfield ;
+        i:piano                 m:JohnLennon , m:PaulMcCartney ;
+        i:tambourine            m:RingoStarr ;
+        i:trumpetsorflugelhorn  m:FreddyClayton , m:LeonCalvert , m:BertCourtley , m:DuncanCampbell , m:DavidMason ;
+        i:tubularbells          m:RingoStarr ;
+        i:vocals                m:PaulMcCartney .
+
+<http://learningsparql.com/ns/instrument/drums%28Anthology3%29>
+        a           s:Instrument ;
+        rdfs:label  "drums (Anthology 3)" .
+
+m:LouSofier  a      s:Musician ;
+        rdfs:label  "Lou Sofier" .
+
+m:NormanLederman  a  s:Musician ;
+        rdfs:label  "Norman Lederman" .
+
+i:cymbals  a        s:Instrument ;
+        rdfs:label  "cymbals" .
+
+m:HaroldJackson  a  s:Musician ;
+        rdfs:label  "Harold Jackson" .
+
+m:IanHamer  a       s:Musician ;
+        rdfs:label  "Ian Hamer" .
+
+i:14femalevocalists  a  s:Instrument ;
+        rdfs:label  "14 female vocalists" .
+
+t:MagicalMysteryTour  a         s:Song ;
+        rdfs:label              "Magical Mystery Tour" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:percussion            m:RingoStarr , m:NeilAspinall , m:MalEvans , m:GeorgeHarrison , m:JohnLennon ;
+        i:piano                 m:PaulMcCartney ;
+        i:trumpet               m:ElgarHowarth , m:JohnWilbraham , m:DavidMason , m:RoyCopestake ;
+        i:vocals                m:JohnLennon , m:PaulMcCartney , m:GeorgeHarrison .
+
+t:IWantToHoldYourHand
+        a               s:Song ;
+        rdfs:label      "I Want To Hold Your Hand" ;
+        i:bassguitar    m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:handclaps     m:PaulMcCartney , m:GeorgeHarrison , m:RingoStarr , m:JohnLennon ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon .
+
+t:WhenIGetHome  a        s:Song ;
+        rdfs:label       "When I Get Home" ;
+        i:backingvocals  m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:leadvocals     m:JohnLennon ;
+        i:rhythmguitar   m:JohnLennon .
+
+i:baritonesaxophones  a  s:Instrument ;
+        rdfs:label  "baritone saxophones" .
+
+<http://learningsparql.com/ns/title/NorwegianWood%28ThisBirdHasFlown%29>
+        a                          s:Song ;
+        rdfs:label                 "Norwegian Wood (This Bird Has Flown)" ;
+        i:12-stringacousticguitar  m:GeorgeHarrison ;
+        i:acousticrhythmguitar     m:JohnLennon ;
+        i:bass                     m:PaulMcCartney ;
+        i:bassdrum                 m:RingoStarr ;
+        i:harmonyvocals            m:PaulMcCartney ;
+        i:sitar                    m:GeorgeHarrison ;
+        i:tambourine               m:RingoStarr ;
+        i:vocals                   m:JohnLennon .
+
+t:SunKing  a             s:Song ;
+        rdfs:label       "Sun King" ;
+        i:Lowreyorgan    m:GeorgeMartin ;
+        i:bass           m:PaulMcCartney ;
+        i:bongo          m:RingoStarr ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:JohnLennon ;
+        i:harmonium      m:PaulMcCartney ;
+        i:harmonyvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:maracas        m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:tambourine     m:RingoStarr ;
+        i:tapeloops      m:PaulMcCartney ;
+        i:vocals         m:JohnLennon .
+
+t:Something  a           s:Song ;
+        rdfs:label       "Something" ;
+        i:12violins      m:Unknown ;
+        i:4cellos        m:Unknown ;
+        i:4violas        m:Unknown ;
+        i:Hammondorgan   m:BillyPreston ;
+        i:backingvocals  m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:doublebass     m:Unknown ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:RingoStarr , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:piano          m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+<http://learningsparql.com/ns/instrument/drums%28Anthology1%29>
+        a           s:Instrument ;
+        rdfs:label  "drums (Anthology 1)" .
+
+m:MarianneFaithfull  a  s:Musician ;
+        rdfs:label  "Marianne Faithfull" .
+
+m:KenBarrie  a      s:Musician ;
+        rdfs:label  "Ken Barrie" .
+
+<http://learningsparql.com/ns/title/HoneyDon%26%238217%3Bt>
+        a                          s:Song ;
+        rdfs:label                 "Honey Don&#8217;t" ;
+        i:acoustic12-stringguitar  m:JohnLennon ;
+        i:bass                     m:PaulMcCartney ;
+        i:drums                    m:RingoStarr ;
+        i:leadguitar               m:GeorgeHarrison ;
+        i:tambourine               m:JohnLennon ;
+        i:vocals                   m:RingoStarr .
+
+t:HelloGoodbye  a        s:Song ;
+        rdfs:label       "Hello, Goodbye" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:bongo          m:PaulMcCartney ;
+        i:conga          m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison , m:JohnLennon ;
+        i:maracas        m:RingoStarr ;
+        i:organ          m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:tambourine     m:RingoStarr ;
+        i:viola          m:KennethEssex , m:LeoBirnbaum ;
+        i:vocals         m:PaulMcCartney .
+
+t:YoungBlood  a          s:Song ;
+        rdfs:label       "Young Blood" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:RingoStarr , m:GeorgeHarrison .
+
+i:twoguitarists  a  s:Instrument ;
+        rdfs:label  "two guitarists" .
+
+m:PeteBest  a       s:Musician ;
+        rdfs:label  "Pete Best" .
+
+t:YouKnowWhatToDo  a    s:Song ;
+        rdfs:label      "You Know What To Do" ;
+        i:bass          m:PaulMcCartney ;
+        i:rhythmguitar  m:GeorgeHarrison ;
+        i:tambourine    m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison .
+
+i:dilruba  a        s:Instrument ;
+        rdfs:label  "dilruba" .
+
+t:CryForAShadow  a      s:Song ;
+        rdfs:label      "Cry For A Shadow" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:PeteBest ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon .
+
+t:ForYouBlue  a           s:Song ;
+        rdfs:label        "For You Blue" ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:drums           m:RingoStarr ;
+        i:lapsteelguitar  m:JohnLennon ;
+        i:piano           m:PaulMcCartney ;
+        i:vocals          m:GeorgeHarrison .
+
+m:JohnDuffLowe  a   s:Musician ;
+        rdfs:label  "John 'Duff' Lowe" .
+
+m:DannyMoss  a      s:Musician ;
+        rdfs:label  "Danny Moss" .
+
+m:DavidMcCallum  a  s:Musician ;
+        rdfs:label  "David McCallum" .
+
+m:AlanDalziel  a    s:Musician ;
+        rdfs:label  "Alan Dalziel" .
+
+t:OohMySoul  a          s:Song ;
+        rdfs:label      "Ooh! My Soul" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+m:GregBowen  a      s:Musician ;
+        rdfs:label  "Greg Bowen" .
+
+t:HerMajesty  a           s:Song ;
+        rdfs:label        "Her Majesty" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:vocals          m:PaulMcCartney .
+
+t:RockAndRollMusic  a     s:Song ;
+        rdfs:label        "Rock And Roll Music" ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:bassguitar      m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:piano           m:PaulMcCartney , m:GeorgeMartin , m:JohnLennon ;
+        i:rhythmguitar    m:JohnLennon ;
+        i:vocals          m:JohnLennon .
+
+t:SeaOfTime  a      s:Song ;
+        rdfs:label  "Sea Of Time" .
+
+i:shehnai  a        s:Instrument ;
+        rdfs:label  "shehnai" .
+
+m:RossGilmour  a    s:Musician ;
+        rdfs:label  "Ross Gilmour" .
+
+m:HarrySpain  a     s:Musician ;
+        rdfs:label  "Harry Spain" .
+
+t:KansasCityHey-Hey-Hey-Hey
+        a                s:Song ;
+        rdfs:label       "Kansas City/Hey-Hey-Hey-Hey!" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:GeorgeHarrison , m:JohnLennon , m:RingoStarr , m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:leadvocals     m:PaulMcCartney ;
+        i:piano          m:GeorgeMartin ;
+        i:rhythmguitar   m:JohnLennon .
+
+i:shaker  a         s:Instrument ;
+        rdfs:label  "shaker" .
+
+t:PleasePleaseMe  a      s:Song ;
+        rdfs:label       "Please Please Me" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonica      m:JohnLennon ;
+        i:harmonyvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:leadvocals     m:JohnLennon ;
+        i:rhythmguitar   m:JohnLennon .
+
+t:Why   a               s:Song ;
+        rdfs:label      "Why" ;
+        i:bassguitar    m:PaulMcCartney ;
+        i:drums         m:PeteBest ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:TonySheridan .
+
+<http://learningsparql.com/ns/title/WhyDon%26%238217%3BtWeDoItInTheRoad%3F>
+        a                 s:Song ;
+        rdfs:label        "Why Don&#8217;t We Do It In The Road?" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:handclaps       m:PaulMcCartney , m:RingoStarr ;
+        i:leadguitar      m:PaulMcCartney ;
+        i:piano           m:PaulMcCartney ;
+        i:vocals          m:PaulMcCartney .
+
+i:Hammondorgan  a   s:Instrument ;
+        rdfs:label  "Hammond organ" .
+
+m:EldonFox  a       s:Musician ;
+        rdfs:label  "Eldon Fox" .
+
+i:glockenspiel  a   s:Instrument ;
+        rdfs:label  "glockenspiel" .
+
+i:doublebass  a     s:Instrument ;
+        rdfs:label  "double bass" .
+
+i:Africandrum  a    s:Instrument ;
+        rdfs:label  "African drum" .
+
+t:IFeelFine  a      s:Song ;
+        rdfs:label  "I Feel Fine" ;
+        i:bass      m:PaulMcCartney ;
+        i:drums     m:RingoStarr ;
+        i:guitar    m:GeorgeHarrison , m:JohnLennon ;
+        i:vocals    m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+m:LeoBirnbaum  a    s:Musician ;
+        rdfs:label  "Leo Birnbaum" .
+
+m:ErnestScott  a    s:Musician ;
+        rdfs:label  "Ernest Scott" .
+
+m:DavidSanderman  a  s:Musician ;
+        rdfs:label  "David Sanderman" .
+
+m:ChrisThomas  a    s:Musician ;
+        rdfs:label  "Chris Thomas" .
+
+i:fuzzbass  a       s:Instrument ;
+        rdfs:label  "fuzz bass" .
+
+i:clavichord  a     s:Instrument ;
+        rdfs:label  "clavichord" .
+
+m:PaulScherman  a   s:Musician ;
+        rdfs:label  "Paul Scherman" .
+
+t:NotGuilty  a         s:Song ;
+        rdfs:label     "Not Guilty" ;
+        i:bass         m:PaulMcCartney ;
+        i:drums        m:RingoStarr ;
+        i:guitar       m:GeorgeHarrison ;
+        i:harpsichord  m:ChrisThomas ;
+        i:vocals       m:GeorgeHarrison .
+
+t:GlassOnion  a           s:Song ;
+        rdfs:label        "Glass Onion" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:cello           m:ReginaldKilbey , m:EldonFox ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:piano           m:PaulMcCartney ;
+        i:recorder        m:PaulMcCartney ;
+        i:tambourine      m:RingoStarr ;
+        i:viola           m:JohnUnderwood , m:KeithCummings ;
+        i:violin          m:EricBowie , m:RonaldThomas , m:HenryDatyner , m:NormanLederman ;
+        i:vocals          m:JohnLennon .
+
+i:six-stringbass  a  s:Instrument ;
+        rdfs:label  "six-string bass" .
+
+t:EleanorRigby  a        s:Song ;
+        rdfs:label       "Eleanor Rigby" ;
+        i:cello          m:NormanJones , m:DerekSimpson ;
+        i:harmonyvocals  m:JohnLennon , m:GeorgeHarrison ;
+        i:viola          m:JohnUnderwood , m:StephenShingles ;
+        i:violin         m:SidneySax , m:JohnSharpe , m:TonyGilbert , m:JurgenHess ;
+        i:vocals         m:PaulMcCartney .
+
+m:KeithCummings  a  s:Musician ;
+        rdfs:label  "Keith Cummings" .
+
+m:IreneKing  a      s:Musician ;
+        rdfs:label  "Irene King" .
+
+m:DGriffiths  a     s:Musician ;
+        rdfs:label  "D Griffiths" .
+
+t:Girl  a                          s:Song ;
+        rdfs:label                 "Girl" ;
+        i:acoustic12-stringguitar  m:GeorgeHarrison ;
+        i:acousticguitar           m:JohnLennon ;
+        i:backingvocals            m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass                     m:PaulMcCartney ;
+        i:drums                    m:RingoStarr ;
+        i:leadacousticguitar       m:GeorgeHarrison ;
+        i:vocals                   m:JohnLennon .
+
+t:Michelle  a                      s:Song ;
+        rdfs:label                 "Michelle" ;
+        i:12-stringacousticguitar  m:GeorgeHarrison ;
+        i:acousticguitar           m:JohnLennon , m:PaulMcCartney ;
+        i:backingvocals            m:GeorgeHarrison , m:JohnLennon ;
+        i:bass                     m:PaulMcCartney ;
+        i:drums                    m:RingoStarr ;
+        i:leadguitar               m:GeorgeHarrison ;
+        i:vocals                   m:PaulMcCartney .
+
+m:HarryKlein  a     s:Musician ;
+        rdfs:label  "Harry Klein" .
+
+i:12-stringrhythmguitar
+        a           s:Instrument ;
+        rdfs:label  "12-string rhythm guitar" .
+
+m:LeonCalvert  a    s:Musician ;
+        rdfs:label  "Leon Calvert" .
+
+m:LouisStevens  a   s:Musician ;
+        rdfs:label  "Louis Stevens" .
+
+m:AshishKhan  a     s:Musician ;
+        rdfs:label  "Ashish Khan" .
+
+i:pianetelectricpiano
+        a           s:Instrument ;
+        rdfs:label  "pianet electric piano" .
+
+m:GordonPearce  a   s:Musician ;
+        rdfs:label  "Gordon Pearce" .
+
+t:ThankYouGirl  a       s:Song ;
+        rdfs:label      "Thank You Girl" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:harmonica     m:JohnLennon ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon .
+
+t:OhDarling  a           s:Song ;
+        rdfs:label       "Oh! Darling" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon , m:PaulMcCartney ;
+        i:bassguitar     m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:GeorgeHarrison ;
+        i:piano          m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+i:viola  a          s:Instrument ;
+        rdfs:label  "viola" .
+
+m:DickMorgan  a     s:Musician ;
+        rdfs:label  "Dick Morgan" .
+
+t:TheLongAndWindingRoad
+        a                    s:Song ;
+        rdfs:label           "The Long And Winding Road" ;
+        i:14femalevocalists  m:Uncredited ;
+        i:18violins          m:Uncredited ;
+        i:bass               m:JohnLennon ;
+        i:drums              m:RingoStarr ;
+        i:fourcellos         m:Uncredited ;
+        i:fourviolas         m:Uncredited ;
+        i:guitar             m:GeorgeHarrison ;
+        i:harp               m:Uncredited ;
+        i:piano              m:PaulMcCartney ;
+        i:threetrombones     m:Uncredited ;
+        i:threetrumpets      m:Uncredited ;
+        i:twoguitarists      m:Uncredited ;
+        i:vocals             m:PaulMcCartney .
+
+m:SylviaKing  a     s:Musician ;
+        rdfs:label  "Sylvia King" .
+
+m:JeffLynne  a      s:Musician ;
+        rdfs:label  "Jeff Lynne" .
+
+<http://learningsparql.com/ns/title/You%26%238217%3BllBeMine>
+        a           s:Song ;
+        rdfs:label  "You&#8217;ll Be Mine" ;
+        i:bass      m:StuartSutcliffe ;
+        i:guitar    m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:vocals    m:PaulMcCartney , m:JohnLennon .
+
+<http://learningsparql.com/ns/title/She%26%238217%3BsAWoman>
+        a               s:Song ;
+        rdfs:label      "She&#8217;s A Woman" ;
+        i:bass          m:PaulMcCartney ;
+        i:chocalho      m:RingoStarr ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:piano         m:PaulMcCartney ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+t:AndILoveHer  a                s:Song ;
+        rdfs:label              "And I Love Her" ;
+        i:acousticleadguitar    m:GeorgeHarrison ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:claves                m:GeorgeHarrison ;
+        i:conga                 m:RingoStarr ;
+        i:vocals                m:PaulMcCartney .
+
+i:1bassoon  a       s:Instrument ;
+        rdfs:label  "1 bassoon" .
+
+t:Junk  a                 s:Song ;
+        rdfs:label        "Junk" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:vocals          m:PaulMcCartney .
+
+m:GrahamNash  a     s:Musician ;
+        rdfs:label  "Graham Nash" .
+
+t:YourMotherShouldKnow
+        a                s:Song ;
+        rdfs:label       "Your Mother Should Know" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:GeorgeHarrison ;
+        i:organ          m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:PaulMcCartney .
+
+i:harmonium  a      s:Instrument ;
+        rdfs:label  "harmonium" .
+
+t:GladAllOver  a        s:Song ;
+        rdfs:label      "Glad All Over" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison , m:PaulMcCartney .
+
+m:NatwarSoni  a     s:Musician ;
+        rdfs:label  "Natwar Soni" .
+
+i:violin  a         s:Instrument ;
+        rdfs:label  "violin" .
+
+t:MarchOfTheMeanies  a  s:Song ;
+        rdfs:label  "March Of The Meanies" .
+
+t:SeaOfHoles  a     s:Song ;
+        rdfs:label  "Sea Of Holes" .
+
+i:soundeffects  a   s:Instrument ;
+        rdfs:label  "sound effects" .
+
+t:KommGibMirDeineHand
+        a               s:Song ;
+        rdfs:label      "Komm, Gib Mir Deine Hand" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:handclaps     m:PaulMcCartney , m:GeorgeHarrison , m:RingoStarr , m:JohnLennon ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon , m:GeorgeHarrison .
+
+i:clavioline  a     s:Instrument ;
+        rdfs:label  "clavioline" .
+
+<http://learningsparql.com/ns/title/Don%26%238217%3BtPassMeBy>
+        a             s:Song ;
+        rdfs:label    "Don&#8217;t Pass Me By" ;
+        i:bass        m:PaulMcCartney ;
+        i:drums       m:RingoStarr ;
+        i:piano       m:RingoStarr , m:PaulMcCartney ;
+        i:sleighbell  m:RingoStarr ;
+        i:violin      m:JackFallon ;
+        i:vocals      m:RingoStarr .
+
+t:WeCanWorkItOut  a             s:Song ;
+        rdfs:label              "We Can Work It Out" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonium             m:JohnLennon ;
+        i:tambourine            m:GeorgeHarrison ;
+        i:vocals                m:PaulMcCartney , m:JohnLennon .
+
+m:MikeMcCartney  a  s:Musician ;
+        rdfs:label  "Mike McCartney" .
+
+<http://learningsparql.com/ns/title/MotherNature%26%238217%3BsSon>
+        a                 s:Song ;
+        rdfs:label        "Mother Nature&#8217;s Son" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:PaulMcCartney ;
+        i:timpani         m:PaulMcCartney ;
+        i:twotrombones    m:Uncredited ;
+        i:twotrumpets     m:Uncredited ;
+        i:vocals          m:PaulMcCartney .
+
+i:pianette  a       s:Instrument ;
+        rdfs:label  "pianette" .
+
+i:handbell  a       s:Instrument ;
+        rdfs:label  "handbell" .
+
+i:effects  a        s:Instrument ;
+        rdfs:label  "effects" .
+
+t:TakeOutSomeInsuranceOnMeBaby
+        a               s:Song ;
+        rdfs:label      "Take Out Some Insurance On Me, Baby" ;
+        i:bassguitar    m:PaulMcCartney ;
+        i:drums         m:PeteBest ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:TonySheridan .
+
+t:WildHoneyPie  a         s:Song ;
+        rdfs:label        "Wild Honey Pie" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:drums           m:PaulMcCartney ;
+        i:vocals          m:PaulMcCartney .
+
+m:JohnRonayne  a    s:Musician ;
+        rdfs:label  "John Ronayne" .
+
+m:MikeRedway  a     s:Musician ;
+        rdfs:label  "Mike Redway" .
+
+t:YouReallyGotAHoldOnMe
+        a                s:Song ;
+        rdfs:label       "You Really Got A Hold On Me" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonyvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:leadvocals     m:JohnLennon ;
+        i:piano          m:GeorgeMartin ;
+        i:rhythmguitar   m:JohnLennon .
+
+m:TonyTunstall  a   s:Musician ;
+        rdfs:label  "Tony Tunstall" .
+
+m:GeorgeMartin  a   s:Musician ;
+        rdfs:label  "George Martin" .
+
+i:4violas  a        s:Instrument ;
+        rdfs:label  "4 violas" .
+
+i:harmonica  a      s:Instrument ;
+        rdfs:label  "harmonica" .
+
+t:EveryLittleThing  a           s:Song ;
+        rdfs:label              "Every Little Thing" ;
+        i:acousticguitar        m:GeorgeHarrison ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:JohnLennon ;
+        i:piano                 m:PaulMcCartney ;
+        i:timpani               m:RingoStarr ;
+        i:vocals                m:JohnLennon , m:PaulMcCartney .
+
+t:YellowSubmarineInPepperland
+        a           s:Song ;
+        rdfs:label  "Yellow Submarine In Pepperland" .
+
+m:JohnWilbraham  a  s:Musician ;
+        rdfs:label  "John Wilbraham" .
+
+t:GettingBetter  a       s:Song ;
+        rdfs:label       "Getting Better" ;
+        i:backingvocals  m:JohnLennon , m:GeorgeHarrison ;
+        i:bassguitar     m:PaulMcCartney ;
+        i:conga          m:RingoStarr ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:pianette       m:GeorgeMartin ;
+        i:piano          m:PaulMcCartney , m:GeorgeMartin ;
+        i:rhythmguitar   m:PaulMcCartney ;
+        i:tambura        m:GeorgeHarrison ;
+        i:vocals         m:PaulMcCartney .
+
+t:TheFoolOnTheHill  a     s:Song ;
+        rdfs:label        "The Fool On The Hill" ;
+        i:Jewsharp        m:JohnLennon ;
+        i:acousticguitar  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:fingercymbals   m:RingoStarr ;
+        i:flute           m:ChristopherTaylor , m:JackEllory , m:RichardTaylor ;
+        i:harmonica       m:JohnLennon , m:GeorgeHarrison ;
+        i:maracas         m:RingoStarr ;
+        i:piano           m:PaulMcCartney ;
+        i:recorder        m:PaulMcCartney ;
+        i:vocals          m:PaulMcCartney .
+
+i:vibes  a          s:Instrument ;
+        rdfs:label  "vibes" .
+
+i:guitar  a         s:Instrument ;
+        rdfs:label  "guitar" .
+
+i:tamboura  a       s:Instrument ;
+        rdfs:label  "tamboura" .
+
+i:bassclarinet  a   s:Instrument ;
+        rdfs:label  "bass clarinet" .
+
+t:LadyMadonna  a              s:Song ;
+        rdfs:label            "Lady Madonna" ;
+        i:backingvocals       m:JohnLennon , m:GeorgeHarrison ;
+        i:baritonesaxophones  m:HarryKlein , m:BillJackman ;
+        i:bass                m:PaulMcCartney ;
+        i:drums               m:RingoStarr ;
+        i:handclaps           m:RingoStarr , m:JohnLennon , m:PaulMcCartney , m:GeorgeHarrison ;
+        i:leadguitar          m:JohnLennon , m:GeorgeHarrison ;
+        i:piano               m:PaulMcCartney ;
+        i:tenorsaxophone      m:RonnieScott , m:BillPovey ;
+        i:vocals              m:PaulMcCartney .
+
+<http://learningsparql.com/ns/title/AllI%26%238217%3BveGotToDo>
+        a                s:Song ;
+        rdfs:label       "All I&#8217;ve Got To Do" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+m:EricBowie  a      s:Musician ;
+        rdfs:label  "Eric Bowie" .
+
+m:JohnONeill  a     s:Musician ;
+        rdfs:label  "John O'Neill" .
+
+i:backingvocals  a  s:Instrument ;
+        rdfs:label  "backing vocals" .
+
+i:4trumpets  a      s:Instrument ;
+        rdfs:label  "4 trumpets" .
+
+t:Wait  a               s:Song ;
+        rdfs:label      "Wait" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:guitar        m:GeorgeHarrison ;
+        i:maracas       m:RingoStarr ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:tambourine    m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon .
+
+i:tapdancing  a     s:Instrument ;
+        rdfs:label  "tap dancing" .
+
+t:HelloLittleGirl  a     s:Song ;
+        rdfs:label       "Hello Little Girl" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:PeteBest ;
+        i:harmonyvocals  m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+m:RijRamDesad  a    s:Musician ;
+        rdfs:label  "Rij Ram Desad" .
+
+<http://learningsparql.com/ns/musician/Jos%C3%A9LuisGarcia>
+        a           s:Musician ;
+        rdfs:label  "José Luis Garcia" .
+
+i:electricrhythmguitar
+        a           s:Instrument ;
+        rdfs:label  "electric rhythm guitar" .
+
+m:HenryDatyner  a   s:Musician ;
+        rdfs:label  "Henry Datyner" .
+
+t:LongLongLong  a         s:Song ;
+        rdfs:label        "Long, Long, Long" ;
+        i:Hammondorgan    m:PaulMcCartney ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:backingvocals   m:PaulMcCartney ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:piano           m:ChrisThomas ;
+        i:vocals          m:GeorgeHarrison .
+
+m:AlfBicknell  a    s:Musician ;
+        rdfs:label  "Alf Bicknell" .
+
+t:MoonlightBay  a   s:Song ;
+        rdfs:label  "Moonlight Bay" ;
+        i:drums     m:RingoStarr ;
+        i:piano     m:KennyPowell ;
+        i:vocals    m:EricMorecambe , m:ErnieWise , m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+m:GMallen  a        s:Musician ;
+        rdfs:label  "G Mallen" .
+
+m:BillJackman  a    s:Musician ;
+        rdfs:label  "Bill Jackman" .
+
+m:JulienGaillard  a  s:Musician ;
+        rdfs:label  "Julien Gaillard" .
+
+t:IWill  a                s:Song ;
+        rdfs:label        "I Will" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:bongo           m:RingoStarr ;
+        i:cymbals         m:RingoStarr ;
+        i:maracas         m:RingoStarr ;
+        i:percussion      m:JohnLennon ;
+        i:vocals          m:PaulMcCartney .
+
+i:4cellos  a        s:Instrument ;
+        rdfs:label  "4 cellos" .
+
+<http://learningsparql.com/ns/title/ChristmasTime%28IsHereAgain%29>
+        a                 s:Song ;
+        rdfs:label        "Christmas Time (Is Here Again)" ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:bassdrum        m:JohnLennon ;
+        i:drums           m:RingoStarr ;
+        i:piano           m:PaulMcCartney ;
+        i:spokenword      m:MalEvans ;
+        i:tapdancing      m:RingoStarr , m:VictorSpinetti ;
+        i:vocals          m:GeorgeHarrison , m:JohnLennon , m:VictorSpinetti , m:PaulMcCartney , m:RingoStarr , m:GeorgeMartin .
+
+<http://learningsparql.com/ns/title/WhatYou%26%238217%3BreDoing>
+        a                       s:Song ;
+        rdfs:label              "What You&#8217;re Doing" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonyvocals         m:GeorgeHarrison , m:JohnLennon ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:piano                 m:GeorgeMartin ;
+        i:vocals                m:PaulMcCartney .
+
+m:DennisWalton  a   s:Musician ;
+        rdfs:label  "Dennis Walton" .
+
+t:IMeMine  a              s:Song ;
+        rdfs:label        "I Me Mine" ;
+        i:18violins       m:Uncredited ;
+        i:Hammondorgan    m:PaulMcCartney ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:electricpiano   m:PaulMcCartney ;
+        i:fourcellos      m:Uncredited ;
+        i:fourviolas      m:Uncredited ;
+        i:harmonyvocals   m:GeorgeHarrison , m:PaulMcCartney ;
+        i:harp            m:Uncredited ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:threetrombones  m:Uncredited ;
+        i:threetrumpets   m:Uncredited ;
+        i:vocals          m:GeorgeHarrison .
+
+i:3trumpets  a      s:Instrument ;
+        rdfs:label  "3 trumpets" .
+
+m:PattieHarrison  a  s:Musician ;
+        rdfs:label  "Pattie Harrison" .
+
+m:GordonLewin  a    s:Musician ;
+        rdfs:label  "Gordon Lewin" .
+
+t:Shout  a              s:Song ;
+        rdfs:label      "Shout" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:RingoStarr , m:GeorgeHarrison , m:JohnLennon .
+
+i:acousticguitar  a  s:Instrument ;
+        rdfs:label  "acoustic guitar" .
+
+i:shakerbells  a    s:Instrument ;
+        rdfs:label  "shaker bells" .
+
+t:RipItUpShakeRattleAndRollBlueSuedeShoes
+        a                 s:Song ;
+        rdfs:label        "Rip It Up/Shake, Rattle And Roll/Blue Suede Shoes" ;
+        i:Hammondorgan    m:BillyPreston ;
+        i:bassguitar      m:JohnLennon ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:GeorgeHarrison ;
+        i:piano           m:PaulMcCartney ;
+        i:vocals          m:PaulMcCartney , m:JohnLennon .
+
+t:DayTripper  a         s:Song ;
+        rdfs:label      "Day Tripper" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison , m:JohnLennon ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:tambourine    m:RingoStarr ;
+        i:vocals        m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney .
+
+t:MeanMrMustard  a       s:Song ;
+        rdfs:label       "Mean Mr Mustard" ;
+        i:drums          m:RingoStarr ;
+        i:fuzzbass       m:PaulMcCartney ;
+        i:guitar         m:JohnLennon ;
+        i:harmonyvocals  m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:maracas        m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:JohnLennon .
+
+t:Lucille  a            s:Song ;
+        rdfs:label      "Lucille" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+i:14choristers  a   s:Instrument ;
+        rdfs:label  "14 choristers" .
+
+m:GeorgeHarrison  a  s:Musician ;
+        rdfs:label  "George Harrison" .
+
+i:keyboards  a      s:Instrument ;
+        rdfs:label  "keyboards" .
+
+m:JackRichards  a   s:Musician ;
+        rdfs:label  "Jack Richards" .
+
+t:ComeAndGetIt  a   s:Song ;
+        rdfs:label  "Come And Get It" ;
+        i:bass      m:PaulMcCartney ;
+        i:drums     m:PaulMcCartney ;
+        i:maracas   m:PaulMcCartney ;
+        i:piano     m:PaulMcCartney ;
+        i:vocals    m:PaulMcCartney .
+
+t:LucyInTheSkyWithDiamonds
+        a                 s:Song ;
+        rdfs:label        "Lucy In The Sky With Diamonds" ;
+        i:Lowreyorgan     m:PaulMcCartney ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:backingvocals   m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison , m:JohnLennon ;
+        i:maracas         m:RingoStarr ;
+        i:tambura         m:GeorgeHarrison ;
+        i:vocals          m:JohnLennon .
+
+i:trumpet  a        s:Instrument ;
+        rdfs:label  "trumpet" .
+
+i:piano  a          s:Instrument ;
+        rdfs:label  "piano" .
+
+i:hi-hat  a         s:Instrument ;
+        rdfs:label  "hi-hat" .
+
+<http://learningsparql.com/ns/title/That%26%238217%3BllBeTheDay>
+        a                s:Song ;
+        rdfs:label       "That&#8217;ll Be The Day" ;
+        i:drums          m:ColinHanton ;
+        i:guitar         m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:harmonyvocals  m:PaulMcCartney ;
+        i:piano          m:JohnDuffLowe ;
+        i:vocals         m:JohnLennon .
+
+t:HeyJude  a              s:Song ;
+        rdfs:label        "Hey Jude" ;
+        i:10violins       m:Uncredited ;
+        i:1bassclarinet   m:Uncredited ;
+        i:1bassoon        m:Uncredited ;
+        i:1contrabassoon  m:Uncredited ;
+        i:1percussion     m:Uncredited ;
+        i:2clarinets      m:Uncredited ;
+        i:2doublebasses   m:Uncredited ;
+        i:2flutes         m:Uncredited ;
+        i:2horns          m:Uncredited ;
+        i:3cellos         m:Uncredited ;
+        i:3violas         m:Uncredited ;
+        i:4trombones      m:Uncredited ;
+        i:4trumpets       m:Uncredited ;
+        i:acousticguitar  m:JohnLennon ;
+        i:backingvocals   m:GeorgeHarrison , m:RingoStarr , m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:GeorgeHarrison ;
+        i:piano           m:PaulMcCartney ;
+        i:tambourine      m:RingoStarr ;
+        i:vocals          m:PaulMcCartney .
+
+i:tapeloops  a      s:Instrument ;
+        rdfs:label  "tape loops" .
+
+m:MorrisMiller  a   s:Musician ;
+        rdfs:label  "Morris Miller" .
+
+i:Jewsharp  a       s:Instrument ;
+        rdfs:label  "Jew's harp" .
+
+t:ICallYourName  a      s:Song ;
+        rdfs:label      "I Call Your Name" ;
+        i:bass          m:PaulMcCartney ;
+        i:cowbell       m:RingoStarr ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+m:DerekWatkins  a   s:Musician ;
+        rdfs:label  "Derek Watkins" .
+
+m:JackieLomax  a    s:Musician ;
+        rdfs:label  "Jackie Lomax" .
+
+<http://learningsparql.com/ns/title/YouCan%26%238217%3BtDoThat>
+        a                        s:Song ;
+        rdfs:label               "You Can&#8217;t Do That" ;
+        i:12-stringrhythmguitar  m:GeorgeHarrison ;
+        i:backingvocals          m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass                   m:PaulMcCartney ;
+        i:conga                  m:RingoStarr ;
+        i:cowbell                m:PaulMcCartney ;
+        i:drums                  m:RingoStarr ;
+        i:leadguitar             m:JohnLennon ;
+        i:vocals                 m:JohnLennon .
+
+i:tambura  a        s:Instrument ;
+        rdfs:label  "tambura" .
+
+m:JackFallon  a     s:Musician ;
+        rdfs:label  "Jack Fallon" .
+
+m:DavidSmith  a     s:Musician ;
+        rdfs:label  "David Smith" .
+
+i:cello  a          s:Instrument ;
+        rdfs:label  "cello" .
+
+i:clarinet  a       s:Instrument ;
+        rdfs:label  "clarinet" .
+
+m:RonaldThomas  a   s:Musician ;
+        rdfs:label  "Ronald Thomas" .
+
+i:drums  a          s:Instrument ;
+        rdfs:label  "drums" .
+
+i:oboesorcoranglais  a  s:Instrument ;
+        rdfs:label  "oboes or cor anglais" .
+
+m:MannyWinters  a   s:Musician ;
+        rdfs:label  "Manny Winters" .
+
+m:DerekSimpson  a   s:Musician ;
+        rdfs:label  "Derek Simpson" .
+
+m:PatWhitmore  a    s:Musician ;
+        rdfs:label  "Pat Whitmore" .
+
+m:ColinHanton  a    s:Musician ;
+        rdfs:label  "Colin Hanton" .
+
+t:DigIt  a                      s:Song ;
+        rdfs:label              "Dig It" ;
+        i:Hammondorgan          m:BillyPreston ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:piano                 m:PaulMcCartney ;
+        i:shaker                m:GeorgeMartin ;
+        i:six-stringbassguitar  m:JohnLennon ;
+        i:vocals                m:JohnLennon .
+
+m:MikeWinfield  a   s:Musician ;
+        rdfs:label  "Mike Winfield" .
+
+m:RalphElman  a     s:Musician ;
+        rdfs:label  "Ralph Elman" .
+
+m:RonaldChamberlain  a  s:Musician ;
+        rdfs:label  "Ronald Chamberlain" .
+
+t:HoneyPie  a           s:Song ;
+        rdfs:label      "Honey Pie" ;
+        i:bass          m:GeorgeHarrison ;
+        i:clarinet      m:RaymondNewman , m:DavidSmith ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:JohnLennon ;
+        i:piano         m:PaulMcCartney ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:saxophone     m:JimChester , m:DennisWalton , m:RexMorris , m:HarryKlein , m:RonaldChamberlain ;
+        i:vocals        m:PaulMcCartney .
+
+i:threetrombones  a  s:Instrument ;
+        rdfs:label  "three trombones" .
+
+m:JackBrymer  a     s:Musician ;
+        rdfs:label  "Jack Brymer" .
+
+t:SoldierOfLove  a       s:Song ;
+        rdfs:label       "Soldier Of Love" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+t:DevilInHerHeart  a     s:Song ;
+        rdfs:label       "Devil In Her Heart" ;
+        i:backingvocals  m:JohnLennon , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:maracas        m:RingoStarr ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+t:TheWord  a            s:Song ;
+        rdfs:label      "The Word" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:harmonium     m:GeorgeMartin ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:maracas       m:RingoStarr ;
+        i:piano         m:PaulMcCartney ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon .
+
+m:BernardGeorge  a  s:Musician ;
+        rdfs:label  "Bernard George" .
+
+i:sarod  a          s:Instrument ;
+        rdfs:label  "sarod" .
+
+m:AlanCivil  a      s:Musician ;
+        rdfs:label  "Alan Civil" .
+
+m:FranciscoGabarro  a  s:Musician ;
+        rdfs:label  "Francisco Gabarro" .
+
+i:lapsteelguitar  a  s:Instrument ;
+        rdfs:label  "lap steel guitar" .
+
+<http://learningsparql.com/ns/title/SoHowCome%28NoOneLovesMe%29>
+        a                s:Song ;
+        rdfs:label       "So How Come (No One Loves Me)" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonyvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+i:2flutes  a        s:Instrument ;
+        rdfs:label  "2 flutes" .
+
+t:TooMuchMonkeyBusiness
+        a                 s:Song ;
+        rdfs:label        "Too Much Monkey Business" ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:JohnLennon ;
+        i:rhythmguitar    m:GeorgeHarrison ;
+        i:vocals          m:JohnLennon .
+
+t:SavoyTruffle  a             s:Song ;
+        rdfs:label            "Savoy Truffle" ;
+        i:baritonesaxophones  m:RonnieRoss , m:HarryKlein , m:BernardGeorge ;
+        i:bassguitar          m:PaulMcCartney ;
+        i:bongo               m:PaulMcCartney ;
+        i:drums               m:RingoStarr ;
+        i:electricpiano       m:ChrisThomas ;
+        i:harmonyvocals       m:PaulMcCartney ;
+        i:leadguitar          m:GeorgeHarrison ;
+        i:organ               m:ChrisThomas ;
+        i:tambourine          m:PaulMcCartney ;
+        i:tenorsaxophone      m:DerekCollins , m:ArtEllefson , m:DannyMoss ;
+        i:vocals              m:GeorgeHarrison .
+
+i:threeflutes  a    s:Instrument ;
+        rdfs:label  "three flutes" .
+
+t:Cayenne  a        s:Song ;
+        rdfs:label  "Cayenne" ;
+        i:bass      m:StuartSutcliffe ;
+        i:guitar    m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+t:Because  a               s:Song ;
+        rdfs:label         "Because" ;
+        i:Moogsynthesiser  m:GeorgeHarrison ;
+        i:bass             m:PaulMcCartney ;
+        i:electricspinetBaldwinharpsichord
+                m:GeorgeMartin ;
+        i:leadguitar       m:JohnLennon ;
+        i:vocals           m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+t:ThisBoy  a              s:Song ;
+        rdfs:label        "This Boy" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:vocals          m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+t:TillThereWasYou  a            s:Song ;
+        rdfs:label              "Till There Was You" ;
+        i:acousticleadguitar    m:GeorgeHarrison ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:bongo                 m:RingoStarr ;
+        i:vocals                m:PaulMcCartney .
+
+i:12violins  a      s:Instrument ;
+        rdfs:label  "12 violins" .
+
+i:guiro  a          s:Instrument ;
+        rdfs:label  "guiro" .
+
+i:4horns  a         s:Instrument ;
+        rdfs:label  "4 horns" .
+
+m:JSmith  a         s:Musician ;
+        rdfs:label  "J Smith" .
+
+m:WendyHoran  a     s:Musician ;
+        rdfs:label  "Wendy Horan" .
+
+m:TrevorWilliams  a  s:Musician ;
+        rdfs:label  "Trevor Williams" .
+
+i:4trombones  a     s:Instrument ;
+        rdfs:label  "4 trombones" .
+
+i:woodblock  a      s:Instrument ;
+        rdfs:label  "woodblock" .
+
+m:BertCourtley  a   s:Musician ;
+        rdfs:label  "Bert Courtley" .
+
+i:fingercymbals  a  s:Instrument ;
+        rdfs:label  "finger cymbals" .
+
+m:MichaelBarnes  a  s:Musician ;
+        rdfs:label  "Michael Barnes" .
+
+t:SweetLittleSixteen  a  s:Song ;
+        rdfs:label      "Sweet Little Sixteen" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+i:Lowreyorgan  a    s:Instrument ;
+        rdfs:label  "Lowrey organ" .
+
+t:AndYourBirdCanSing  a  s:Song ;
+        rdfs:label       "And Your Bird Can Sing" ;
+        i:backingvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:RingoStarr , m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison , m:PaulMcCartney ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:JohnLennon .
+
+t:Birthday  a                       s:Song ;
+        rdfs:label                  "Birthday" ;
+        i:backingvocalsorhandclaps  m:YokoOno , m:PattieHarrison ;
+        i:bassguitar                m:PaulMcCartney ;
+        i:drums                     m:RingoStarr ;
+        i:handclaps                 m:MalEvans , m:RingoStarr , m:PaulMcCartney , m:JohnLennon , m:GeorgeHarrison ;
+        i:leadguitar                m:GeorgeHarrison , m:JohnLennon ;
+        i:piano                     m:PaulMcCartney ;
+        i:tambourine                m:JohnLennon ;
+        i:vocals                    m:PaulMcCartney , m:JohnLennon .
+
+m:MalEvans  a       s:Musician ;
+        rdfs:label  "Mal Evans" .
+
+t:FixingAHole  a                s:Song ;
+        rdfs:label              "Fixing A Hole" ;
+        i:backingvocals         m:GeorgeHarrison , m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harpsichord           m:GeorgeMartin ;
+        i:leadandbackingvocals  m:PaulMcCartney ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:maracas               m:RingoStarr .
+
+m:AlfredWaters  a   s:Musician ;
+        rdfs:label  "Alfred Waters" .
+
+m:Othermusicians  a  s:Musician ;
+        rdfs:label  "Other musicians" .
+
+i:rhythmguitar  a   s:Instrument ;
+        rdfs:label  "rhythm guitar" .
+
+m:JackGreene  a     s:Musician ;
+        rdfs:label  "Jack Greene" .
+
+m:NFawcett  a       s:Musician ;
+        rdfs:label  "N Fawcett" .
+
+i:spadeingravel  a  s:Instrument ;
+        rdfs:label  "spade in gravel" .
+
+t:LoveMeDo  a                   s:Song ;
+        rdfs:label              "Love Me Do" ;
+        i:acousticrhythmguitar  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:AndyWhite , m:PeteBest , m:RingoStarr ;
+        i:harmonica             m:JohnLennon ;
+        i:tambourine            m:RingoStarr ;
+        i:vocals                m:JohnLennon , m:PaulMcCartney .
+
+t:DoctorRobert  a        s:Song ;
+        rdfs:label       "Doctor Robert" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonium      m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:maracas        m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+t:InMyLife  a            s:Song ;
+        rdfs:label       "In My Life" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonyvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:piano          m:GeorgeMartin ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:tambourine     m:GeorgeMartin ;
+        i:vocals         m:JohnLennon .
+
+i:sticks  a         s:Instrument ;
+        rdfs:label  "sticks" .
+
+t:RockyRaccoon  a         s:Song ;
+        rdfs:label        "Rocky Raccoon" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:backingvocals   m:GeorgeHarrison , m:JohnLennon ;
+        i:bassguitar      m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:harmonica       m:JohnLennon ;
+        i:harmonium       m:JohnLennon ;
+        i:piano           m:GeorgeMartin ;
+        i:six-stringbass  m:JohnLennon ;
+        i:vocals          m:PaulMcCartney .
+
+i:celesta  a        s:Instrument ;
+        rdfs:label  "celesta" .
+
+t:ThatMeansALot  a       s:Song ;
+        rdfs:label       "That Means A Lot" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:maracas        m:GeorgeHarrison , m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+m:JimChester  a     s:Musician ;
+        rdfs:label  "Jim Chester" .
+
+m:JackEmblow  a     s:Musician ;
+        rdfs:label  "Jack Emblow" .
+
+m:DonaldWeekes  a   s:Musician ;
+        rdfs:label  "Donald Weekes" .
+
+t:ABeginning  a     s:Song ;
+        rdfs:label  "A Beginning" ;
+        i:          <http://learningsparql.com/ns/musician/Personnelunknown%3Binstrumentsinclude> .
+
+i:electricpiano  a  s:Instrument ;
+        rdfs:label  "electric piano" .
+
+i:svarmandal  a     s:Instrument ;
+        rdfs:label  "svarmandal" .
+
+t:MaggieMae  a            s:Song ;
+        rdfs:label        "Maggie Mae" ;
+        i:acousticguitar  m:PaulMcCartney , m:JohnLennon ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:vocals          m:PaulMcCartney , m:JohnLennon .
+
+t:SlowDown  a           s:Song ;
+        rdfs:label      "Slow Down" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:piano         m:GeorgeMartin ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+m:JuneDay  a        s:Musician ;
+        rdfs:label  "June Day" .
+
+i:      a           s:Instrument ;
+        rdfs:label  "" .
+
+m:StanleyRoderick  a  s:Musician ;
+        rdfs:label  "Stanley Roderick" .
+
+m:JaneAsher  a      s:Musician ;
+        rdfs:label  "Jane Asher" .
+
+<http://learningsparql.com/ns/title/Anna%28GoToHim%29>
+        a                       s:Song ;
+        rdfs:label              "Anna (Go To Him)" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:backingvocals         m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:vocals                m:JohnLennon .
+
+i:harpsichord  a    s:Instrument ;
+        rdfs:label  "harpsichord" .
+
+t:HoldMeTight  a         s:Song ;
+        rdfs:label       "Hold Me Tight" ;
+        i:backingvocals  m:JohnLennon , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney , m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+i:twotrumpets  a    s:Instrument ;
+        rdfs:label  "two trumpets" .
+
+i:tabla  a          s:Instrument ;
+        rdfs:label  "tabla" .
+
+m:PatrickHalling  a  s:Musician ;
+        rdfs:label  "Patrick Halling" .
+
+m:AlanLoveday  a    s:Musician ;
+        rdfs:label  "Alan Loveday" .
+
+i:vocals  a         s:Instrument ;
+        rdfs:label  "vocals" .
+
+<http://learningsparql.com/ns/title/IDon%26%238217%3BtWantToSpoilTheParty>
+        a                       s:Song ;
+        rdfs:label              "I Don&#8217;t Want To Spoil The Party" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:backingvocals         m:GeorgeHarrison ;
+        i:bass                  m:PaulMcCartney ;
+        i:double-trackedvocals  m:JohnLennon ;
+        i:drums                 m:RingoStarr ;
+        i:harmonyvocals         m:PaulMcCartney ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:tambourine            m:RingoStarr .
+
+i:trombone  a       s:Instrument ;
+        rdfs:label  "trombone" .
+
+m:RoyCopestake  a   s:Musician ;
+        rdfs:label  "Roy Copestake" .
+
+i:Frenchhorn  a     s:Instrument ;
+        rdfs:label  "French horn" .
+
+<http://learningsparql.com/ns/title/AHardDay%26%238217%3BsNight>
+        a             s:Song ;
+        rdfs:label    "A Hard Day&#8217;s Night" ;
+        i:bass        m:PaulMcCartney ;
+        i:bongo       m:NormanSmith ;
+        i:cowbell     m:RingoStarr ;
+        i:drums       m:RingoStarr ;
+        i:electricandacousticrhythmguitars
+                m:JohnLennon ;
+        i:leadguitar  m:GeorgeHarrison ;
+        i:piano       m:GeorgeMartin ;
+        i:vocals      m:JohnLennon , m:PaulMcCartney .
+
+m:ErichGruenberg  a  s:Musician ;
+        rdfs:label  "Erich Gruenberg" .
+
+t:12-BarOriginal  a  s:Song ;
+        rdfs:label   "12-Bar Original" ;
+        i:bass       m:PaulMcCartney ;
+        i:drums      m:RingoStarr ;
+        i:guitar     m:GeorgeHarrison , m:JohnLennon ;
+        i:harmonium  m:GeorgeMartin .
+
+i:percussion  a     s:Instrument ;
+        rdfs:label  "percussion" .
+
+<http://learningsparql.com/ns/title/Can%26%238217%3BtBuyMeLove>
+        a                       s:Song ;
+        rdfs:label              "Can&#8217;t Buy Me Love" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:hi-hat                m:NormanSmith ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:rhythmguitar          m:GeorgeHarrison ;
+        i:vocals                m:PaulMcCartney .
+
+i:leadandbackingvocals
+        a           s:Instrument ;
+        rdfs:label  "lead and backing vocals" .
+
+m:JPower  a         s:Musician ;
+        rdfs:label  "J Power" .
+
+<http://learningsparql.com/ns/musician/Tom%28surnameunknown%29>
+        a           s:Musician ;
+        rdfs:label  "Tom (surname unknown)" .
+
+m:JamesWBuck  a     s:Musician ;
+        rdfs:label  "James W Buck" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BllFollowTheSun>
+        a                       s:Song ;
+        rdfs:label              "I&#8217;ll Follow The Sun" ;
+        i:acousticguitar        m:PaulMcCartney ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bassguitar            m:PaulMcCartney ;
+        i:harmonyvocals         m:JohnLennon ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:percussion            m:RingoStarr ;
+        i:vocals                m:PaulMcCartney .
+
+m:AlanHolmes  a     s:Musician ;
+        rdfs:label  "Alan Holmes" .
+
+t:INeedYou  a                       s:Song ;
+        rdfs:label                  "I Need You" ;
+        i:12-stringelectricguitar   m:GeorgeHarrison ;
+        i:acousticguitar            m:GeorgeHarrison , m:JohnLennon ;
+        i:acousticguitarpercussion  m:RingoStarr ;
+        i:bassguitar                m:PaulMcCartney ;
+        i:cowbell                   m:RingoStarr ;
+        i:harmonyvocals             m:JohnLennon , m:PaulMcCartney ;
+        i:snaredrum                 m:JohnLennon ;
+        i:vocals                    m:GeorgeHarrison .
+
+t:AcrossTheUniverse  a          s:Song ;
+        rdfs:label              "Across The Universe" ;
+        i:14choristers          m:Uncredited ;
+        i:18violins             m:Uncredited ;
+        i:Hammondorgan          m:GeorgeMartin ;
+        i:acousticguitar        m:PaulMcCartney ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:backingvocals         m:JohnLennon , m:LizzieBravo , m:GeorgeHarrison , m:GayleenPease , m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:electricguitar        m:GeorgeHarrison ;
+        i:fourcellos            m:Uncredited ;
+        i:fourviolas            m:Uncredited ;
+        i:harp                  m:Uncredited ;
+        i:maracas               m:GeorgeHarrison ;
+        i:organ                 m:JohnLennon ;
+        i:percussion            m:RingoStarr ;
+        i:piano                 m:PaulMcCartney ;
+        i:svaramandal           m:RingoStarr ;
+        i:tambura               m:GeorgeHarrison ;
+        i:threetrombones        m:Uncredited ;
+        i:threetrumpets         m:Uncredited ;
+        i:twoguitarists         m:Uncredited ;
+        i:vocals                m:JohnLennon .
+
+<http://learningsparql.com/ns/title/Searchin%26%238217%3B>
+        a                s:Song ;
+        rdfs:label       "Searchin&#8217;" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:PeteBest ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+i:tubularbells  a   s:Instrument ;
+        rdfs:label  "tubular bells" .
+
+m:BillPovey  a      s:Musician ;
+        rdfs:label  "Bill Povey" .
+
+i:timpani  a        s:Instrument ;
+        rdfs:label  "timpani" .
+
+i:claves  a         s:Instrument ;
+        rdfs:label  "claves" .
+
+i:conga  a          s:Instrument ;
+        rdfs:label  "conga" .
+
+m:AllenFord  a      s:Musician ;
+        rdfs:label  "Allen Ford" .
+
+m:HenryMyerscough  a  s:Musician ;
+        rdfs:label  "Henry Myerscough" .
+
+m:EddieThornton  a  s:Musician ;
+        rdfs:label  "Eddie Thornton" .
+
+t:WhatGoesOn  a          s:Song ;
+        rdfs:label       "What Goes On" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonyvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:RingoStarr .
+
+<http://learningsparql.com/ns/title/YouKnowMyName%28LookUpTheNumber%29>
+        a                s:Song ;
+        rdfs:label       "You Know My Name (Look Up The Number)" ;
+        i:altosaxophone  m:BrianJones ;
+        i:backingvocals  m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:bongo          m:RingoStarr ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:JohnLennon , m:GeorgeHarrison ;
+        i:handclaps      m:RingoStarr , m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:harmonica      m:JohnLennon ;
+        i:maracas        m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:spadeingravel  m:MalEvans ;
+        i:vibes          m:GeorgeHarrison ;
+        i:vocals         m:RingoStarr , m:JohnLennon , m:PaulMcCartney .
+
+t:DriveMyCar  a          s:Song ;
+        rdfs:label       "Drive My Car" ;
+        i:bass           m:PaulMcCartney ;
+        i:cowbell        m:RingoStarr ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:GeorgeHarrison ;
+        i:harmonyvocals  m:GeorgeHarrison ;
+        i:leadguitar     m:PaulMcCartney ;
+        i:piano          m:JohnLennon ;
+        i:rhythmguitar   m:PaulMcCartney ;
+        i:tambourine     m:JohnLennon ;
+        i:vocals         m:PaulMcCartney , m:JohnLennon .
+
+i:2clarinets  a     s:Instrument ;
+        rdfs:label  "2 clarinets" .
+
+t:WhileMyGuitarGentlyWeeps
+        a                 s:Song ;
+        rdfs:label        "While My Guitar Gently Weeps" ;
+        i:Hammondorgan    m:GeorgeHarrison ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:backingvocals   m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bassguitar      m:PaulMcCartney ;
+        i:castanets       m:RingoStarr ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:EricClapton ;
+        i:organ           m:PaulMcCartney ;
+        i:piano           m:PaulMcCartney ;
+        i:rhythmguitar    m:JohnLennon ;
+        i:tambourine      m:RingoStarr ;
+        i:vocals          m:GeorgeHarrison .
+
+m:TMoore  a         s:Musician ;
+        rdfs:label  "T Moore" .
+
+m:BrianJones  a     s:Musician ;
+        rdfs:label  "Brian Jones" .
+
+<http://learningsparql.com/ns/title/IJustDon%26%238217%3BtUnderstand>
+        a                s:Song ;
+        rdfs:label       "I Just Don&#8217;t Understand" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+i:ukulele  a        s:Instrument ;
+        rdfs:label  "ukulele" .
+
+<http://learningsparql.com/ns/title/Everybody%26%238217%3BsGotSomethingToHideExceptMeAndMyMonkey>
+        a                s:Song ;
+        rdfs:label       "Everybody&#8217;s Got Something To Hide Except Me And My Monkey" ;
+        i:backingvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:JohnLennon ;
+        i:handclaps      m:PaulMcCartney , m:JohnLennon , m:GeorgeHarrison , m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:percussion     m:RingoStarr , m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+m:StephenShingles  a  s:Musician ;
+        rdfs:label  "Stephen Shingles" .
+
+i:HohnerPianetelectricpiano
+        a           s:Instrument ;
+        rdfs:label  "Hohner Pianet electric piano" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmOnlySleeping>
+        a                       s:Song ;
+        rdfs:label              "I&#8217;m Only Sleeping" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:backingvocals         m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:vocals                m:JohnLennon .
+
+t:SexySadie  a            s:Song ;
+        rdfs:label        "Sexy Sadie" ;
+        i:Hammondorgan    m:JohnLennon ;
+        i:acousticguitar  m:JohnLennon ;
+        i:backingvocals   m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:piano           m:PaulMcCartney ;
+        i:rhythmguitar    m:JohnLennon ;
+        i:tambourine      m:RingoStarr ;
+        i:vocals          m:JohnLennon .
+
+m:JFraser  a        s:Musician ;
+        rdfs:label  "J Fraser" .
+
+i:tenorflute  a     s:Instrument ;
+        rdfs:label  "tenor flute" .
+
+t:AllYouNeedIsLove  a     s:Song ;
+        rdfs:label        "All You Need Is Love" ;
+        i:accordion       m:JackEmblow ;
+        i:banjo           m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:cello           m:JackHolmes , m:LionelRoss ;
+        i:chorus          m:GrahamNash , m:PattieHarrison , m:JaneAsher , m:KeithRichards , m:GaryLeedsandmore , m:HunterDavies , m:KeithMoon , m:EricClapton , m:MickJagger , m:MarianneFaithfull , m:MikeMcCartney ;
+        i:conductor       m:MikeVickers ;
+        i:doublebass      m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:guitar          m:GeorgeHarrison ;
+        i:harpsichord     m:JohnLennon ;
+        i:piano           m:GeorgeMartin ;
+        i:tenorsaxophone  m:DonHoneywill , m:RexMorris ;
+        i:trombone        m:EvanWatkins , m:HarrySpain ;
+        i:trumpet         m:DavidMason , m:StanleyWoods ;
+        i:violin          m:GeorgeHarrison , m:EricBowie , m:JohnRonayne , m:SidneySax , m:PatrickHalling ;
+        i:vocals          m:GeorgeHarrison , m:JohnLennon , m:PaulMcCartney .
+
+t:BadBoy  a                          s:Song ;
+        rdfs:label                   "Bad Boy" ;
+        i:HohnerPianetelectricpiano  m:PaulMcCartney ;
+        i:bass                       m:PaulMcCartney ;
+        i:drums                      m:RingoStarr ;
+        i:leadguitar                 m:GeorgeHarrison ;
+        i:rhythmguitar               m:JohnLennon ;
+        i:tambourine                 m:RingoStarr ;
+        i:vocals                     m:JohnLennon .
+
+t:BlueJayWay  a          s:Song ;
+        rdfs:label       "Blue Jay Way" ;
+        i:Hammondorgan   m:GeorgeHarrison ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:cello          m:PeterWillison ;
+        i:drums          m:RingoStarr ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:GeorgeHarrison .
+
+t:CarryThatWeight  a    s:Song ;
+        rdfs:label      "Carry That Weight" ;
+        i:12violins     m:Unknown ;
+        i:3trumpets     m:Unknown ;
+        i:4cellos       m:Unknown ;
+        i:4horns        m:Unknown ;
+        i:4violas       m:Unknown ;
+        i:bass          m:GeorgeHarrison ;
+        i:basstrombone  m:Unknown ;
+        i:doublebass    m:Unknown ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:piano         m:PaulMcCartney ;
+        i:rhythmguitar  m:PaulMcCartney ;
+        i:timpani       m:RingoStarr ;
+        i:trombone      m:Unknown ;
+        i:vocals        m:PaulMcCartney , m:RingoStarr , m:JohnLennon , m:GeorgeHarrison .
+
+<http://learningsparql.com/ns/title/Don%26%238217%3BtLetMeDown>
+        a                s:Song ;
+        rdfs:label       "Don&#8217;t Let Me Down" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:BillyPreston ;
+        i:harmonyvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+m:DavidWolfsthal  a  s:Musician ;
+        rdfs:label  "David Wolfsthal" .
+
+i:six-stringbassguitar
+        a           s:Instrument ;
+        rdfs:label  "six-string bass guitar" .
+
+i:threeviolas  a    s:Instrument ;
+        rdfs:label  "three violas" .
+
+i:chorus  a         s:Instrument ;
+        rdfs:label  "chorus" .
+
+i:leadacousticguitar  a  s:Instrument ;
+        rdfs:label  "lead acoustic guitar" .
+
+m:TonyRandall  a    s:Musician ;
+        rdfs:label  "Tony Randall" .
+
+i:electricslideguitar
+        a           s:Instrument ;
+        rdfs:label  "electric slide guitar" .
+
+m:JohnBurden  a     s:Musician ;
+        rdfs:label  "John Burden" .
+
+i:bassguitar  a     s:Instrument ;
+        rdfs:label  "bass guitar" .
+
+t:DearPrudence  a                   s:Song ;
+        rdfs:label                  "Dear Prudence" ;
+        i:backingvocals             m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon ;
+        i:backingvocalsorhandclaps  m:MalEvans , m:JackieLomax , m:JohnMcCartney ;
+        i:bass                      m:PaulMcCartney ;
+        i:drums                     m:PaulMcCartney ;
+        i:flugelhorn                m:PaulMcCartney ;
+        i:guitar                    m:JohnLennon ;
+        i:handclaps                 m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar                m:GeorgeHarrison ;
+        i:piano                     m:PaulMcCartney ;
+        i:tambourine                m:PaulMcCartney ;
+        i:vocals                    m:JohnLennon .
+
+i:flugelhorn  a     s:Instrument ;
+        rdfs:label  "flugelhorn" .
+
+t:ThreeCoolCats  a       s:Song ;
+        rdfs:label       "Three Cool Cats" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:PeteBest ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+m:CliffordSeville  a  s:Musician ;
+        rdfs:label  "Clifford Seville" .
+
+m:Unknownmusician  a  s:Musician ;
+        rdfs:label  "Unknown musician" .
+
+t:KeepYourHandsOffMyBaby
+        a                s:Song ;
+        rdfs:label       "Keep Your Hands Off My Baby" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+t:HereThereAndEverywhere
+        a                 s:Song ;
+        rdfs:label        "Here, There And Everywhere" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:backingvocals   m:GeorgeHarrison , m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:fingerclicks    m:JohnLennon , m:PaulMcCartney , m:RingoStarr , m:GeorgeHarrison ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:vocals          m:PaulMcCartney .
+
+<http://learningsparql.com/ns/title/ItWon%26%238217%3BtBeLong>
+        a                s:Song ;
+        rdfs:label       "It Won&#8217;t Be Long" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+i:organ  a          s:Instrument ;
+        rdfs:label  "organ" .
+
+i:electricandacousticrhythmguitars
+        a           s:Instrument ;
+        rdfs:label  "electric and acoustic rhythm guitars" .
+
+i:threesaxophones  a  s:Instrument ;
+        rdfs:label  "three saxophones" .
+
+m:RonnieScott  a    s:Musician ;
+        rdfs:label  "Ronnie Scott" .
+
+m:TerryWeil  a      s:Musician ;
+        rdfs:label  "Terry Weil" .
+
+m:ElgarHowarth  a   s:Musician ;
+        rdfs:label  "Elgar Howarth" .
+
+m:CyrilMacArthur  a  s:Musician ;
+        rdfs:label  "Cyril MacArthur" .
+
+m:BramMartin  a     s:Musician ;
+        rdfs:label  "Bram Martin" .
+
+m:JurgenHess  a     s:Musician ;
+        rdfs:label  "Jurgen Hess" .
+
+m:EricMorecambe  a  s:Musician ;
+        rdfs:label  "Eric Morecambe" .
+
+m:AndrewMcGee  a    s:Musician ;
+        rdfs:label  "Andrew McGee" .
+
+m:JillUtting  a     s:Musician ;
+        rdfs:label  "Jill Utting" .
+
+t:TomorrowNeverKnows  a  s:Song ;
+        rdfs:label    "Tomorrow Never Knows" ;
+        i:bass        m:PaulMcCartney ;
+        i:drums       m:RingoStarr ;
+        i:guitar      m:GeorgeHarrison ;
+        i:leadguitar  m:PaulMcCartney ;
+        i:organ       m:JohnLennon ;
+        i:piano       m:GeorgeMartin ;
+        i:sitar       m:GeorgeHarrison ;
+        i:tambourine  m:RingoStarr ;
+        i:tambura     m:GeorgeHarrison ;
+        i:tapeloops   m:JohnLennon , m:GeorgeHarrison , m:RingoStarr , m:PaulMcCartney ;
+        i:vocals      m:JohnLennon .
+
+t:SheCameInThroughTheBathroomWindow
+        a                          s:Song ;
+        rdfs:label                 "She Came In Through The Bathroom Window" ;
+        i:12-stringacousticguitar  m:JohnLennon ;
+        i:backingvocals            m:JohnLennon , m:GeorgeHarrison ;
+        i:bass                     m:PaulMcCartney ;
+        i:cowbell                  m:RingoStarr ;
+        i:drums                    m:RingoStarr ;
+        i:electricpiano            m:PaulMcCartney ;
+        i:handclaps                m:JohnLennon ;
+        i:leadguitar               m:PaulMcCartney , m:GeorgeHarrison ;
+        i:maracas                  m:RingoStarr ;
+        i:piano                    m:PaulMcCartney ;
+        i:rhythmguitar             m:JohnLennon ;
+        i:tambourine               m:RingoStarr ;
+        i:vocals                   m:PaulMcCartney .
+
+t:Misery  a             s:Song ;
+        rdfs:label      "Misery" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:piano         m:GeorgeMartin ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon .
+
+i:threecellos  a    s:Instrument ;
+        rdfs:label  "three cellos" .
+
+t:YellowSubmarine  a      s:Song ;
+        rdfs:label        "Yellow Submarine" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:backingvocals   m:BrianJones , m:GeoffEmerick , m:GeorgeMartin , m:MalEvans , m:MarianneFaithfull , m:PattieHarrison , m:NeilAspinall , m:GeorgeHarrison , m:JohnLennon , m:PaulMcCartney , m:AlfBicknell ;
+        i:bass            m:PaulMcCartney ;
+        i:bassdrum        m:MalEvans ;
+        i:drums           m:RingoStarr ;
+        i:tambourine      m:GeorgeHarrison ;
+        i:vocals          m:RingoStarr .
+
+t:TheInnerLight  a       s:Song ;
+        rdfs:label       "The Inner Light" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:flute          m:HariprasadChaurasiaSRKenkare ;
+        i:harmonium      m:RijRamDesad ;
+        i:pakavaj        m:MahapurushMisra ;
+        i:sarod          m:AshishKhan ;
+        i:shehnai        m:SharadGhoshHanumanJadev ;
+        i:tabla          m:MahapurushMisra ;
+        i:vocals         m:GeorgeHarrison .
+
+m:EddieKramer  a    s:Musician ;
+        rdfs:label  "Eddie Kramer" .
+
+t:EightDaysAWeek  a             s:Song ;
+        rdfs:label              "Eight Days A Week" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bassguitar            m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:electricguitar        m:GeorgeHarrison ;
+        i:handclaps             m:PaulMcCartney , m:JohnLennon , m:RingoStarr , m:GeorgeHarrison ;
+        i:vocals                m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+m:ReginaldKilbey  a  s:Musician ;
+        rdfs:label  "Reginald Kilbey" .
+
+m:StuartSutcliffe  a  s:Musician ;
+        rdfs:label  "Stuart Sutcliffe" .
+
+m:GranvilleJones  a  s:Musician ;
+        rdfs:label  "Granville Jones" .
+
+t:Taxman  a              s:Song ;
+        rdfs:label       "Taxman" ;
+        i:backingvocals  m:JohnLennon , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:cowbell        m:RingoStarr ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:PaulMcCartney , m:GeorgeHarrison ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:GeorgeHarrison .
+
+i:chocalho  a       s:Instrument ;
+        rdfs:label  "chocalho" .
+
+m:BasilTschaikov  a  s:Musician ;
+        rdfs:label  "Basil Tschaikov" .
+
+t:AnyTimeAtAll  a               s:Song ;
+        rdfs:label              "Any Time At All" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:backingvocals         m:PaulMcCartney ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:piano                 m:PaulMcCartney ;
+        i:vocals                m:JohnLennon .
+
+m:ArtEllefson  a    s:Musician ;
+        rdfs:label  "Art Ellefson" .
+
+<http://learningsparql.com/ns/title/YouWon%26%238217%3BtSeeMe>
+        a                s:Song ;
+        rdfs:label       "You Won&#8217;t See Me" ;
+        i:Hammondorgan   m:MalEvans ;
+        i:backingvocals  m:JohnLennon , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:piano          m:PaulMcCartney ;
+        i:rhythmguitar   m:GeorgeHarrison ;
+        i:tambourine     m:GeorgeHarrison ;
+        i:vocals         m:PaulMcCartney .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BllGetYou>
+        a                s:Song ;
+        rdfs:label       "I&#8217;ll Get You" ;
+        i:backingvocals  m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:GeorgeHarrison , m:PaulMcCartney , m:RingoStarr ;
+        i:harmonica      m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney , m:JohnLennon .
+
+t:StrawberryFieldsForever
+        a                 s:Song ;
+        rdfs:label        "Strawberry Fields Forever" ;
+        i:Mellotron       m:JohnLennon , m:PaulMcCartney ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:bongo           m:JohnLennon , m:PaulMcCartney ;
+        i:cello           m:JohnHall , m:DerekSimpson , m:NormanJones ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:guiro           m:NeilAspinall ;
+        i:maracas         m:TerryDoran , m:GeorgeHarrison ;
+        i:percussion      m:RingoStarr ;
+        i:piano           m:JohnLennon ;
+        i:svarmandal      m:GeorgeHarrison ;
+        i:tambourine      m:MalEvans ;
+        i:timpani         m:PaulMcCartney , m:GeorgeHarrison ;
+        i:trumpet         m:DerekWatkins , m:StanleyRoderick , m:TonyFisher , m:GregBowen ;
+        i:vocals          m:JohnLennon .
+
+i:sitar  a          s:Instrument ;
+        rdfs:label  "sitar" .
+
+t:SieLiebtDich  a       s:Song ;
+        rdfs:label      "Sie Liebt Dich" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+m:Variousothers  a  s:Musician ;
+        rdfs:label  "Various others" .
+
+m:JohnMarston  a    s:Musician ;
+        rdfs:label  "John Marston" .
+
+t:DoYouWantToKnowASecret
+        a                s:Song ;
+        rdfs:label       "Do You Want To Know A Secret" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:percussion     m:RingoStarr ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+t:WithinYouWithoutYou
+        a                 s:Song ;
+        rdfs:label        "Within You Without You" ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:cello           m:AllenFord , m:PeterBeavan , m:ReginaldKilbey ;
+        i:dilruba         m:AnnaJoshi , m:AmritGajjar ;
+        i:sitar           m:GeorgeHarrison ;
+        i:svarmandal      m:Unknownmusician ;
+        i:tabla           m:NatwarSoni ;
+        i:tamboura        m:BuddhadevKansara ;
+        i:tambura         m:GeorgeHarrison , m:NeilAspinall ;
+        i:violin          m:AlanLoveday , m:JackRothstein , m:ErichGruenberg , m:JulienGaillard , m:RalphElman , m:DavidWolfsthal , m:JackGreene , m:PaulScherman ;
+        i:vocals          m:GeorgeHarrison .
+
+t:TheHippyHippyShake  a  s:Song ;
+        rdfs:label      "The Hippy Hippy Shake" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+t:ThinkForYourself  a          s:Song ;
+        rdfs:label             "Think For Yourself" ;
+        i:VoxContinentalorgan  m:JohnLennon ;
+        i:bass                 m:PaulMcCartney ;
+        i:drums                m:RingoStarr ;
+        i:harmonyvocals        m:JohnLennon , m:PaulMcCartney ;
+        i:maracas              m:RingoStarr ;
+        i:rhythmguitar         m:GeorgeHarrison ;
+        i:tambourine           m:JohnLennon ;
+        i:vocals               m:GeorgeHarrison .
+
+<http://learningsparql.com/ns/title/It%26%238217%3BsOnlyLove>
+        a                          s:Song ;
+        rdfs:label                 "It&#8217;s Only Love" ;
+        i:12-stringacousticguitar  m:GeorgeHarrison ;
+        i:acousticrhythmguitar     m:JohnLennon ;
+        i:bass                     m:PaulMcCartney ;
+        i:drums                    m:RingoStarr ;
+        i:electricguitar           m:JohnLennon ;
+        i:leadguitar               m:GeorgeHarrison ;
+        i:tambourine               m:RingoStarr ;
+        i:vocals                   m:JohnLennon .
+
+i:12-stringacousticguitar
+        a           s:Instrument ;
+        rdfs:label  "12-string acoustic guitar" .
+
+m:BillyPreston  a   s:Musician ;
+        rdfs:label  "Billy Preston" .
+
+m:YokoOno  a        s:Musician ;
+        rdfs:label  "Yoko Ono" .
+
+i:banjo  a          s:Instrument ;
+        rdfs:label  "banjo" .
+
+m:TonyGilbert  a    s:Musician ;
+        rdfs:label  "Tony Gilbert" .
+
+t:LovelyRita  a                 s:Song ;
+        rdfs:label              "Lovely Rita" ;
+        i:acousticrhythmguitar  m:GeorgeHarrison , m:JohnLennon ;
+        i:backingvocals         m:JohnLennon , m:GeorgeHarrison ;
+        i:bass                  m:PaulMcCartney ;
+        i:combandpaper          m:RingoStarr , m:GeorgeHarrison , m:JohnLennon , m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:piano                 m:PaulMcCartney , m:GeorgeMartin ;
+        i:vocals                m:PaulMcCartney .
+
+i:saxophone  a      s:Instrument ;
+        rdfs:label  "saxophone" .
+
+t:MailmanBringMeNoMoreBlues
+        a           s:Song ;
+        rdfs:label  "Mailman, Bring Me No More Blues" ;
+        i:bass      m:PaulMcCartney ;
+        i:drums     m:RingoStarr ;
+        i:guitar    m:GeorgeHarrison , m:JohnLennon ;
+        i:vocals    m:PaulMcCartney , m:JohnLennon .
+
+i:twopiccolos  a    s:Instrument ;
+        rdfs:label  "two piccolos" .
+
+i:altosaxophone  a  s:Instrument ;
+        rdfs:label  "alto saxophone" .
+
+t:LittleChild  a        s:Song ;
+        rdfs:label      "Little Child" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:harmonica     m:JohnLennon ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:piano         m:PaulMcCartney ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon , m:PaulMcCartney .
+
+i:alarmclock  a     s:Instrument ;
+        rdfs:label  "alarm clock" .
+
+i:double-trackedleadguitar
+        a           s:Instrument ;
+        rdfs:label  "double-tracked lead guitar" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmSoTired>
+        a                 s:Song ;
+        rdfs:label        "I&#8217;m So Tired" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:electricpiano   m:PaulMcCartney ;
+        i:harmonyvocals   m:PaulMcCartney ;
+        i:leadguitar      m:JohnLennon , m:GeorgeHarrison ;
+        i:organ           m:JohnLennon ;
+        i:vocals          m:JohnLennon .
+
+m:HunterDavies  a   s:Musician ;
+        rdfs:label  "Hunter Davies" .
+
+<http://learningsparql.com/ns/musician/Personnelunknown%3Binstrumentsinclude>
+        a           s:Musician ;
+        rdfs:label  "Personnel unknown; instruments include" .
+
+t:TheSheikOfAraby  a     s:Song ;
+        rdfs:label       "The Sheik Of Araby" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:PeteBest ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+m:StanleyWoods  a   s:Musician ;
+        rdfs:label  "Stanley Woods" .
+
+m:FredLucas  a      s:Musician ;
+        rdfs:label  "Fred Lucas" .
+
+i:1percussion  a    s:Instrument ;
+        rdfs:label  "1 percussion" .
+
+t:WordsOfLove  a        s:Song ;
+        rdfs:label      "Words Of Love" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:percussion    m:RingoStarr ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon , m:PaulMcCartney , m:GeorgeHarrison .
+
+t:LonesomeTearsInMyEyes
+        a               s:Song ;
+        rdfs:label      "Lonesome Tears In My Eyes" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:JohnLennon ;
+        i:rhythmguitar  m:GeorgeHarrison ;
+        i:vocals        m:JohnLennon .
+
+m:FrankReidy  a     s:Musician ;
+        rdfs:label  "Frank Reidy" .
+
+<http://learningsparql.com/ns/title/IfYou%26%238217%3BveGotTrouble>
+        a               s:Song ;
+        rdfs:label      "If You&#8217;ve Got Trouble" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:RingoStarr .
+
+i:chimes  a         s:Instrument ;
+        rdfs:label  "chimes" .
+
+m:JohnMcCartney  a  s:Musician ;
+        rdfs:label  "John McCartney" .
+
+m:LesCondon  a      s:Musician ;
+        rdfs:label  "Les Condon" .
+
+m:JohnSharpe  a     s:Musician ;
+        rdfs:label  "John Sharpe" .
+
+t:GetBack  a             s:Song ;
+        rdfs:label       "Get Back" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:BillyPreston ;
+        i:harmonyvocals  m:JohnLennon ;
+        i:leadguitar     m:JohnLennon ;
+        i:rhythmguitar   m:GeorgeHarrison ;
+        i:vocals         m:PaulMcCartney .
+
+m:MikeVickers  a    s:Musician ;
+        rdfs:label  "Mike Vickers" .
+
+m:TonySheridan  a   s:Musician ;
+        rdfs:label  "Tony Sheridan" .
+
+m:PeggieAllen  a    s:Musician ;
+        rdfs:label  "Peggie Allen" .
+
+m:ChristopherTaylor  a  s:Musician ;
+        rdfs:label  "Christopher Taylor" .
+
+<http://learningsparql.com/ns/title/BabyYou%26%238217%3BreARichMan>
+        a             s:Song ;
+        rdfs:label    "Baby You&#8217;re A Rich Man" ;
+        i:bass        m:PaulMcCartney ;
+        i:clavioline  m:JohnLennon ;
+        i:drums       m:RingoStarr ;
+        i:guitar      m:GeorgeHarrison ;
+        i:handclaps   m:GeorgeHarrison ;
+        i:maracas     m:RingoStarr ;
+        i:piano       m:PaulMcCartney , m:JohnLennon ;
+        i:tambourine  m:RingoStarr ;
+        i:vibraphone  m:EddieKramer ;
+        i:vocals      m:PaulMcCartney , m:MickJagger , m:JohnLennon , m:GeorgeHarrison .
+
+<http://learningsparql.com/ns/title/Everybody%26%238217%3BsTryingToBeMyBaby>
+        a                       s:Song ;
+        rdfs:label              "Everybody&#8217;s Trying To Be My Baby" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:tambourine            m:RingoStarr ;
+        i:vocals                m:GeorgeHarrison .
+
+i:12-stringelectricguitar
+        a           s:Instrument ;
+        rdfs:label  "12-string electric guitar" .
+
+t:Help  a                s:Song ;
+        rdfs:label       "Help!" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:JohnLennon .
+
+t:MrMoonlight  a                s:Song ;
+        rdfs:label              "Mr Moonlight" ;
+        i:Africandrum           m:GeorgeHarrison ;
+        i:Hammondorgan          m:PaulMcCartney ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:harmonyvocals         m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:percussion            m:RingoStarr ;
+        i:vocals                m:JohnLennon .
+
+t:BeingForTheBenefitOfMrKite
+        a                 s:Song ;
+        rdfs:label        "Being For The Benefit Of Mr Kite!" ;
+        i:Hammondorgan    m:GeorgeMartin ;
+        i:Lowreyorgan     m:JohnLennon ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:bassguitar      m:PaulMcCartney ;
+        i:bassharmonica   m:MalEvans ;
+        i:drums           m:RingoStarr ;
+        i:harmonica       m:GeorgeHarrison , m:RingoStarr , m:NeilAspinall ;
+        i:harmonium       m:GeorgeMartin ;
+        i:piano           m:GeorgeMartin ;
+        i:shakerbells     m:RingoStarr ;
+        i:tapeloops       m:GeoffEmerick , m:GeorgeMartin ;
+        i:vocals          m:JohnLennon .
+
+t:TellMeWhatYouSee  a    s:Song ;
+        rdfs:label       "Tell Me What You See" ;
+        i:bass           m:PaulMcCartney ;
+        i:claves         m:RingoStarr ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:PaulMcCartney ;
+        <http://learningsparql.com/ns/instrument/g%C3%BCiro>
+                m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:tambourine     m:JohnLennon ;
+        i:vocals         m:JohnLennon , m:PaulMcCartney .
+
+m:StanleyReynolds  a  s:Musician ;
+        rdfs:label  "Stanley Reynolds" .
+
+t:AnotherGirl  a                s:Song ;
+        rdfs:label              "Another Girl" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:electricrhythmguitar  m:GeorgeHarrison ;
+        i:harmonyvocals         m:JohnLennon , m:GeorgeHarrison ;
+        i:leadguitar            m:PaulMcCartney ;
+        i:vocals                m:PaulMcCartney .
+
+t:MarthaMyDear  a         s:Song ;
+        rdfs:label        "Martha My Dear" ;
+        i:Frenchhorn      m:TonyTunstall ;
+        i:bass            m:PaulMcCartney ;
+        i:cello           m:FrederickAlexander , m:ReginaldKilbey ;
+        i:drums           m:PaulMcCartney ;
+        i:electricguitar  m:GeorgeHarrison ;
+        i:flugelhorn      m:LeonCalvert ;
+        i:handclaps       m:PaulMcCartney ;
+        i:leadguitar      m:PaulMcCartney ;
+        i:piano           m:PaulMcCartney ;
+        i:trombone        m:TedBarker ;
+        i:trumpet         m:LeonCalvert , m:StanleyReynolds , m:RonnieHughes ;
+        i:tuba            m:AlfReece ;
+        i:viola           m:HenryMyerscough , m:LeoBirnbaum ;
+        i:violin          m:DennisMcConnell , m:BernardMiller , m:LouSofier , m:LesMaddox ;
+        i:vocals          m:PaulMcCartney .
+
+i:threetrumpets  a  s:Instrument ;
+        rdfs:label  "three trumpets" .
+
+m:RichardTaylor  a  s:Musician ;
+        rdfs:label  "Richard Taylor" .
+
+i:bongo  a          s:Instrument ;
+        rdfs:label  "bongo" .
+
+i:trumpetsorflugelhorn
+        a           s:Instrument ;
+        rdfs:label  "trumpets or flugelhorn" .
+
+i:tuba  a           s:Instrument ;
+        rdfs:label  "tuba" .
+
+m:RingoStarr  a     s:Musician ;
+        rdfs:label  "Ringo Starr" .
+
+t:IfINeededSomeone  a              s:Song ;
+        rdfs:label                 "If I Needed Someone" ;
+        i:12-stringelectricguitar  m:GeorgeHarrison ;
+        i:bass                     m:PaulMcCartney ;
+        i:drums                    m:RingoStarr ;
+        i:harmonyvocals            m:PaulMcCartney , m:JohnLennon ;
+        i:rhythmguitar             m:JohnLennon ;
+        i:tambourine               m:RingoStarr ;
+        i:vocals                   m:GeorgeHarrison .
+
+t:SheSaidSheSaid  a      s:Song ;
+        rdfs:label       "She Said She Said" ;
+        i:Hammondorgan   m:JohnLennon ;
+        i:backingvocals  m:GeorgeHarrison ;
+        i:bass           m:GeorgeHarrison ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:shaker         m:RingoStarr ;
+        i:vocals         m:JohnLennon .
+
+t:AllThingsMustPass  a    s:Song ;
+        rdfs:label        "All Things Must Pass" ;
+        i:electricguitar  m:GeorgeHarrison ;
+        i:vocals          m:GeorgeHarrison .
+
+t:CryingWaitingHoping
+        a                s:Song ;
+        rdfs:label       "Crying, Waiting, Hoping" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:GeorgeHarrison .
+
+<http://learningsparql.com/ns/title/IWantYou%28She%26%238217%3BsSoHeavy%29>
+        a                  s:Song ;
+        rdfs:label         "I Want You (She&#8217;s So Heavy)" ;
+        i:Hammondorgan     m:BillyPreston ;
+        i:Moogsynthesiser  m:JohnLennon ;
+        i:backingvocals    m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass             m:PaulMcCartney ;
+        i:conga            m:RingoStarr ;
+        i:drums            m:RingoStarr ;
+        i:leadguitar       m:JohnLennon , m:GeorgeHarrison ;
+        i:organ            m:JohnLennon ;
+        i:vocals           m:JohnLennon .
+
+i:conductor  a      s:Instrument ;
+        rdfs:label  "conductor" .
+
+t:Piggies  a           s:Song ;
+        rdfs:label     "Piggies" ;
+        i:bass         m:PaulMcCartney ;
+        i:cello        m:EldonFox , m:ReginaldKilbey ;
+        i:drums        m:RingoStarr ;
+        i:guitar       m:GeorgeHarrison ;
+        i:harpsichord  m:ChrisThomas ;
+        i:tambourine   m:RingoStarr ;
+        i:tapeloops    m:JohnLennon ;
+        i:viola        m:KeithCummings , m:JohnUnderwood ;
+        i:violin       m:NormanLederman , m:EricBowie , m:RonaldThomas , m:HenryDatyner ;
+        i:vocals       m:GeorgeHarrison .
+
+m:GaryLeedsandmore  a  s:Musician ;
+        rdfs:label  "Gary Leeds and more" .
+
+<http://learningsparql.com/ns/title/SgtPepper%26%238217%3BsLonelyHeartsClubBand>
+        a             s:Song ;
+        rdfs:label    "Sgt Pepper&#8217;s Lonely Hearts Club Band" ;
+        i:Frenchhorn  m:JamesWBuck , m:JohnBurden , m:TonyRandall , m:NeilSanders ;
+        i:bassguitar  m:PaulMcCartney ;
+        i:drums       m:RingoStarr ;
+        i:guitar      m:JohnLennon , m:GeorgeHarrison ;
+        i:leadguitar  m:PaulMcCartney ;
+        i:vocals      m:JohnLennon , m:PaulMcCartney , m:GeorgeHarrison .
+
+m:RaymondNewman  a  s:Musician ;
+        rdfs:label  "Raymond Newman" .
+
+t:LoveYouTo  a            s:Song ;
+        rdfs:label        "Love You To" ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:backingvocals   m:PaulMcCartney ;
+        i:bass            m:PaulMcCartney ;
+        i:electricguitar  m:GeorgeHarrison ;
+        i:sitar           m:Othermusicians , m:GeorgeHarrison ;
+        i:tabla           m:AnilBhagwat ;
+        i:tambourine      m:RingoStarr ;
+        i:tambura         m:Othermusicians ;
+        i:vocals          m:GeorgeHarrison .
+
+i:bassoons  a       s:Instrument ;
+        rdfs:label  "bassoons" .
+
+m:DuncanCampbell  a  s:Musician ;
+        rdfs:label  "Duncan Campbell" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmGonnaSitRightDownAndCry%28OverYou%29>
+        a               s:Song ;
+        rdfs:label      "I&#8217;m Gonna Sit Right Down And Cry (Over You)" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon .
+
+t:CryBabyCry  a           s:Song ;
+        rdfs:label        "Cry Baby Cry" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:harmonium       m:GeorgeMartin ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:organ           m:JohnLennon ;
+        i:piano           m:JohnLennon ;
+        i:tambourine      m:RingoStarr ;
+        i:vocals          m:JohnLennon .
+
+i:double-trackedvocals
+        a           s:Instrument ;
+        rdfs:label  "double-tracked vocals" .
+
+m:TristanFry  a     s:Musician ;
+        rdfs:label  "Tristan Fry" .
+
+i:1bassclarinet  a  s:Instrument ;
+        rdfs:label  "1 bass clarinet" .
+
+m:PaulMcCartney  a  s:Musician ;
+        rdfs:label  "Paul McCartney" .
+
+i:recorder  a       s:Instrument ;
+        rdfs:label  "recorder" .
+
+<http://learningsparql.com/ns/title/There%26%238217%3BsAPlace>
+        a                s:Song ;
+        rdfs:label       "There&#8217;s A Place" ;
+        i:backingvocals  m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonica      m:JohnLennon ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney , m:JohnLennon .
+
+t:YouNeverGiveMeYourMoney
+        a                s:Song ;
+        rdfs:label       "You Never Give Me Your Money" ;
+        i:backingvocals  m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:chimes         m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:tambourine     m:RingoStarr ;
+        i:tapeloops      m:PaulMcCartney ;
+        i:vocals         m:PaulMcCartney .
+
+t:OneAfter909  a         s:Song ;
+        rdfs:label       "One After 909" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:BillyPreston ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney , m:JohnLennon .
+
+<http://learningsparql.com/ns/title/Money%28That%26%238217%3BsWhatIWant%29>
+        a                s:Song ;
+        rdfs:label       "Money (That&#8217;s What I Want)" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:piano          m:GeorgeMartin ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+m:NeilSanders  a    s:Musician ;
+        rdfs:label  "Neil Sanders" .
+
+m:AlexNifosi  a     s:Musician ;
+        rdfs:label  "Alex Nifosi" .
+
+i:backingvocalsorhandclaps
+        a           s:Instrument ;
+        rdfs:label  "backing vocals or handclaps" .
+
+m:BernardMiller  a  s:Musician ;
+        rdfs:label  "Bernard Miller" .
+
+t:GoldenSlumbers  a     s:Song ;
+        rdfs:label      "Golden Slumbers" ;
+        i:12violins     m:Unknown ;
+        i:3trumpets     m:Unknown ;
+        i:4cellos       m:Unknown ;
+        i:4horns        m:Unknown ;
+        i:4violas       m:Unknown ;
+        i:bass          m:GeorgeHarrison ;
+        i:basstrombone  m:Unknown ;
+        i:doublebass    m:Unknown ;
+        i:drums         m:RingoStarr ;
+        i:piano         m:PaulMcCartney ;
+        i:trombone      m:Unknown ;
+        i:vocals        m:PaulMcCartney .
+
+t:PSILoveYou  a                 s:Song ;
+        rdfs:label              "PS I Love You" ;
+        i:acousticguitar        m:GeorgeHarrison ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:backingvocals         m:JohnLennon , m:GeorgeHarrison ;
+        i:bass                  m:PaulMcCartney ;
+        i:leadvocals            m:PaulMcCartney ;
+        i:maracas               m:RingoStarr ;
+        i:percussion            m:AndyWhite .
+
+<http://learningsparql.com/ns/title/BabyIt%26%238217%3BsYou>
+        a                s:Song ;
+        rdfs:label       "Baby It&#8217;s You" ;
+        i:backingvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:celesta        m:GeorgeMartin ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+i:18violins  a      s:Instrument ;
+        rdfs:label  "18 violins" .
+
+i:leadguitar  a     s:Instrument ;
+        rdfs:label  "lead guitar" .
+
+m:JohnHall  a       s:Musician ;
+        rdfs:label  "John Hall" .
+
+i:cowbell  a        s:Instrument ;
+        rdfs:label  "cowbell" .
+
+i:tenorsaxophone  a  s:Instrument ;
+        rdfs:label  "tenor saxophone" .
+
+m:EricClapton  a    s:Musician ;
+        rdfs:label  "Eric Clapton" .
+
+t:TheEnd  a              s:Song ;
+        rdfs:label       "The End" ;
+        i:12violins      m:Unknown ;
+        i:3trumpets      m:Unknown ;
+        i:4cellos        m:Unknown ;
+        i:4horns         m:Unknown ;
+        i:4violas        m:Unknown ;
+        i:backingvocals  m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:basstrombone   m:Unknown ;
+        i:doublebass     m:Unknown ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:PaulMcCartney , m:JohnLennon , m:GeorgeHarrison ;
+        i:piano          m:PaulMcCartney ;
+        i:rhythmguitar   m:GeorgeHarrison ;
+        i:trombone       m:Unknown ;
+        i:vocals         m:PaulMcCartney .
+
+t:TellMeWhy  a           s:Song ;
+        rdfs:label       "Tell Me Why" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonyvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:leadvocals     m:JohnLennon ;
+        i:piano          m:GeorgeMartin ;
+        i:rhythmguitar   m:JohnLennon .
+
+m:LesMaddox  a      s:Musician ;
+        rdfs:label  "Les Maddox" .
+
+m:FDachtler  a      s:Musician ;
+        rdfs:label  "F Dachtler" .
+
+t:BeautifulDreamer  a   s:Song ;
+        rdfs:label      "Beautiful Dreamer" ;
+        i:bassguitar    m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon .
+
+m:MickJagger  a     s:Musician ;
+        rdfs:label  "Mick Jagger" .
+
+<http://learningsparql.com/ns/instrument/congas%28%3F%29>
+        a           s:Instrument ;
+        rdfs:label  "congas (?)" .
+
+m:NormanSmith  a    s:Musician ;
+        rdfs:label  "Norman Smith" .
+
+t:AskMeWhy  a            s:Song ;
+        rdfs:label       "Ask Me Why" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+m:DonLang  a        s:Musician ;
+        rdfs:label  "Don Lang" .
+
+m:RaySwinfield  a   s:Musician ;
+        rdfs:label  "Ray Swinfield" .
+
+t:Carol  a              s:Song ;
+        rdfs:label      "Carol" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+t:HereComesTheSun  a       s:Song ;
+        rdfs:label         "Here Comes The Sun" ;
+        i:Moogsynthesiser  m:GeorgeHarrison ;
+        i:acousticguitar   m:GeorgeHarrison ;
+        i:backingvocals    m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass             m:PaulMcCartney ;
+        i:doublebass       m:Uncredited ;
+        i:drums            m:RingoStarr ;
+        i:fourcellos       m:Uncredited ;
+        i:fourviolas       m:Uncredited ;
+        i:handclaps        m:GeorgeHarrison , m:RingoStarr , m:PaulMcCartney ;
+        i:harmonium        m:GeorgeHarrison ;
+        i:twoaltoflutes    m:Uncredited ;
+        i:twoclarinets     m:Uncredited ;
+        i:twoflutes        m:Uncredited ;
+        i:twopiccolos      m:Uncredited ;
+        i:vocals           m:GeorgeHarrison .
+
+i:electricguitar  a  s:Instrument ;
+        rdfs:label  "electric guitar" .
+
+m:MarijkeKoger  a   s:Musician ;
+        rdfs:label  "Marijke Koger" .
+
+m:DBradley  a       s:Musician ;
+        rdfs:label  "D Bradley" .
+
+t:Blackbird  a            s:Song ;
+        rdfs:label        "Blackbird" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:vocals          m:PaulMcCartney .
+
+t:YouLikeMeTooMuch  a           s:Song ;
+        rdfs:label              "You Like Me Too Much" ;
+        i:acousticguitar        m:GeorgeHarrison ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bassguitar            m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:electricguitar        m:GeorgeHarrison ;
+        i:electricpiano         m:JohnLennon ;
+        i:piano                 m:GeorgeMartin , m:PaulMcCartney ;
+        i:tambourine            m:JohnLennon ;
+        i:vocals                m:GeorgeHarrison , m:PaulMcCartney .
+
+m:AllanGrant  a     s:Musician ;
+        rdfs:label  "Allan Grant" .
+
+t:OnlyANorthernSong  a  s:Song ;
+        rdfs:label      "Only A Northern Song" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:effects       m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:glockenspiel  m:JohnLennon ;
+        i:organ         m:GeorgeHarrison ;
+        i:piano         m:JohnLennon ;
+        i:trumpet       m:PaulMcCartney ;
+        i:vocals        m:GeorgeHarrison .
+
+m:SheilaBromberg  a  s:Musician ;
+        rdfs:label  "Sheila Bromberg" .
+
+<http://learningsparql.com/ns/title/Don%26%238217%3BtEverChange>
+        a               s:Song ;
+        rdfs:label      "Don&#8217;t Ever Change" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison , m:PaulMcCartney .
+
+t:IWantToTellYou  a      s:Song ;
+        rdfs:label       "I Want To Tell You" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:JohnLennon , m:PaulMcCartney , m:GeorgeHarrison , m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:leadvocals     m:GeorgeHarrison ;
+        i:maracas        m:RingoStarr ;
+        i:piano          m:PaulMcCartney ;
+        i:tambourine     m:JohnLennon .
+
+m:EvanWatkins  a    s:Musician ;
+        rdfs:label  "Evan Watkins" .
+
+m:RexMorris  a      s:Musician ;
+        rdfs:label  "Rex Morris" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BllCryInstead>
+        a                       s:Song ;
+        rdfs:label              "I&#8217;ll Cry Instead" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:tambourine            m:JohnLennon ;
+        i:vocals                m:JohnLennon .
+
+i:flute  a          s:Instrument ;
+        rdfs:label  "flute" .
+
+t:RealLove  a             s:Song ;
+        rdfs:label        "Real Love" ;
+        i:acousticguitar  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:backingvocals   m:RingoStarr , m:PaulMcCartney , m:JeffLynne , m:GeorgeHarrison ;
+        i:bass            m:PaulMcCartney ;
+        i:doublebass      m:PaulMcCartney ;
+        i:drummachine     m:JohnLennon ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:GeorgeHarrison ;
+        i:guitar          m:JeffLynne ;
+        i:percussion      m:GeorgeHarrison , m:PaulMcCartney , m:RingoStarr ;
+        i:piano           m:JohnLennon ;
+        i:synthesiser     m:PaulMcCartney ;
+        i:vocals          m:JohnLennon .
+
+t:Revolution9  a    s:Song ;
+        rdfs:label  "Revolution 9" .
+
+i:altoflute  a      s:Instrument ;
+        rdfs:label  "alto flute" .
+
+i:horn  a           s:Instrument ;
+        rdfs:label  "horn" .
+
+m:ErnieWise  a      s:Musician ;
+        rdfs:label  "Ernie Wise" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BllBeOnMyWay>
+        a                 s:Song ;
+        rdfs:label        "I&#8217;ll Be On My Way" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:harmonyvocals   m:PaulMcCartney ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:vocals          m:JohnLennon .
+
+m:HenryMacKenzie  a  s:Musician ;
+        rdfs:label  "Henry MacKenzie" .
+
+<http://learningsparql.com/ns/title/That%26%238217%3BsAllRight%28Mama%29>
+        a               s:Song ;
+        rdfs:label      "That&#8217;s All Right (Mama)" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+i:twotrombones  a   s:Instrument ;
+        rdfs:label  "two trombones" .
+
+t:IShouldHaveKnownBetter
+        a                       s:Song ;
+        rdfs:label              "I Should Have Known Better" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonica             m:JohnLennon ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:vocals                m:JohnLennon .
+
+i:twoflutes  a      s:Instrument ;
+        rdfs:label  "two flutes" .
+
+<http://learningsparql.com/ns/title/SureToFall%28InLoveWithYou%29>
+        a                s:Song ;
+        rdfs:label       "Sure To Fall (In Love With You)" ;
+        i:backingvocals  m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+i:anvil  a          s:Instrument ;
+        rdfs:label  "anvil" .
+
+m:RobertBurns  a    s:Musician ;
+        rdfs:label  "Robert Burns" .
+
+t:ActNaturally  a               s:Song ;
+        rdfs:label              "Act Naturally" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonyvocals         m:PaulMcCartney ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:sticks                m:RingoStarr ;
+        i:vocals                m:RingoStarr .
+
+m:DavidMasonandthreeothers
+        a           s:Musician ;
+        rdfs:label  "David Mason and three others" .
+
+<http://learningsparql.com/ns/title/SgtPepper%26%238217%3BsLonelyHeartsClubBand%28Reprise%29>
+        a               s:Song ;
+        rdfs:label      "Sgt Pepper&#8217;s Lonely Hearts Club Band (Reprise)" ;
+        i:bassguitar    m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:maracas       m:RingoStarr ;
+        i:organ         m:GeorgeMartin ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:tambourine    m:RingoStarr ;
+        i:vocals        m:GeorgeHarrison , m:RingoStarr , m:JohnLennon , m:PaulMcCartney .
+
+m:AlanBranscombe  a  s:Musician ;
+        rdfs:label  "Alan Branscombe" .
+
+t:BackInTheUSSR  a              s:Song ;
+        rdfs:label              "Back In The USSR" ;
+        i:backingvocals         m:PaulMcCartney , m:JohnLennon , m:GeorgeHarrison ;
+        i:bassguitar            m:PaulMcCartney ;
+        i:drums                 m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon ;
+        i:electricguitar        m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon ;
+        i:handclaps             m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon ;
+        i:piano                 m:PaulMcCartney ;
+        i:six-stringbassguitar  m:GeorgeHarrison ;
+        i:vocals                m:PaulMcCartney .
+
+m:includingMaureenStarkey
+        a           s:Musician ;
+        rdfs:label  "including Maureen Starkey" .
+
+m:JackHolmes  a     s:Musician ;
+        rdfs:label  "Jack Holmes" .
+
+i:basstrombone  a   s:Instrument ;
+        rdfs:label  "bass trombone" .
+
+<http://learningsparql.com/ns/title/You%26%238217%3BreGoingToLoseThatGirl>
+        a                       s:Song ;
+        rdfs:label              "You&#8217;re Going To Lose That Girl" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:backingvocals         m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass                  m:PaulMcCartney ;
+        i:bongo                 m:RingoStarr ;
+        i:drums                 m:RingoStarr ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:piano                 m:PaulMcCartney ;
+        i:vocals                m:JohnLennon .
+
+m:PeterWillison  a  s:Musician ;
+        rdfs:label  "Peter Willison" .
+
+m:BarrieCameron  a  s:Musician ;
+        rdfs:label  "Barrie Cameron" .
+
+t:AllTogetherNow  a       s:Song ;
+        rdfs:label        "All Together Now" ;
+        i:acousticguitar  m:JohnLennon , m:PaulMcCartney ;
+        i:backingvocals   m:RingoStarr , m:GeorgeHarrison ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:fingercymbals   m:RingoStarr ;
+        i:handclaps       m:JohnLennon , m:RingoStarr , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:harmonica       m:JohnLennon ;
+        i:ukulele         m:JohnLennon ;
+        i:vocals          m:JohnLennon , m:PaulMcCartney .
+
+t:FreeAsABird  a               s:Song ;
+        rdfs:label             "Free As A Bird" ;
+        i:acousticguitar       m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass                 m:PaulMcCartney ;
+        i:drums                m:RingoStarr ;
+        i:electricslideguitar  m:GeorgeHarrison ;
+        i:guitar               m:JeffLynne ;
+        i:harmonyvocals        m:JeffLynne ;
+        i:keyboards            m:PaulMcCartney ;
+        i:piano                m:JohnLennon , m:PaulMcCartney ;
+        i:ukulele              m:GeorgeHarrison ;
+        i:vocals               m:GeorgeHarrison , m:PaulMcCartney , m:RingoStarr , m:JohnLennon .
+
+m:HariprasadChaurasiaSRKenkare
+        a           s:Musician ;
+        rdfs:label  "Hariprasad Chaurasia/SR Kenkare" .
+
+t:SeaOfMonsters  a  s:Song ;
+        rdfs:label  "Sea Of Monsters" .
+
+m:PeterBeavan  a    s:Musician ;
+        rdfs:label  "Peter Beavan" .
+
+m:RogerLord  a      s:Musician ;
+        rdfs:label  "Roger Lord" .
+
+m:MahapurushMisra  a  s:Musician ;
+        rdfs:label  "Mahapurush Misra" .
+
+i:acousticleadguitar  a  s:Instrument ;
+        rdfs:label  "acoustic lead guitar" .
+
+m:PeterCoe  a       s:Musician ;
+        rdfs:label  "Peter Coe" .
+
+i:2doublebasses  a  s:Instrument ;
+        rdfs:label  "2 double basses" .
+
+m:AndyWhite  a      s:Musician ;
+        rdfs:label  "Andy White" .
+
+t:AllMyLoving  a         s:Song ;
+        rdfs:label       "All My Loving" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+m:RonnieRoss  a     s:Musician ;
+        rdfs:label  "Ronnie Ross" .
+
+i:pakavaj  a        s:Instrument ;
+        rdfs:label  "pakavaj" .
+
+m:LindaMcCartney  a  s:Musician ;
+        rdfs:label  "Linda McCartney" .
+
+i:bassharmonica  a  s:Instrument ;
+        rdfs:label  "bass harmonica" .
+
+m:GwynneEdwards  a  s:Musician ;
+        rdfs:label  "Gwynne Edwards" .
+
+m:FrederickAlexander  a  s:Musician ;
+        rdfs:label  "Frederick Alexander" .
+
+m:PaulHarvey  a     s:Musician ;
+        rdfs:label  "Paul Harvey" .
+
+i:VoxContinentalorgan
+        a           s:Instrument ;
+        rdfs:label  "Vox Continental organ" .
+
+<http://learningsparql.com/ns/instrument/g%C3%BCiro>
+        a           s:Instrument ;
+        rdfs:label  "güiro" .
+
+t:Rain  a                s:Song ;
+        rdfs:label       "Rain" ;
+        i:backingvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:GeorgeHarrison , m:JohnLennon ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:JohnLennon .
+
+t:ADayInTheLife  a        s:Song ;
+        rdfs:label        "A Day In The Life" ;
+        i:Frenchhorn      m:NeilSanders , m:AlanCivil ;
+        i:acousticguitar  m:JohnLennon ;
+        i:alarmclock      m:MalEvans ;
+        i:bass            m:PaulMcCartney ;
+        i:bassoons        m:NFawcett , m:AlfredWaters ;
+        i:bongo           m:RingoStarr ;
+        i:cello           m:FranciscoGabarro , m:DennisVigay , m:AlexNifosi , m:AlanDalziel ;
+        i:clarinet        m:BasilTschaikov , m:JackBrymer ;
+        i:doublebasses    m:GordonPearce , m:CyrilMacArthur ;
+        i:drums           m:RingoStarr ;
+        i:flute           m:DavidSanderman , m:CliffordSeville ;
+        i:harmonium       m:GeorgeMartin ;
+        i:harp            m:JohnMarston ;
+        i:maracas         m:GeorgeHarrison ;
+        i:oboe            m:RogerLord ;
+        i:percussion      m:TristanFry ;
+        i:piano           m:JohnLennon , m:MalEvans , m:PaulMcCartney ;
+        i:tambourine      m:MarijkeKoger ;
+        i:timpani         m:TristanFry ;
+        i:trombone        m:TMoore , m:RaymondPremru , m:RaymondBrown ;
+        i:trumpet         m:MontyMontgomery , m:DavidMason , m:HaroldJackson ;
+        i:tuba            m:MichaelBarnes ;
+        i:viola           m:JohnMeek , m:JohnUnderwood , m:GwynneEdwards , m:BernardDavis ;
+        i:violin          m:DonaldWeekes , m:SidneySax , m:ErichGruenberg , m:BillMonro , m:ErnestScott , m:JurgenHess , m:HenryDatyner , m:LionelBentley , m:DBradley , m:GranvilleJones , m:HansGeiger , m:DavidMcCallum ;
+        i:vocals          m:MalEvans , m:PaulMcCartney , m:JohnLennon .
+
+t:ComeTogether  a        s:Song ;
+        rdfs:label       "Come Together" ;
+        i:bassguitar     m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:JohnLennon ;
+        i:handclaps      m:JohnLennon ;
+        i:harmonyvocals  m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:maracas        m:RingoStarr ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:tambourine     m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+t:PepperlandLaidWaste
+        a           s:Song ;
+        rdfs:label  "Pepperland Laid Waste" .
+
+t:Clarabella  a         s:Song ;
+        rdfs:label      "Clarabella" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:harmonica     m:JohnLennon ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+t:PolythenePam  a                  s:Song ;
+        rdfs:label                 "Polythene Pam" ;
+        i:12-stringacousticguitar  m:JohnLennon ;
+        i:backingvocals            m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass                     m:PaulMcCartney ;
+        i:cowbell                  m:RingoStarr ;
+        i:drums                    m:RingoStarr ;
+        i:electricpiano            m:PaulMcCartney ;
+        i:handclaps                m:JohnLennon ;
+        i:leadguitar               m:GeorgeHarrison , m:PaulMcCartney ;
+        i:maracas                  m:RingoStarr ;
+        i:piano                    m:PaulMcCartney ;
+        i:rhythmguitar             m:JohnLennon ;
+        i:tambourine               m:RingoStarr ;
+        i:vocals                   m:JohnLennon .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmLookingThroughYou>
+        a                       s:Song ;
+        rdfs:label              "I&#8217;m Looking Through You" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:guitar                m:GeorgeHarrison ;
+        i:harmonyvocals         m:JohnLennon ;
+        i:organ                 m:RingoStarr ;
+        i:percussion            m:RingoStarr ;
+        i:tambourine            m:GeorgeHarrison ;
+        i:vocals                m:PaulMcCartney .
+
+i:drummachine  a    s:Instrument ;
+        rdfs:label  "drum machine" .
+
+t:TheBalladOfJohnAndYoko
+        a                 s:Song ;
+        rdfs:label        "The Ballad Of John And Yoko" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:PaulMcCartney ;
+        i:harmonyvocals   m:PaulMcCartney ;
+        i:leadguitar      m:JohnLennon ;
+        i:maracas         m:PaulMcCartney ;
+        i:piano           m:PaulMcCartney ;
+        i:vocals          m:JohnLennon .
+
+m:KeithRichards  a  s:Musician ;
+        rdfs:label  "Keith Richards" .
+
+m:RonnieHughes  a   s:Musician ;
+        rdfs:label  "Ronnie Hughes" .
+
+t:HeyBulldog  a       s:Song ;
+        rdfs:label    "Hey Bulldog" ;
+        i:bass        m:PaulMcCartney ;
+        i:drums       m:RingoStarr ;
+        i:guitar      m:GeorgeHarrison , m:JohnLennon ;
+        i:piano       m:JohnLennon ;
+        i:tambourine  m:PaulMcCartney ;
+        i:vocals      m:JohnLennon , m:PaulMcCartney .
+
+i:double-trackedleadvocals
+        a           s:Instrument ;
+        rdfs:label  "double-tracked lead vocals" .
+
+i:oboe  a           s:Instrument ;
+        rdfs:label  "oboe" .
+
+m:AnilBhagwat  a    s:Musician ;
+        rdfs:label  "Anil Bhagwat" .
+
+t:IAmTheWalrus  a              s:Song ;
+        rdfs:label             "I Am The Walrus" ;
+        i:backingvocals        m:PeggieAllen , m:FDachtler , m:JohnONeill , m:SylviaKing , m:PatWhitmore , m:JillUtting , m:MikeRedway , m:WendyHoran , m:DGriffiths , m:AllanGrant , m:JFraser , m:JuneDay , m:JSmith , m:GMallen , m:IreneKing , m:FredLucas ;
+        i:bassguitar           m:PaulMcCartney ;
+        i:cello                m:EldonFox , m:LionelRoss , m:BramMartin , m:TerryWeil ;
+        i:clarinet             m:GordonLewin ;
+        i:drums                m:RingoStarr ;
+        i:electricguitar       m:GeorgeHarrison ;
+        i:horn                 m:TonyTunstall , m:MorrisMiller , m:NeilSanders ;
+        i:pianetelectricpiano  m:JohnLennon ;
+        i:tambourine           m:PaulMcCartney ;
+        i:violin               m:JackGreene , m:LouisStevens , m:JohnJezzard , m:JackRichards , m:SidneySax , m:RalphElman , m:JackRothstein , m:AndrewMcGee ;
+        i:vocals               m:JohnLennon .
+
+t:HelterSkelter  a        s:Song ;
+        rdfs:label        "Helter Skelter" ;
+        i:backingvocals   m:JohnLennon , m:GeorgeHarrison ;
+        i:bassguitar      m:JohnLennon ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:tenorsaxophone  m:JohnLennon ;
+        i:trumpet         m:MalEvans ;
+        i:vocals          m:PaulMcCartney .
+
+i:brushedsnaredrum  a  s:Instrument ;
+        rdfs:label  "brushed snare drum" .
+
+m:FrancieSchwartz  a  s:Musician ;
+        rdfs:label  "Francie Schwartz" .
+
+t:GoodDaySunshine  a     s:Song ;
+        rdfs:label       "Good Day Sunshine" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon , m:RingoStarr ;
+        i:piano          m:GeorgeMartin , m:PaulMcCartney ;
+        i:vocals         m:PaulMcCartney .
+
+t:WithALittleHelpFromMyFriends
+        a                s:Song ;
+        rdfs:label       "With A Little Help From My Friends" ;
+        i:Hammondorgan   m:GeorgeMartin ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:cowbell        m:JohnLennon ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:piano          m:PaulMcCartney ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:RingoStarr .
+
+i:harp  a           s:Instrument ;
+        rdfs:label  "harp" .
+
+t:LongTallSally  a      s:Song ;
+        rdfs:label      "Long Tall Sally" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison , m:JohnLennon ;
+        i:piano         m:GeorgeMartin ;
+        i:rhythmguitar  m:JohnLennon , m:GeorgeHarrison ;
+        i:vocals        m:PaulMcCartney .
+
+m:JohnMeek  a       s:Musician ;
+        rdfs:label  "John Meek" .
+
+m:BillMonro  a      s:Musician ;
+        rdfs:label  "Bill Monro" .
+
+i:tambourine  a     s:Instrument ;
+        rdfs:label  "tambourine" .
+
+m:BuddhadevKansara  a  s:Musician ;
+        rdfs:label  "Buddhadev Kansara" .
+
+t:ToKnowHerIsToLoveHer
+        a                s:Song ;
+        rdfs:label       "To Know Her Is To Love Her" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+t:HowDoYouDoIt  a        s:Song ;
+        rdfs:label       "How Do You Do It" ;
+        i:backingvocals  m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney , m:JohnLennon .
+
+t:FromMeToYou  a         s:Song ;
+        rdfs:label       "From Me To You" ;
+        i:bassguitar     m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonica      m:JohnLennon ;
+        i:harmonyvocals  m:GeorgeHarrison ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney , m:JohnLennon .
+
+m:JackRothstein  a  s:Musician ;
+        rdfs:label  "Jack Rothstein" .
+
+t:Flying  a             s:Song ;
+        rdfs:label      "Flying" ;
+        i:Mellotron     m:JohnLennon ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:guitar        m:GeorgeHarrison , m:PaulMcCartney ;
+        i:maracas       m:RingoStarr ;
+        i:organ         m:JohnLennon ;
+        i:soundeffects  m:RingoStarr , m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon , m:RingoStarr .
+
+m:MontyMontgomery  a  s:Musician ;
+        rdfs:label  "Monty Montgomery" .
+
+i:acoustic12-stringguitar
+        a           s:Instrument ;
+        rdfs:label  "acoustic 12-string guitar" .
+
+t:RollOverBeethoven  a  s:Song ;
+        rdfs:label      "Roll Over Beethoven" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:handclaps     m:GeorgeHarrison , m:RingoStarr , m:JohnLennon , m:PaulMcCartney ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison .
+
+i:spokenword  a     s:Instrument ;
+        rdfs:label  "spoken word" .
+
+i:3violas  a        s:Instrument ;
+        rdfs:label  "3 violas" .
+
+<http://learningsparql.com/ns/title/Nobody%26%238217%3BsChild>
+        a             s:Song ;
+        rdfs:label    "Nobody&#8217;s Child" ;
+        i:bassguitar  m:PaulMcCartney ;
+        i:drums       m:PeteBest ;
+        i:guitar      m:TonySheridan ;
+        i:vocals      m:TonySheridan .
+
+<http://learningsparql.com/ns/title/She%26%238217%3BsLeavingHome>
+        a                s:Song ;
+        rdfs:label       "She&#8217;s Leaving Home" ;
+        i:backingvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:cello          m:DennisVigay , m:AlanDalziel ;
+        i:doublebass     m:GordonPearce ;
+        i:harp           m:SheilaBromberg ;
+        i:leadvocals     m:PaulMcCartney ;
+        i:viola          m:JohnUnderwood , m:StephenShingles ;
+        i:violin         <http://learningsparql.com/ns/musician/Jos%C3%A9LuisGarcia> , m:ErichGruenberg , m:DerekJacobs , m:TrevorWilliams ;
+        i:vocals         m:JohnLennon .
+
+t:TwistAndShout  a       s:Song ;
+        rdfs:label       "Twist And Shout" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+i:fourviolas  a     s:Instrument ;
+        rdfs:label  "four violas" .
+
+t:ForNoOne  a         s:Song ;
+        rdfs:label    "For No One" ;
+        i:bass        m:PaulMcCartney ;
+        i:clavichord  m:PaulMcCartney ;
+        i:drums       m:RingoStarr ;
+        i:horn        m:AlanCivil ;
+        i:maracas     m:RingoStarr ;
+        i:piano       m:PaulMcCartney ;
+        i:tambourine  m:RingoStarr ;
+        i:vocals      m:PaulMcCartney .
+
+m:VictorSpinetti  a  s:Musician ;
+        rdfs:label  "Victor Spinetti" .
+
+i:twoaltoflutes  a  s:Instrument ;
+        rdfs:label  "two alto flutes" .
+
+m:ValStockwell  a   s:Musician ;
+        rdfs:label  "Val Stockwell" .
+
+m:DonHoneywill  a   s:Musician ;
+        rdfs:label  "Don Honeywill" .
+
+t:TheNightBefore  a      s:Song ;
+        rdfs:label       "The Night Before" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:JohnLennon ;
+        i:harmonyvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:leadguitar     m:PaulMcCartney , m:GeorgeHarrison ;
+        i:percussion     m:RingoStarr ;
+        i:vocals         m:PaulMcCartney .
+
+t:LeaveMyKittenAlone  a  s:Song ;
+        rdfs:label    "Leave My Kitten Alone" ;
+        i:bass        m:PaulMcCartney ;
+        i:drums       m:RingoStarr ;
+        i:leadguitar  m:GeorgeHarrison ;
+        i:piano       m:PaulMcCartney ;
+        i:tambourine  m:RingoStarr ;
+        i:vocals      m:JohnLennon .
+
+i:2horns  a         s:Instrument ;
+        rdfs:label  "2 horns" .
+
+t:Pepperland  a     s:Song ;
+        rdfs:label  "Pepperland" .
+
+i:1contrabassoon  a  s:Instrument ;
+        rdfs:label  "1 contrabassoon" .
+
+m:HansGeiger  a     s:Musician ;
+        rdfs:label  "Hans Geiger" .
+
+t:Revolution  a           s:Song ;
+        rdfs:label        "Revolution" ;
+        i:Hammondorgan    m:PaulMcCartney ;
+        i:bassguitar      m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:JohnLennon , m:GeorgeHarrison ;
+        i:electricpiano   m:NickyHopkins ;
+        i:handclaps       m:JohnLennon , m:RingoStarr , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:vocals          m:JohnLennon .
+
+m:AlfReece  a       s:Musician ;
+        rdfs:label  "Alf Reece" .
+
+m:SharadGhoshHanumanJadev
+        a           s:Musician ;
+        rdfs:label  "Sharad Ghosh/Hanuman Jadev" .
+
+t:RunForYourLife  a       s:Song ;
+        rdfs:label        "Run For Your Life" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:electricguitar  m:JohnLennon ;
+        i:harmonyvocals   m:PaulMcCartney , m:GeorgeHarrison ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:tambourine      m:RingoStarr ;
+        i:vocals          m:JohnLennon .
+
+t:IfIFell  a                    s:Song ;
+        rdfs:label              "If I Fell" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:electricguitar        m:GeorgeHarrison ;
+        i:vocals                m:PaulMcCartney , m:JohnLennon .
+
+t:MyBonnie  a            s:Song ;
+        rdfs:label       "My Bonnie" ;
+        i:backingvocals  m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:PeteBest ;
+        i:leadguitar     m:TonySheridan , m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:TonySheridan .
+
+i:svaramandal  a    s:Instrument ;
+        rdfs:label  "svaramandal" .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmALoser>
+        a                       s:Song ;
+        rdfs:label              "I&#8217;m A Loser" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonica             m:JohnLennon ;
+        i:harmonyvocals         m:PaulMcCartney ;
+        i:leadguitar            m:GeorgeHarrison ;
+        i:tambourine            m:RingoStarr ;
+        i:vocals                m:JohnLennon .
+
+i:combandpaper  a   s:Instrument ;
+        rdfs:label  "comb and paper" .
+
+t:InSpiteOfAllTheDanger
+        a                s:Song ;
+        rdfs:label       "In Spite Of All The Danger" ;
+        i:backingvocals  m:PaulMcCartney , m:GeorgeHarrison ;
+        i:drums          m:ColinHanton ;
+        i:guitar         m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney ;
+        i:piano          m:JohnDuffLowe ;
+        i:vocals         m:JohnLennon .
+
+m:NormanJones  a    s:Musician ;
+        rdfs:label  "Norman Jones" .
+
+<http://learningsparql.com/ns/title/Nothin%26%238217%3BShakin%26%238217%3B>
+        a               s:Song ;
+        rdfs:label      "Nothin&#8217; Shakin&#8217;" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison .
+
+t:TheContinuingStoryOfBungalowBill
+        a                 s:Song ;
+        rdfs:label        "The Continuing Story Of Bungalow Bill" ;
+        i:Mellotron       m:ChrisThomas ;
+        i:acousticguitar  m:GeorgeHarrison , m:JohnLennon ;
+        i:backingvocals   m:GeorgeHarrison , m:RingoStarr , m:includingMaureenStarkey , m:PaulMcCartney , m:Variousothers , m:YokoOno ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:organ           m:JohnLennon ;
+        i:tambourine      m:RingoStarr ;
+        i:vocals          m:YokoOno , m:JohnLennon .
+
+m:JohnUnderwood  a  s:Musician ;
+        rdfs:label  "John Underwood" .
+
+t:IForgotToRememberToForget
+        a               s:Song ;
+        rdfs:label      "I Forgot To Remember To Forget" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison .
+
+t:Chains  a             s:Song ;
+        rdfs:label      "Chains" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:harmonica     m:JohnLennon ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon , m:PaulMcCartney , m:GeorgeHarrison .
+
+<http://learningsparql.com/ns/title/Ain%26%238217%3BtSheSweet>
+        a                        s:Song ;
+        rdfs:label               "Ain&#8217;t She Sweet" ;
+        i:bass                   m:PaulMcCartney ;
+        <http://learningsparql.com/ns/instrument/drums%28Anthology1%29>
+                m:PeteBest ;
+        <http://learningsparql.com/ns/instrument/drums%28Anthology3%29>
+                m:RingoStarr ;
+        i:leadguitar             m:GeorgeHarrison ;
+        i:rhythmguitar           m:JohnLennon ;
+        i:vocals                 m:JohnLennon .
+
+m:PGoody  a         s:Musician ;
+        rdfs:label  "P Goody" .
+
+i:3cellos  a        s:Instrument ;
+        rdfs:label  "3 cellos" .
+
+m:RaymondPremru  a  s:Musician ;
+        rdfs:label  "Raymond Premru" .
+
+<http://learningsparql.com/ns/title/It%26%238217%3BsAllTooMuch>
+        a                s:Song ;
+        rdfs:label       "It&#8217;s All Too Much" ;
+        i:Hammondorgan   m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:bassclarinet   m:PaulHarvey ;
+        i:drums          m:RingoStarr ;
+        i:harmonyvocals  m:PaulMcCartney , m:JohnLennon ;
+        i:leadguitar     m:JohnLennon ;
+        i:tambourine     m:RingoStarr ;
+        i:trumpet        m:DavidMasonandthreeothers ;
+        i:vocals         m:GeorgeHarrison .
+
+m:AnnaJoshi  a      s:Musician ;
+        rdfs:label  "Anna Joshi" .
+
+i:fourcellos  a     s:Instrument ;
+        rdfs:label  "four cellos" .
+
+t:HappinessIsAWarmGun
+        a                s:Song ;
+        rdfs:label       "Happiness Is A Warm Gun" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison , m:JohnLennon ;
+        i:tambourine     m:RingoStarr ;
+        i:vocals         m:JohnLennon .
+
+i:handclaps  a      s:Instrument ;
+        rdfs:label  "handclaps" .
+
+<http://learningsparql.com/ns/title/WhenI%26%238217%3BmSixty-Four>
+        a                s:Song ;
+        rdfs:label       "When I&#8217;m Sixty-Four" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:chimes         m:RingoStarr ;
+        i:clarinet       m:FrankReidy , m:HenryMacKenzie , m:RobertBurns ;
+        i:drums          m:RingoStarr ;
+        i:guitar         m:JohnLennon ;
+        i:piano          m:PaulMcCartney ;
+        i:vocals         m:PaulMcCartney .
+
+t:Julia  a                s:Song ;
+        rdfs:label        "Julia" ;
+        i:acousticguitar  m:JohnLennon ;
+        i:vocals          m:JohnLennon .
+
+t:JohnnyBGoode  a       s:Song ;
+        rdfs:label      "Johnny B Goode" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+<http://learningsparql.com/ns/title/Don%26%238217%3BtBotherMe>
+        a               s:Song ;
+        rdfs:label      "Don&#8217;t Bother Me" ;
+        i:bass          m:PaulMcCartney ;
+        i:bongo         m:RingoStarr ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:tambourine    m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison ;
+        i:woodblock     m:PaulMcCartney .
+
+m:TedBarker  a      s:Musician ;
+        rdfs:label  "Ted Barker" .
+
+t:YerBlues  a            s:Song ;
+        rdfs:label       "Yer Blues" ;
+        i:backingvocals  m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison , m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+t:NowhereMan  a                 s:Song ;
+        rdfs:label              "Nowhere Man" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:harmonyvocals         m:PaulMcCartney , m:GeorgeHarrison ;
+        i:leadguitar            m:GeorgeHarrison , m:JohnLennon ;
+        i:vocals                m:JohnLennon .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BmTalkingAboutYou>
+        a               s:Song ;
+        rdfs:label      "I&#8217;m Talking About You" ;
+        i:bassguitar    m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:JohnLennon .
+
+m:JohnJezzard  a    s:Musician ;
+        rdfs:label  "John Jezzard" .
+
+m:GeoffEmerick  a   s:Musician ;
+        rdfs:label  "Geoff Emerick" .
+
+t:TwoOfUs  a              s:Song ;
+        rdfs:label        "Two Of Us" ;
+        i:acousticguitar  m:PaulMcCartney , m:JohnLennon ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:vocals          m:PaulMcCartney , m:JohnLennon ;
+        i:whistling       m:JohnLennon , m:PaulMcCartney .
+
+t:SheLovesYou  a        s:Song ;
+        rdfs:label      "She Loves You" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:GeorgeHarrison , m:PaulMcCartney , m:JohnLennon .
+
+m:DavidMason  a     s:Musician ;
+        rdfs:label  "David Mason" .
+
+t:Matchbox  a           s:Song ;
+        rdfs:label      "Matchbox" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:piano         m:GeorgeMartin ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:RingoStarr .
+
+m:AmritGajjar  a    s:Musician ;
+        rdfs:label  "Amrit Gajjar" .
+
+t:StepInsideLove  a       s:Song ;
+        rdfs:label        "Step Inside Love" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:claves          m:RingoStarr ;
+        i:percussion      m:JohnLennon ;
+        i:vocals          m:PaulMcCartney .
+
+t:Boys  a                s:Song ;
+        rdfs:label       "Boys" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:RingoStarr .
+
+i:bass  a           s:Instrument ;
+        rdfs:label  "bass" .
+
+m:FrankClarke  a    s:Musician ;
+        rdfs:label  "Frank Clarke" .
+
+i:doublebasses  a   s:Instrument ;
+        rdfs:label  "double basses" .
+
+t:TeddyBoy  a             s:Song ;
+        rdfs:label        "Teddy Boy" ;
+        i:acousticguitar  m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:vocals          m:PaulMcCartney , m:JohnLennon .
+
+i:leadvocals  a     s:Instrument ;
+        rdfs:label  "lead vocals" .
+
+m:TonyFisher  a     s:Musician ;
+        rdfs:label  "Tony Fisher" .
+
+i:vibraphone  a     s:Instrument ;
+        rdfs:label  "vibraphone" .
+
+m:NickyHopkins  a   s:Musician ;
+        rdfs:label  "Nicky Hopkins" .
+
+m:LionelBentley  a  s:Musician ;
+        rdfs:label  "Lionel Bentley" .
+
+t:GoodMorningGoodMorning
+        a                s:Song ;
+        rdfs:label       "Good Morning Good Morning" ;
+        i:Frenchhorn     <http://learningsparql.com/ns/musician/Tom%28surnameunknown%29> ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison , m:PaulMcCartney ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:saxophone      m:AlanHolmes , m:BarrieCameron , m:DavidGlyde ;
+        i:tambourine     m:RingoStarr ;
+        i:trombone       m:JohnLee , m:unknown ;
+        i:vocals         m:JohnLennon .
+
+t:AShotOfRhythmAndBlues
+        a                s:Song ;
+        rdfs:label       "A Shot Of Rhythm And Blues" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:harmonyvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+<http://learningsparql.com/ns/title/What%26%238217%3BsTheNewMaryJane>
+        a                 s:Song ;
+        rdfs:label        "What&#8217;s The New Mary Jane" ;
+        i:acousticguitar  m:GeorgeHarrison ;
+        i:effects         m:MalEvans , m:GeorgeHarrison , m:YokoOno , m:JohnLennon ;
+        i:handbell        m:MalEvans ;
+        i:piano           m:JohnLennon ;
+        i:vocals          m:GeorgeHarrison , m:JohnLennon , m:YokoOno .
+
+t:PleaseMisterPostman
+        a                s:Song ;
+        rdfs:label       "Please Mister Postman" ;
+        i:backingvocals  m:GeorgeHarrison , m:PaulMcCartney ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon .
+
+t:PaperbackWriter  a     s:Song ;
+        rdfs:label       "Paperback Writer" ;
+        i:backingvocals  m:JohnLennon , m:GeorgeHarrison ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:PaulMcCartney ;
+        i:rhythmguitar   m:GeorgeHarrison ;
+        i:tambourine     m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+i:whistling  a      s:Instrument ;
+        rdfs:label  "whistling" .
+
+t:NoReply  a                    s:Song ;
+        rdfs:label              "No Reply" ;
+        i:acousticrhythmguitar  m:JohnLennon ;
+        i:bass                  m:PaulMcCartney ;
+        i:drums                 m:RingoStarr ;
+        i:handclaps             m:RingoStarr , m:PaulMcCartney , m:GeorgeHarrison , m:JohnLennon ;
+        i:harmonyvocals         m:PaulMcCartney ;
+        i:piano                 m:GeorgeMartin ;
+        i:rhythmguitar          m:GeorgeHarrison ;
+        i:vocals                m:JohnLennon .
+
+i:bassdrum  a       s:Instrument ;
+        rdfs:label  "bass drum" .
+
+t:TheHoneymoonSong  a   s:Song ;
+        rdfs:label      "The Honeymoon Song" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney .
+
+t:ISawHerStandingThere
+        a                s:Song ;
+        rdfs:label       "I Saw Her Standing There" ;
+        i:backingvocals  m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:handclaps      m:GeorgeHarrison , m:JohnLennon , m:RingoStarr , m:PaulMcCartney ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+t:SomeOtherGuy  a       s:Song ;
+        rdfs:label      "Some Other Guy" ;
+        i:bass          m:PaulMcCartney ;
+        i:drums         m:RingoStarr ;
+        i:leadguitar    m:GeorgeHarrison ;
+        i:rhythmguitar  m:JohnLennon ;
+        i:vocals        m:PaulMcCartney , m:JohnLennon .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BveGotAFeeling>
+        a                s:Song ;
+        rdfs:label       "I&#8217;ve Got A Feeling" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:BillyPreston ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney .
+
+m:BernardDavis  a   s:Musician ;
+        rdfs:label  "Bernard Davis" .
+
+t:GotToGetYouIntoMyLife
+        a                 s:Song ;
+        rdfs:label        "Got To Get You Into My Life" ;
+        i:bass            m:PaulMcCartney ;
+        i:drums           m:RingoStarr ;
+        i:leadguitar      m:GeorgeHarrison ;
+        i:organ           m:GeorgeMartin ;
+        i:rhythmguitar    m:JohnLennon ;
+        i:tambourine      m:RingoStarr ;
+        i:tenorsaxophone  m:PeterCoe , m:AlanBranscombe ;
+        i:trumpet         m:EddieThornton , m:LesCondon , m:IanHamer ;
+        i:vocals          m:PaulMcCartney .
+
+m:LizzieBravo  a    s:Musician ;
+        rdfs:label  "Lizzie Bravo" .
+
+t:DigAPony  a            s:Song ;
+        rdfs:label       "Dig A Pony" ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:electricpiano  m:BillyPreston ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:JohnLennon , m:GeorgeHarrison , m:PaulMcCartney .
+
+m:KennyPowell  a    s:Musician ;
+        rdfs:label  "Kenny Powell" .
+
+t:ATasteOfHoney  a       s:Song ;
+        rdfs:label       "A Taste Of Honey" ;
+        i:backingvocals  m:GeorgeHarrison , m:JohnLennon ;
+        i:bass           m:PaulMcCartney ;
+        i:drums          m:RingoStarr ;
+        i:leadguitar     m:GeorgeHarrison ;
+        i:rhythmguitar   m:JohnLennon ;
+        i:vocals         m:PaulMcCartney .
+
+<http://learningsparql.com/ns/title/I%26%238217%3BveJustSeenAFace>
+        a                     s:Song ;
+        rdfs:label            "I&#8217;ve Just Seen A Face" ;
+        i:acousticguitar      m:PaulMcCartney , m:JohnLennon ;
+        i:acousticleadguitar  m:GeorgeHarrison ;
+        i:brushedsnaredrum    m:RingoStarr ;
+        i:maracas             m:RingoStarr ;
+        i:vocals              m:PaulMcCartney .
+
+m:JohnnieScott  a   s:Musician ;
+        rdfs:label  "Johnnie Scott" .
