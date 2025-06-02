@@ -15,7 +15,7 @@ def gen_spiral_dataset(n_examples=500, n_classes=2, a=None, b=None, pi_space=3):
     theta = np.linspace(0,pi_space*pi, num=n_examples)
     xy = np.zeros((n_examples,2))
 
-    # logaritmic spirals
+    # logarithmic spirals
     x_golden_parametric = lambda a, b, theta: a**(theta*b) * cos(theta)
     y_golden_parametric = lambda a, b, theta: a**(theta*b) * sin(theta)
     x_golden_parametric = np.vectorize(x_golden_parametric)
