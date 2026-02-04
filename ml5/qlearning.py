@@ -1,4 +1,4 @@
-# Class definition of QLearning
+# Class definition of QLearning 
 
 from pathlib import Path
 from typing import NamedTuple
