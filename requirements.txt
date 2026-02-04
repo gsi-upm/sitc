@@ -2,7 +2,7 @@ future
 rdflib
 rdflib-jsonld
 lxml
-html5lib
+html5lib 
 scikit-learn
 seaborn
 pydotplus
