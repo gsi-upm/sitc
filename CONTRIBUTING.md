@@ -3,7 +3,7 @@
 When contributing to this repository, please consider the scope of your contribution.
 For major corrections (other than typos and minor code changes), please first discuss the change you wish to make via a GitHub issue,
 email, or any other method with the owners of this repository before working on your change. 
-If you fail to do so, your contribution may be rejected.
+If you fail to do so, your contribution may be rejected. 
 
 Also note that we have a code of conduct, please follow it in all your interactions with the project.
 
