@@ -1,6 +1,6 @@
 from future.standard_library import print_function
 import operator
-import types
+import types 
 import sys
 from rdflib import term, RDF, Namespace
 
