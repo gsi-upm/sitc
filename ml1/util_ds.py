@@ -53,10 +53,10 @@ import matplotlib.pyplot as plt
 
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.inspection import DecisionBoundaryDisplay
 
 def plot_tree_iris():
     """
-
     Taken fromhttp://scikit-learn.org/stable/auto_examples/tree/plot_iris.html
     """
     # Parameters
@@ -67,11 +67,11 @@ def plot_tree_iris():
     # Load data
     iris = load_iris()
 
-    for pairidx, pair in enumerate([[0, 1], [0, 2], [0, 3], 
-                                [1, 2], [1, 3], [2, 3]]):
+    for pairidx, pair in enumerate([[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]]):
         # We only take the two corresponding features
         X = iris.data[:, pair]
         y = iris.target
+        '''
 
         # Shuffle
         idx = np.arange(X.shape[0])
@@ -84,34 +84,38 @@ def plot_tree_iris():
         mean = X.mean(axis=0)
         std = X.std(axis=0)
         X = (X - mean) / std
-
+	'''
         # Train
-        model = DecisionTreeClassifier(max_depth=3, random_state=1).fit(X, y)
+        clf = DecisionTreeClassifier(max_depth=3, random_state=1).fit(X, y)
 
         # Plot the decision boundary
-        plt.subplot(2, 3, pairidx + 1)
-
-        x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
-        y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
-        xx, yy = np.meshgrid(np.arange(x_min, x_max, plot_step),
-                 np.arange(y_min, y_max, plot_step))
-
-        Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
-        Z = Z.reshape(xx.shape)
-        cs = plt.contourf(xx, yy, Z, cmap=plt.cm.Paired)
-
-        plt.xlabel(iris.feature_names[pair[0]])
-        plt.ylabel(iris.feature_names[pair[1]])
-        plt.axis("tight")
+        # Taken from https://scikit-learn.org/stable/auto_examples/tree/plot_iris_dtc.html
+        # Plot the decision boundary
+        ax = plt.subplot(2, 3, pairidx + 1)
+        plt.tight_layout(h_pad=0.5, w_pad=0.5, pad=2.5)
+        DecisionBoundaryDisplay.from_estimator(
+            clf,
+            X,
+            cmap=plt.cm.RdYlBu,
+            response_method="predict",
+            ax=ax,
+            xlabel=iris.feature_names[pair[0]],
+            ylabel=iris.feature_names[pair[1]],
+        )
 
         # Plot the training points
         for i, color in zip(range(n_classes), plot_colors):
-            idx = np.where(y == i)
-            plt.scatter(X[idx, 0], X[idx, 1], c=color, label=iris.target_names[i],
-                        cmap=plt.cm.Paired)
-
-        plt.axis("tight")
-
+            idx = np.asarray(y == i).nonzero()
+            plt.scatter(
+            X[idx, 0],
+            X[idx, 1],
+            c=color,
+            label=iris.target_names[i],
+            edgecolor="black",
+            s=15
+        )
+    plt.axis("tight")
     plt.suptitle("Decision surface of a decision tree using paired features")
-    plt.legend()
+    #plt.legend()
+    plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
     plt.show()  
