@@ -35,7 +35,7 @@ def plot_svm(df):
 	order = np.random.permutation(n_sample)
 
 	X = X[order]
-	y = y[order].astype(np.float)
+	y = y[order].astype(float)
 
 	# do a cross validation
 	nighty_precent_of_sample = int(.9 * n_sample)
