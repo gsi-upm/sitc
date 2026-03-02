@@ -38,7 +38,7 @@ def plot_learning_curve(
     train_sizes=np.linspace(0.1, 1.0, 5),
 ):
     """
-    Generate 3 plots: the test and training learning curve, the training
+    Generate 3 plots:  the test and training learning curve, the training
     samples vs fit times curve, the fit times vs score curve.
 
     Parameters
